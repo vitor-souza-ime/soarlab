@@ -1,0 +1,721 @@
+﻿index,repetition,mode,question,gold_memory,gold_topic,reference_status,pred_memory,pred_topic,match_method,match_confidence,native_status,correct,latency_soar_ms,parse_ms,latency_e2e_ms,decision_cycles,smem_queries_delta,epmem_queries_delta,episode_id,native_soar
+1,1,fixed,What should the robot do if localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,6.6101,5.5168,13.1691,2,0,0,1598,True
+2,1,fixed,What should the robot do if the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,6.8132,7.6213,15.4475,2,0,0,1600,True
+3,1,fixed,How should the robot react when an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,7.8239,5.9768,14.6667,2,0,0,1602,True
+4,1,fixed,How should the robot react when localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,7.5366,6.358,15.0889,2,0,0,1604,True
+5,1,fixed,Tell me about the robotic gripper.,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,17.745,14.6862,33.3498,3,1,0,1607,True
+6,1,fixed,Do you remember a camera event?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,13.1799,0.197,14.1519,3,0,1,1610,True
+7,1,fixed,Tell me about the depth sensor.,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,9.6658,14.9597,25.5094,3,1,0,1613,True
+8,1,fixed,Tell me about the laser scanner.,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,11.7484,13.7531,26.3671,3,1,0,1616,True
+9,1,fixed,Explain the ultrasonic rangefinder.,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,10.9526,14.5568,26.4335,3,1,0,1619,True
+10,1,fixed,Explain the Robot Operating System 2.,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,10.8476,13.4328,25.0815,3,1,0,1622,True
+11,1,fixed,Do you remember a low battery episode?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,10.8256,0.0988,11.683,3,0,1,1625,True
+12,1,fixed,What should the robot do if a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,7.1097,5.5105,13.4101,2,0,0,1627,True
+13,1,fixed,Do you remember an obstacle?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,12.2546,0.0566,13.2035,3,0,1,1630,True
+14,1,fixed,Do you remember a motor experience?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,10.8635,0.2255,11.8988,3,0,1,1633,True
+15,1,fixed,What happened to the motor before?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,12.5803,0.3146,13.685,3,0,1,1636,True
+16,1,fixed,What is a depth camera?,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,9.741,13.6468,24.4831,3,1,0,1639,True
+17,1,fixed,Explain Soar semantic memory.,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,11.998,13.9893,27.0927,3,1,0,1642,True
+18,1,fixed,How should the robot react when the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,8.1728,5.6638,14.6625,2,0,0,1644,True
+19,1,fixed,How should the robot react when a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,9.3233,5.2791,15.3598,2,0,0,1646,True
+20,1,fixed,Describe the NAO humanoid.,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,10.5002,15.0943,26.525,3,1,0,1649,True
+21,1,fixed,What happened to the camera earlier?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,10.5484,0.235,12.0467,3,0,1,1652,True
+22,1,fixed,Explain the role of a servomotor.,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,12.9464,14.2028,28.0618,3,1,0,1655,True
+23,1,fixed,What does a wheel encoder do?,semantic,encoder,found,semantic,encoder,semantic-alias,1.0,found,1,10.2825,14.045,25.2357,3,1,0,1658,True
+24,1,fixed,What does SMem store?,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,13.6048,14.1305,28.6486,3,1,0,1661,True
+25,1,fixed,What should the robot do if a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,11.7304,5.5509,18.0573,2,0,0,1663,True
+26,1,fixed,Do you remember an earlier navigation episode?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,10.7449,0.1652,11.6503,3,0,1,1666,True
+27,1,fixed,What should the robot do if an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,13.2018,5.9525,20.4422,2,0,0,1668,True
+28,1,fixed,What should the robot do if the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,8.3128,7.4442,16.8558,2,0,0,1670,True
+29,1,fixed,What is a PID controller?,semantic,pid-controller,found,semantic,pid-controller,semantic-alias,1.0,found,1,13.4317,14.5228,29.1096,3,1,0,1673,True
+30,1,fixed,How do robots use a LiDAR sensor?,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,10.9651,14.2745,26.3996,3,1,0,1676,True
+31,1,fixed,Describe proportional integral derivative terms.,semantic,pid-controller,found,semantic,pid-controller,controlled-paraphrase,0.96,found,1,12.5792,15.0969,28.5815,3,1,0,1679,True
+32,1,fixed,Explain grid map.,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,12.3951,13.9792,27.3146,3,1,0,1682,True
+33,1,fixed,What is simultaneous localization and mapping?,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,9.984,14.2462,25.1151,3,1,0,1685,True
+34,1,fixed,What is the purpose of ROS 2?,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,12.5166,14.0065,27.4205,3,1,0,1688,True
+35,1,fixed,Explain rotary encoders.,semantic,encoder,found,semantic,encoder,fuzzy,0.85,found,1,12.8363,38.3428,52.0699,3,1,0,1691,True
+36,1,fixed,What happened with an obstacle before?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,11.333,0.1025,12.1754,3,0,1,1694,True
+37,1,fixed,What is a robot gripper?,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,9.9692,13.782,24.6311,3,1,0,1697,True
+38,1,fixed,What happened with the battery earlier?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,10.8762,0.1267,11.7507,3,0,1,1700,True
+39,1,fixed,What happened during navigation before?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,12.1292,0.1698,13.1164,3,0,1,1703,True
+40,1,fixed,What is the NAO robot?,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,10.0088,13.5599,24.4387,3,1,0,1706,True
+41,1,fixed,Do you remember a sensor experience?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,9.9891,0.1198,10.8371,3,0,1,1709,True
+42,1,fixed,How should the robot react when the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,7.3549,5.4092,13.5616,2,0,0,1711,True
+43,1,fixed,What is an occupancy grid?,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,10.1248,13.6894,24.8776,3,1,0,1714,True
+44,1,fixed,What happened to a sensor before?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,10.1532,0.1609,11.0444,3,0,1,1717,True
+45,1,fixed,What is an ultrasonic sensor?,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,9.8471,13.5326,24.198,3,1,0,1720,True
+46,1,fixed,Explain SLAM.,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,12.7393,13.5527,27.1765,3,1,0,1723,True
+47,1,fixed,How should the robot react when a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,6.7361,5.3478,12.8265,2,0,0,1725,True
+48,1,fixed,What is a servo motor?,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,9.8058,13.3776,23.9968,3,1,0,1728,True
+49,2,fixed,How should the robot react when localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,8.1174,5.5264,14.8469,2,0,0,1730,True
+50,2,fixed,What should the robot do if the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,8.2912,6.2896,15.6354,2,0,0,1732,True
+51,2,fixed,Do you remember an earlier navigation episode?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,10.5566,0.1683,11.5676,3,0,1,1735,True
+52,2,fixed,What is a servo motor?,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,9.9446,13.4213,24.1589,3,1,0,1738,True
+53,2,fixed,What is a PID controller?,semantic,pid-controller,found,semantic,pid-controller,semantic-alias,1.0,found,1,13.1113,14.443,28.4872,3,1,0,1741,True
+54,2,fixed,Explain the Robot Operating System 2.,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,11.8158,14.106,27.2423,3,1,0,1744,True
+55,2,fixed,Explain the role of a servomotor.,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,13.4133,13.8926,28.4981,3,1,0,1747,True
+56,2,fixed,Tell me about the robotic gripper.,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,12.7351,14.5389,28.2007,3,1,0,1750,True
+57,2,fixed,What should the robot do if a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,8.1715,5.8187,14.8204,2,0,0,1752,True
+58,2,fixed,Do you remember a low battery episode?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,11.5696,0.093,12.5219,3,0,1,1755,True
+59,2,fixed,How should the robot react when the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,7.6971,5.6916,14.3804,2,0,0,1757,True
+60,2,fixed,Explain Soar semantic memory.,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,11.8076,14.3269,27.1878,3,1,0,1760,True
+61,2,fixed,Tell me about the depth sensor.,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,14.1987,14.5258,29.6469,3,1,0,1763,True
+62,2,fixed,What is a robot gripper?,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,11.849,14.4112,27.5022,3,1,0,1766,True
+63,2,fixed,Do you remember a sensor experience?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,24.1043,0.1414,25.3019,3,0,1,1769,True
+64,2,fixed,Do you remember a camera event?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,16.0932,0.1814,17.0222,3,0,1,1772,True
+65,2,fixed,Describe the NAO humanoid.,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,13.4397,15.0541,29.4253,3,1,0,1775,True
+66,2,fixed,What should the robot do if a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,8.8415,5.704,15.5757,2,0,0,1777,True
+67,2,fixed,How should the robot react when a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,8.7642,5.6207,15.2422,2,0,0,1779,True
+68,2,fixed,How should the robot react when an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,10.1836,5.86,17.5853,2,0,0,1781,True
+69,2,fixed,What is an ultrasonic sensor?,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,12.0791,15.2988,28.5108,3,1,0,1784,True
+70,2,fixed,What happened to a sensor before?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,12.4212,0.3223,14.2262,3,0,1,1787,True
+71,2,fixed,How do robots use a LiDAR sensor?,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,14.4588,15.3771,30.847,3,1,0,1790,True
+72,2,fixed,Explain grid map.,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,13.1958,13.7652,28.0167,3,1,0,1793,True
+73,2,fixed,What does a wheel encoder do?,semantic,encoder,found,semantic,encoder,semantic-alias,1.0,found,1,14.9027,15.1304,31.2118,3,1,0,1796,True
+74,2,fixed,What happened to the camera earlier?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,15.6981,0.28,17.0168,3,0,1,1799,True
+75,2,fixed,What is an occupancy grid?,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,15.4895,14.6105,31.1371,3,1,0,1802,True
+76,2,fixed,What is the purpose of ROS 2?,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,15.711,13.9176,31.1047,3,1,0,1805,True
+77,2,fixed,Describe proportional integral derivative terms.,semantic,pid-controller,found,semantic,pid-controller,controlled-paraphrase,0.96,found,1,12.9138,14.2715,28.2777,3,1,0,1808,True
+78,2,fixed,Tell me about the laser scanner.,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,15.0783,14.3193,30.3395,3,1,0,1811,True
+79,2,fixed,Explain the ultrasonic rangefinder.,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,13.3394,14.1338,28.6194,3,1,0,1814,True
+80,2,fixed,What does SMem store?,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,13.1875,13.6791,27.8967,3,1,0,1817,True
+81,2,fixed,What is a depth camera?,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,12.811,14.2754,28.0003,3,1,0,1820,True
+82,2,fixed,How should the robot react when the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,8.6379,5.4262,15.005,2,0,0,1822,True
+83,2,fixed,What happened with the battery earlier?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,14.6719,0.1291,15.8553,3,0,1,1825,True
+84,2,fixed,Do you remember a motor experience?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,14.3412,0.2385,15.585,3,0,1,1828,True
+85,2,fixed,What should the robot do if localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,9.0716,5.6953,15.6197,2,0,0,1830,True
+86,2,fixed,How should the robot react when a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,8.8731,5.8452,15.5473,2,0,0,1832,True
+87,2,fixed,What happened during navigation before?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,12.2294,0.1456,13.2784,3,0,1,1835,True
+88,2,fixed,What is simultaneous localization and mapping?,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,14.6922,14.0715,29.9751,3,1,0,1838,True
+89,2,fixed,What happened with an obstacle before?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,12.0,0.1089,12.9815,3,0,1,1841,True
+90,2,fixed,What happened to the motor before?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,13.7756,0.2499,15.0709,3,0,1,1844,True
+91,2,fixed,What is the NAO robot?,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,19.3101,14.8871,35.3491,3,1,0,1847,True
+92,2,fixed,Explain SLAM.,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,20.1449,23.0388,44.3005,3,1,0,1850,True
+93,2,fixed,Do you remember an obstacle?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,14.0237,0.0649,15.0732,3,0,1,1853,True
+94,2,fixed,What should the robot do if the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,10.77,6.1034,17.7924,2,0,0,1855,True
+95,2,fixed,What should the robot do if an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,10.752,5.6001,17.2449,2,0,0,1857,True
+96,2,fixed,Explain rotary encoders.,semantic,encoder,found,semantic,encoder,fuzzy,0.85,found,1,14.1683,36.3662,51.4457,3,1,0,1860,True
+97,3,fixed,Do you remember a camera event?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,13.8739,0.2165,14.9672,3,0,1,1863,True
+98,3,fixed,Do you remember a sensor experience?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,13.3036,0.1022,14.2782,3,0,1,1866,True
+99,3,fixed,Explain Soar semantic memory.,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,11.9071,13.7054,26.7209,3,1,0,1869,True
+100,3,fixed,What should the robot do if the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,7.8958,6.104,14.907,2,0,0,1871,True
+101,3,fixed,How should the robot react when the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,8.5298,5.6654,15.1855,2,0,0,1873,True
+102,3,fixed,What happened to a sensor before?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,12.6029,0.1444,13.5285,3,0,1,1876,True
+103,3,fixed,What should the robot do if localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,9.4664,5.4056,15.8192,2,0,0,1878,True
+104,3,fixed,What is a robot gripper?,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,12.6917,13.9289,28.0195,3,1,0,1881,True
+105,3,fixed,How do robots use a LiDAR sensor?,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,13.196,13.7091,27.8116,3,1,0,1884,True
+106,3,fixed,What happened with the battery earlier?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,14.3757,0.1331,15.3469,3,0,1,1887,True
+107,3,fixed,Tell me about the laser scanner.,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,12.4492,13.6763,27.0409,3,1,0,1890,True
+108,3,fixed,What is an ultrasonic sensor?,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,11.2821,13.4606,25.5622,3,1,0,1893,True
+109,3,fixed,What is the purpose of ROS 2?,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,10.7225,13.2299,24.7504,3,1,0,1896,True
+110,3,fixed,Describe the NAO humanoid.,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,10.5761,13.1146,24.5231,3,1,0,1899,True
+111,3,fixed,What happened to the motor before?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,10.7628,0.2474,11.7332,3,0,1,1902,True
+112,3,fixed,What is an occupancy grid?,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,10.7943,13.1661,24.7714,3,1,0,1905,True
+113,3,fixed,Explain the role of a servomotor.,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,11.0608,13.4532,25.3298,3,1,0,1908,True
+114,3,fixed,Do you remember a motor experience?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,10.5269,0.2321,11.4865,3,0,1,1911,True
+115,3,fixed,What should the robot do if an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,6.8003,5.3841,12.9478,2,0,0,1913,True
+116,3,fixed,What should the robot do if a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,7.4266,5.7622,14.0208,2,0,0,1915,True
+117,3,fixed,Explain the Robot Operating System 2.,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,11.8663,13.5736,26.31,3,1,0,1918,True
+118,3,fixed,How should the robot react when the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,7.0232,5.4451,13.4227,2,0,0,1920,True
+119,3,fixed,How should the robot react when an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,7.7952,5.3624,14.1344,2,0,0,1922,True
+120,3,fixed,What should the robot do if a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,8.1017,5.4031,14.4964,2,0,0,1924,True
+121,3,fixed,How should the robot react when localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,10.677,5.77,17.8538,2,0,0,1926,True
+122,3,fixed,What is a PID controller?,semantic,pid-controller,found,semantic,pid-controller,semantic-alias,1.0,found,1,15.2387,14.3257,30.5959,3,1,0,1929,True
+123,3,fixed,Explain grid map.,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,15.8682,15.9171,32.6973,3,1,0,1932,True
+124,3,fixed,What is simultaneous localization and mapping?,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,15.4554,15.6036,31.9836,3,1,0,1935,True
+125,3,fixed,Do you remember an earlier navigation episode?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,14.1645,0.1638,15.0885,3,0,1,1938,True
+126,3,fixed,What happened during navigation before?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,14.9836,0.1661,15.9249,3,0,1,1941,True
+127,3,fixed,Do you remember an obstacle?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,14.4015,0.0582,15.2481,3,0,1,1944,True
+128,3,fixed,Explain SLAM.,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,14.2706,14.51,29.9351,3,1,0,1947,True
+129,3,fixed,What is a servo motor?,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,13.9009,15.3895,30.4775,3,1,0,1950,True
+130,3,fixed,What is a depth camera?,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,13.8568,13.8318,29.3253,3,1,0,1953,True
+131,3,fixed,Tell me about the robotic gripper.,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,17.2285,14.4656,32.604,3,1,0,1956,True
+132,3,fixed,What does SMem store?,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,15.1073,13.8327,29.8874,3,1,0,1959,True
+133,3,fixed,Describe proportional integral derivative terms.,semantic,pid-controller,found,semantic,pid-controller,controlled-paraphrase,0.96,found,1,13.3478,14.2236,28.6008,3,1,0,1962,True
+134,3,fixed,How should the robot react when a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,9.6475,5.8734,16.4623,2,0,0,1964,True
+135,3,fixed,What happened with an obstacle before?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,13.8238,0.0876,14.8618,3,0,1,1967,True
+136,3,fixed,What does a wheel encoder do?,semantic,encoder,found,semantic,encoder,semantic-alias,1.0,found,1,14.603,13.9221,29.8244,3,1,0,1970,True
+137,3,fixed,What happened to the camera earlier?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,14.5184,0.2569,15.8388,3,0,1,1973,True
+138,3,fixed,Explain the ultrasonic rangefinder.,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,13.4509,13.9024,28.6644,3,1,0,1976,True
+139,3,fixed,Do you remember a low battery episode?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,12.6484,0.104,13.6762,3,0,1,1979,True
+140,3,fixed,Tell me about the depth sensor.,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,12.6931,13.4424,27.4138,3,1,0,1982,True
+141,3,fixed,Explain rotary encoders.,semantic,encoder,found,semantic,encoder,fuzzy,0.85,found,1,11.9238,34.7365,47.7822,3,1,0,1985,True
+142,3,fixed,What should the robot do if the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,7.6223,5.5657,14.2234,2,0,0,1987,True
+143,3,fixed,What is the NAO robot?,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,11.6452,13.1591,25.8299,3,1,0,1990,True
+144,3,fixed,How should the robot react when a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,7.4923,5.4668,13.8911,2,0,0,1992,True
+145,4,fixed,How should the robot react when localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,7.4028,5.4051,13.7526,2,0,0,1994,True
+146,4,fixed,How should the robot react when the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,7.2975,5.4185,13.6543,2,0,0,1996,True
+147,4,fixed,How should the robot react when an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,7.3386,5.5119,13.748,2,0,0,1998,True
+148,4,fixed,Explain the Robot Operating System 2.,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,11.3238,13.2687,25.3863,3,1,0,2001,True
+149,4,fixed,How do robots use a LiDAR sensor?,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,11.2893,13.3155,25.5684,3,1,0,2004,True
+150,4,fixed,Explain the role of a servomotor.,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,11.4308,13.2373,25.4413,3,1,0,2007,True
+151,4,fixed,How should the robot react when a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,7.1445,5.422,13.3118,2,0,0,2009,True
+152,4,fixed,What is the NAO robot?,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,11.1523,13.0242,25.0115,3,1,0,2012,True
+153,4,fixed,Tell me about the depth sensor.,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,11.3837,13.1595,25.2881,3,1,0,2015,True
+154,4,fixed,What happened to the motor before?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,12.1384,0.2464,13.2404,3,0,1,2018,True
+155,4,fixed,How should the robot react when the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,7.9608,5.4621,14.2311,2,0,0,2020,True
+156,4,fixed,What is an occupancy grid?,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,12.1315,13.5302,26.6826,3,1,0,2023,True
+157,4,fixed,Do you remember a low battery episode?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,11.3412,0.0899,12.3907,3,0,1,2026,True
+158,4,fixed,What should the robot do if a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,7.3306,5.4142,13.6984,2,0,0,2028,True
+159,4,fixed,Describe the NAO humanoid.,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,11.6552,13.1381,25.7276,3,1,0,2031,True
+160,4,fixed,Tell me about the laser scanner.,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,11.4662,13.3253,25.8371,3,1,0,2034,True
+161,4,fixed,What should the robot do if localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,7.5808,5.5181,14.0987,2,0,0,2036,True
+162,4,fixed,What is a PID controller?,semantic,pid-controller,found,semantic,pid-controller,semantic-alias,1.0,found,1,12.0494,13.1231,26.2875,3,1,0,2039,True
+163,4,fixed,What happened to the camera earlier?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,13.1293,0.2619,14.4831,3,0,1,2042,True
+164,4,fixed,Describe proportional integral derivative terms.,semantic,pid-controller,found,semantic,pid-controller,controlled-paraphrase,0.96,found,1,12.4367,13.415,27.0412,3,1,0,2045,True
+165,4,fixed,How should the robot react when a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,9.3205,5.5009,15.9264,2,0,0,2047,True
+166,4,fixed,Do you remember an earlier navigation episode?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,11.6905,0.1675,13.0171,3,0,1,2050,True
+167,4,fixed,Explain grid map.,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,12.243,13.3819,26.8043,3,1,0,2053,True
+168,4,fixed,Do you remember a camera event?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,13.4983,0.1918,14.5848,3,0,1,2056,True
+169,4,fixed,What should the robot do if the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,10.0135,5.4549,16.4106,2,0,0,2058,True
+170,4,fixed,What is simultaneous localization and mapping?,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,12.8727,13.662,27.6731,3,1,0,2061,True
+171,4,fixed,Tell me about the robotic gripper.,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,15.2683,13.5221,29.8157,3,1,0,2064,True
+172,4,fixed,What happened to a sensor before?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,14.6425,0.1697,15.7852,3,0,1,2067,True
+173,4,fixed,Explain the ultrasonic rangefinder.,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,15.9312,14.1254,31.2777,3,1,0,2070,True
+174,4,fixed,What should the robot do if a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,10.4452,5.7413,17.2817,2,0,0,2072,True
+175,4,fixed,What is an ultrasonic sensor?,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,14.6767,13.9362,29.8392,3,1,0,2075,True
+176,4,fixed,Explain SLAM.,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,14.7853,14.0855,30.0195,3,1,0,2078,True
+177,4,fixed,What should the robot do if an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,9.9207,5.5785,16.545,2,0,0,2080,True
+178,4,fixed,Do you remember a sensor experience?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,14.8434,0.1347,15.8691,3,0,1,2083,True
+179,4,fixed,What is a depth camera?,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,14.5403,13.4794,29.2717,3,1,0,2086,True
+180,4,fixed,Do you remember an obstacle?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,15.4719,0.0684,16.4401,3,0,1,2089,True
+181,4,fixed,What is a servo motor?,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,16.9189,14.1615,32.2867,3,1,0,2092,True
+182,4,fixed,What happened during navigation before?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,15.3319,0.2401,16.8807,3,0,1,2095,True
+183,4,fixed,Explain rotary encoders.,semantic,encoder,found,semantic,encoder,fuzzy,0.85,found,1,15.5009,37.5024,54.4044,3,1,0,2098,True
+184,4,fixed,What is the purpose of ROS 2?,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,15.7833,13.7891,30.8959,3,1,0,2101,True
+185,4,fixed,Do you remember a motor experience?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,15.5044,0.2333,16.9913,3,0,1,2104,True
+186,4,fixed,What should the robot do if the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,9.6132,5.9262,16.7481,2,0,0,2106,True
+187,4,fixed,What happened with the battery earlier?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,16.2419,0.1567,17.4174,3,0,1,2109,True
+188,4,fixed,Explain Soar semantic memory.,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,16.2113,13.7942,31.2129,3,1,0,2112,True
+189,4,fixed,What happened with an obstacle before?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,15.8506,0.1369,17.0992,3,0,1,2115,True
+190,4,fixed,What is a robot gripper?,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,15.9571,14.0501,31.2276,3,1,0,2118,True
+191,4,fixed,What does a wheel encoder do?,semantic,encoder,found,semantic,encoder,semantic-alias,1.0,found,1,16.8777,13.9597,32.2521,3,1,0,2121,True
+192,4,fixed,What does SMem store?,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,17.3972,13.8355,32.5645,3,1,0,2124,True
+193,5,fixed,What is an occupancy grid?,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,16.8738,14.3257,32.4093,3,1,0,2127,True
+194,5,fixed,Do you remember an earlier navigation episode?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,15.3069,0.1686,16.3771,3,0,1,2130,True
+195,5,fixed,Describe proportional integral derivative terms.,semantic,pid-controller,found,semantic,pid-controller,controlled-paraphrase,0.96,found,1,15.7844,14.1118,31.193,3,1,0,2133,True
+196,5,fixed,Explain the Robot Operating System 2.,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,14.1529,13.4026,28.9433,3,1,0,2136,True
+197,5,fixed,How should the robot react when a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,8.6214,5.4633,15.1314,2,0,0,2138,True
+198,5,fixed,How should the robot react when localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,8.8319,5.8216,15.4715,2,0,0,2140,True
+199,5,fixed,What does SMem store?,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,14.6259,12.8209,28.6786,3,1,0,2143,True
+200,5,fixed,What happened with an obstacle before?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,13.0789,0.1069,14.2771,3,0,1,2146,True
+201,5,fixed,Do you remember a low battery episode?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,12.9224,0.1247,14.1161,3,0,1,2149,True
+202,5,fixed,Tell me about the robotic gripper.,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,12.7186,13.3164,27.2421,3,1,0,2152,True
+203,5,fixed,What happened to the camera earlier?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,12.3828,0.2335,13.7216,3,0,1,2155,True
+204,5,fixed,What should the robot do if a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,8.3589,5.5579,15.1249,2,0,0,2157,True
+205,5,fixed,What happened during navigation before?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,12.9122,0.1437,14.1222,3,0,1,2160,True
+206,5,fixed,Explain the ultrasonic rangefinder.,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,14.5304,13.5303,29.2759,3,1,0,2163,True
+207,5,fixed,How should the robot react when the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,8.2214,5.4845,14.79,2,0,0,2165,True
+208,5,fixed,Explain rotary encoders.,semantic,encoder,found,semantic,encoder,fuzzy,0.85,found,1,12.8961,34.543,48.4642,3,1,0,2168,True
+209,5,fixed,What does a wheel encoder do?,semantic,encoder,found,semantic,encoder,semantic-alias,1.0,found,1,16.1165,13.2157,30.4808,3,1,0,2171,True
+210,5,fixed,What is simultaneous localization and mapping?,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,18.3867,13.7665,33.4831,3,1,0,2174,True
+211,5,fixed,How should the robot react when the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,10.1456,5.6293,16.7695,2,0,0,2176,True
+212,5,fixed,Tell me about the depth sensor.,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,14.8077,13.3881,29.5572,3,1,0,2179,True
+213,5,fixed,Explain SLAM.,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,15.8914,13.6077,30.876,3,1,0,2182,True
+214,5,fixed,What should the robot do if the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,10.0557,5.9111,17.3251,2,0,0,2184,True
+215,5,fixed,How should the robot react when an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,10.5716,6.0906,17.8476,2,0,0,2186,True
+216,5,fixed,Do you remember a motor experience?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,15.5036,0.2307,16.9333,3,0,1,2189,True
+217,5,fixed,How do robots use a LiDAR sensor?,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,15.9458,14.2949,31.5517,3,1,0,2192,True
+218,5,fixed,Explain the role of a servomotor.,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,14.8209,13.6294,29.7125,3,1,0,2195,True
+219,5,fixed,What is a robot gripper?,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,15.3776,13.4127,29.8174,3,1,0,2198,True
+220,5,fixed,How should the robot react when a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,9.1116,5.5951,15.6833,2,0,0,2200,True
+221,5,fixed,What is a depth camera?,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,14.9816,13.6555,29.7368,3,1,0,2203,True
+222,5,fixed,What is a servo motor?,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,14.5603,13.4997,29.2532,3,1,0,2206,True
+223,5,fixed,Do you remember a sensor experience?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,14.4213,0.1347,15.5569,3,0,1,2209,True
+224,5,fixed,What is the purpose of ROS 2?,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,15.2852,13.4144,29.8775,3,1,0,2212,True
+225,5,fixed,What happened to the motor before?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,13.7141,0.2675,15.0987,3,0,1,2215,True
+226,5,fixed,Explain Soar semantic memory.,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,13.6702,13.2853,28.153,3,1,0,2218,True
+227,5,fixed,Do you remember a camera event?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,14.239,0.2203,15.5418,3,0,1,2221,True
+228,5,fixed,What should the robot do if localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,8.559,5.472,15.1469,2,0,0,2223,True
+229,5,fixed,What should the robot do if a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,8.558,5.3666,15.1547,2,0,0,2225,True
+230,5,fixed,Do you remember an obstacle?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,16.0653,0.0556,17.7866,3,0,1,2228,True
+231,5,fixed,What is an ultrasonic sensor?,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,18.1249,13.6071,33.1034,3,1,0,2231,True
+232,5,fixed,What is the NAO robot?,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,16.3413,13.4009,30.988,3,1,0,2234,True
+233,5,fixed,Tell me about the laser scanner.,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,16.7564,13.8167,31.9323,3,1,0,2237,True
+234,5,fixed,What is a PID controller?,semantic,pid-controller,found,semantic,pid-controller,semantic-alias,1.0,found,1,20.704,13.2856,35.1182,3,1,0,2240,True
+235,5,fixed,What should the robot do if the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,9.8561,6.0461,17.029,2,0,0,2242,True
+236,5,fixed,What should the robot do if an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,9.1081,5.765,15.9011,2,0,0,2244,True
+237,5,fixed,Explain grid map.,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,13.3013,13.0507,27.4221,3,1,0,2247,True
+238,5,fixed,What happened to a sensor before?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,13.2685,0.1601,14.4745,3,0,1,2250,True
+239,5,fixed,Describe the NAO humanoid.,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,17.0639,13.3364,31.7047,3,1,0,2253,True
+240,5,fixed,What happened with the battery earlier?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,14.8481,0.1507,15.9801,3,0,1,2256,True
+241,6,fixed,Tell me about the robotic gripper.,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,13.5493,13.3156,27.6335,3,1,0,2259,True
+242,6,fixed,What is the NAO robot?,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,13.5898,13.1604,27.9834,3,1,0,2262,True
+243,6,fixed,How should the robot react when the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,8.6493,5.4246,15.2362,2,0,0,2264,True
+244,6,fixed,How should the robot react when an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,8.6575,5.3684,15.139,2,0,0,2266,True
+245,6,fixed,What is an ultrasonic sensor?,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,13.3358,13.1411,27.5699,3,1,0,2269,True
+246,6,fixed,Explain rotary encoders.,semantic,encoder,found,semantic,encoder,fuzzy,0.85,found,1,13.9253,34.8897,50.0106,3,1,0,2272,True
+247,6,fixed,How should the robot react when the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,9.8004,5.7551,16.701,2,0,0,2274,True
+248,6,fixed,Tell me about the depth sensor.,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,13.7375,12.9576,27.6852,3,1,0,2277,True
+249,6,fixed,Describe proportional integral derivative terms.,semantic,pid-controller,found,semantic,pid-controller,controlled-paraphrase,0.96,found,1,14.0448,13.5034,28.5648,3,1,0,2280,True
+250,6,fixed,What should the robot do if an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,8.8291,5.4491,15.2473,2,0,0,2282,True
+251,6,fixed,Do you remember a sensor experience?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,13.4409,0.1251,14.5414,3,0,1,2285,True
+252,6,fixed,Explain the role of a servomotor.,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,14.0819,13.3396,28.683,3,1,0,2288,True
+253,6,fixed,How should the robot react when a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,8.7865,5.4743,15.3797,2,0,0,2290,True
+254,6,fixed,What should the robot do if the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,8.7619,5.4262,15.2663,2,0,0,2292,True
+255,6,fixed,What does a wheel encoder do?,semantic,encoder,found,semantic,encoder,semantic-alias,1.0,found,1,13.5796,13.2299,28.0137,3,1,0,2295,True
+256,6,fixed,Explain the Robot Operating System 2.,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,13.7791,13.33,28.2996,3,1,0,2298,True
+257,6,fixed,Do you remember a camera event?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,13.6149,0.1972,14.9334,3,0,1,2301,True
+258,6,fixed,What happened with the battery earlier?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,14.862,0.1248,16.0814,3,0,1,2304,True
+259,6,fixed,Do you remember a low battery episode?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,14.4449,0.0847,15.6397,3,0,1,2307,True
+260,6,fixed,Explain grid map.,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,14.117,13.1083,28.3504,3,1,0,2310,True
+261,6,fixed,How do robots use a LiDAR sensor?,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,13.9479,13.3299,28.4838,3,1,0,2313,True
+262,6,fixed,What is a PID controller?,semantic,pid-controller,found,semantic,pid-controller,semantic-alias,1.0,found,1,13.9781,13.2362,28.4106,3,1,0,2316,True
+263,6,fixed,What happened with an obstacle before?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,13.6384,0.1017,14.8392,3,0,1,2319,True
+264,6,fixed,What should the robot do if a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,8.7994,5.448,15.3364,2,0,0,2321,True
+265,6,fixed,Do you remember an earlier navigation episode?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,13.4135,0.1623,14.6387,3,0,1,2324,True
+266,6,fixed,Explain SLAM.,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,13.8657,12.961,27.5958,3,1,0,2327,True
+267,6,fixed,What is an occupancy grid?,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,13.6831,13.2196,27.6714,3,1,0,2330,True
+268,6,fixed,Explain Soar semantic memory.,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,13.6338,13.2293,27.6872,3,1,0,2333,True
+269,6,fixed,What should the robot do if localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,8.6454,5.4002,14.82,2,0,0,2335,True
+270,6,fixed,What is a servo motor?,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,13.7867,13.0339,27.5633,3,1,0,2338,True
+271,6,fixed,What is a robot gripper?,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,13.7713,13.1365,27.7044,3,1,0,2341,True
+272,6,fixed,Tell me about the laser scanner.,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,13.7633,13.2253,27.8025,3,1,0,2344,True
+273,6,fixed,What should the robot do if a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,8.846,5.4006,15.0231,2,0,0,2346,True
+274,6,fixed,What happened during navigation before?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,13.692,0.1712,14.591,3,0,1,2349,True
+275,6,fixed,What should the robot do if the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,8.8913,5.439,15.2041,2,0,0,2351,True
+276,6,fixed,Describe the NAO humanoid.,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,14.484,13.1821,28.4661,3,1,0,2354,True
+277,6,fixed,Explain the ultrasonic rangefinder.,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,13.9486,13.2166,27.9461,3,1,0,2357,True
+278,6,fixed,How should the robot react when a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,8.8439,5.4857,15.3404,2,0,0,2359,True
+279,6,fixed,Do you remember a motor experience?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,13.9998,0.2419,15.2325,3,0,1,2362,True
+280,6,fixed,What happened to the motor before?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,14.4217,0.1773,15.5027,3,0,1,2365,True
+281,6,fixed,What is a depth camera?,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,14.801,13.1357,29.1002,3,1,0,2368,True
+282,6,fixed,What is simultaneous localization and mapping?,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,14.2413,13.6398,29.1004,3,1,0,2371,True
+283,6,fixed,How should the robot react when localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,9.0206,5.4529,15.5509,2,0,0,2373,True
+284,6,fixed,What is the purpose of ROS 2?,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,14.1616,13.1664,28.4562,3,1,0,2376,True
+285,6,fixed,What happened to a sensor before?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,14.6053,0.1909,15.8696,3,0,1,2379,True
+286,6,fixed,Do you remember an obstacle?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,14.1754,0.0583,15.3626,3,0,1,2382,True
+287,6,fixed,What happened to the camera earlier?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,14.0198,0.1979,15.2941,3,0,1,2385,True
+288,6,fixed,What does SMem store?,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,15.3822,13.2768,29.9848,3,1,0,2388,True
+289,7,fixed,What is the purpose of ROS 2?,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,14.8014,13.212,28.97,3,1,0,2391,True
+290,7,fixed,What is an ultrasonic sensor?,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,15.1496,13.2367,29.6537,3,1,0,2394,True
+291,7,fixed,What happened to the camera earlier?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,14.5037,0.2261,15.7953,3,0,1,2397,True
+292,7,fixed,What is simultaneous localization and mapping?,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,14.6704,13.5298,29.3445,3,1,0,2400,True
+293,7,fixed,Tell me about the depth sensor.,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,16.3656,13.5393,31.1882,3,1,0,2403,True
+294,7,fixed,Do you remember an obstacle?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,14.5696,0.0661,15.7427,3,0,1,2406,True
+295,7,fixed,Do you remember a low battery episode?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,16.3208,0.0969,17.5335,3,0,1,2409,True
+296,7,fixed,Explain rotary encoders.,semantic,encoder,found,semantic,encoder,fuzzy,0.85,found,1,16.3422,35.3166,52.7463,3,1,0,2412,True
+297,7,fixed,What happened with the battery earlier?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,15.025,0.1348,16.1152,3,0,1,2415,True
+298,7,fixed,Do you remember an earlier navigation episode?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,14.7926,0.1473,15.8812,3,0,1,2418,True
+299,7,fixed,Explain the role of a servomotor.,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,14.5302,13.457,29.0463,3,1,0,2421,True
+300,7,fixed,Do you remember a motor experience?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,14.353,0.2275,15.6973,3,0,1,2424,True
+301,7,fixed,Tell me about the laser scanner.,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,15.113,13.3117,29.5901,3,1,0,2427,True
+302,7,fixed,What should the robot do if a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,10.2135,5.5841,16.9888,2,0,0,2429,True
+303,7,fixed,What should the robot do if a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,9.5691,5.4508,16.0832,2,0,0,2431,True
+304,7,fixed,What does SMem store?,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,14.8498,13.1622,29.2137,3,1,0,2434,True
+305,7,fixed,Explain SLAM.,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,14.682,13.0065,28.7889,3,1,0,2437,True
+306,7,fixed,Describe the NAO humanoid.,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,14.7197,13.2221,29.156,3,1,0,2440,True
+307,7,fixed,How should the robot react when the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,9.2863,5.4391,15.8489,2,0,0,2442,True
+308,7,fixed,What happened during navigation before?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,14.5768,0.1801,15.8031,3,0,1,2445,True
+309,7,fixed,How should the robot react when a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,9.6007,5.4488,16.1168,2,0,0,2447,True
+310,7,fixed,How should the robot react when an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,9.3422,5.455,15.8565,2,0,0,2449,True
+311,7,fixed,What is a PID controller?,semantic,pid-controller,found,semantic,pid-controller,semantic-alias,1.0,found,1,14.5498,13.1833,28.893,3,1,0,2452,True
+312,7,fixed,What should the robot do if an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,9.5264,5.4888,16.0803,2,0,0,2454,True
+313,7,fixed,How do robots use a LiDAR sensor?,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,14.9924,13.2792,29.1937,3,1,0,2457,True
+314,7,fixed,Explain the ultrasonic rangefinder.,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,17.1816,13.6996,31.7366,3,1,0,2460,True
+315,7,fixed,What happened to the motor before?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,16.2969,0.2742,17.4801,3,0,1,2463,True
+316,7,fixed,What is a depth camera?,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,14.7819,13.194,28.8979,3,1,0,2466,True
+317,7,fixed,What is a robot gripper?,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,15.2321,13.1736,29.1885,3,1,0,2469,True
+318,7,fixed,Explain grid map.,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,14.9657,13.0467,28.8269,3,1,0,2472,True
+319,7,fixed,What should the robot do if the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,9.4207,5.4256,15.6109,2,0,0,2474,True
+320,7,fixed,Explain the Robot Operating System 2.,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,14.9016,13.2723,28.9942,3,1,0,2477,True
+321,7,fixed,What happened with an obstacle before?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,14.7284,0.1035,15.5789,3,0,1,2480,True
+322,7,fixed,What is an occupancy grid?,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,14.9169,13.2341,29.0473,3,1,0,2483,True
+323,7,fixed,Explain Soar semantic memory.,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,15.9959,13.1904,30.1194,3,1,0,2486,True
+324,7,fixed,Tell me about the robotic gripper.,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,14.86,13.3471,28.9586,3,1,0,2489,True
+325,7,fixed,What should the robot do if the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,9.5651,5.4927,15.8201,2,0,0,2491,True
+326,7,fixed,What is the NAO robot?,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,15.0575,13.0925,28.9585,3,1,0,2494,True
+327,7,fixed,How should the robot react when the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,9.4726,5.4303,15.7716,2,0,0,2496,True
+328,7,fixed,What does a wheel encoder do?,semantic,encoder,found,semantic,encoder,semantic-alias,1.0,found,1,15.624,13.4847,30.1732,3,1,0,2499,True
+329,7,fixed,Describe proportional integral derivative terms.,semantic,pid-controller,found,semantic,pid-controller,controlled-paraphrase,0.96,found,1,15.2759,13.3831,29.4758,3,1,0,2502,True
+330,7,fixed,How should the robot react when localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,9.5457,5.4582,15.7564,2,0,0,2504,True
+331,7,fixed,What is a servo motor?,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,14.761,13.0896,28.6308,3,1,0,2507,True
+332,7,fixed,What happened to a sensor before?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,14.6406,0.1533,15.5017,3,0,1,2510,True
+333,7,fixed,What should the robot do if localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,9.4773,5.4421,15.6425,2,0,0,2512,True
+334,7,fixed,How should the robot react when a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,9.2274,5.3552,15.5258,2,0,0,2514,True
+335,7,fixed,Do you remember a sensor experience?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,14.7096,0.1025,15.707,3,0,1,2517,True
+336,7,fixed,Do you remember a camera event?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,14.4865,0.1702,15.6035,3,0,1,2520,True
+337,8,fixed,Tell me about the depth sensor.,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,18.3083,13.4895,33.0529,3,1,0,2523,True
+338,8,fixed,Tell me about the laser scanner.,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,18.6243,13.2447,32.8756,3,1,0,2526,True
+339,8,fixed,Explain the ultrasonic rangefinder.,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,20.1988,13.4698,35.0576,3,1,0,2529,True
+340,8,fixed,Tell me about the robotic gripper.,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,22.5612,14.9753,39.023,3,1,0,2532,True
+341,8,fixed,Describe the NAO humanoid.,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,20.506,14.8098,36.686,3,1,0,2535,True
+342,8,fixed,Do you remember a sensor experience?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,18.6864,0.1328,20.0477,3,0,1,2538,True
+343,8,fixed,What should the robot do if an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,12.3551,6.2285,19.6596,2,0,0,2540,True
+344,8,fixed,What happened to the motor before?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,18.6609,0.2346,19.6506,3,0,1,2543,True
+345,8,fixed,Explain grid map.,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,18.1797,13.4103,32.5156,3,1,0,2546,True
+346,8,fixed,How should the robot react when a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,11.6032,5.5937,18.306,2,0,0,2548,True
+347,8,fixed,What should the robot do if a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,11.1633,5.5344,17.7336,2,0,0,2550,True
+348,8,fixed,What does a wheel encoder do?,semantic,encoder,found,semantic,encoder,semantic-alias,1.0,found,1,20.245,13.6594,35.0153,3,1,0,2553,True
+349,8,fixed,What is a servo motor?,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,22.6362,14.5666,38.4125,3,1,0,2556,True
+350,8,fixed,What is the purpose of ROS 2?,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,17.2295,13.9316,32.1209,3,1,0,2559,True
+351,8,fixed,What is a depth camera?,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,16.322,13.5352,30.6909,3,1,0,2562,True
+352,8,fixed,What is a robot gripper?,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,15.7418,13.0883,29.7026,3,1,0,2565,True
+353,8,fixed,How should the robot react when a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,10.2521,5.5664,16.9135,2,0,0,2567,True
+354,8,fixed,What does SMem store?,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,15.9457,13.1901,30.127,3,1,0,2570,True
+355,8,fixed,Do you remember an obstacle?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,16.5611,0.0578,17.5174,3,0,1,2573,True
+356,8,fixed,Explain rotary encoders.,semantic,encoder,found,semantic,encoder,fuzzy,0.85,found,1,16.5891,35.1042,52.5754,3,1,0,2576,True
+357,8,fixed,What should the robot do if localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,10.2495,5.4133,16.4188,2,0,0,2578,True
+358,8,fixed,What happened to the camera earlier?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,15.3295,0.2113,16.4143,3,0,1,2581,True
+359,8,fixed,How should the robot react when an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,9.8571,5.365,16.1839,2,0,0,2583,True
+360,8,fixed,What happened to a sensor before?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,15.6116,0.1138,16.7437,3,0,1,2586,True
+361,8,fixed,Describe proportional integral derivative terms.,semantic,pid-controller,found,semantic,pid-controller,controlled-paraphrase,0.96,found,1,16.2829,13.445,30.7132,3,1,0,2589,True
+362,8,fixed,Do you remember a low battery episode?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,15.8146,0.0896,16.8277,3,0,1,2592,True
+363,8,fixed,What is a PID controller?,semantic,pid-controller,found,semantic,pid-controller,semantic-alias,1.0,found,1,16.7979,13.2601,30.9907,3,1,0,2595,True
+364,8,fixed,How should the robot react when the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,10.1002,5.4391,16.2552,2,0,0,2597,True
+365,8,fixed,What should the robot do if the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,10.2009,5.4273,16.3819,2,0,0,2599,True
+366,8,fixed,What is an occupancy grid?,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,19.425,13.3975,33.7405,3,1,0,2602,True
+367,8,fixed,What happened with an obstacle before?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,17.4951,0.1016,18.3361,3,0,1,2605,True
+368,8,fixed,Explain the Robot Operating System 2.,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,16.7661,13.7698,31.3344,3,1,0,2608,True
+369,8,fixed,What is the NAO robot?,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,16.2415,13.144,30.1918,3,1,0,2611,True
+370,8,fixed,What happened with the battery earlier?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,16.5159,0.139,17.4717,3,0,1,2614,True
+371,8,fixed,What is simultaneous localization and mapping?,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,16.3285,13.45,30.8032,3,1,0,2617,True
+372,8,fixed,What is an ultrasonic sensor?,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,16.0622,13.2191,30.061,3,1,0,2620,True
+373,8,fixed,What should the robot do if the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,10.144,5.4799,16.3982,2,0,0,2622,True
+374,8,fixed,How should the robot react when the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,10.331,5.511,16.8398,2,0,0,2624,True
+375,8,fixed,Explain Soar semantic memory.,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,16.1537,13.6246,30.6191,3,1,0,2627,True
+376,8,fixed,How should the robot react when localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,12.7419,5.6283,19.2419,2,0,0,2629,True
+377,8,fixed,Do you remember a camera event?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,16.8723,0.1914,17.9157,3,0,1,2632,True
+378,8,fixed,Do you remember an earlier navigation episode?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,16.7386,0.1219,17.9438,3,0,1,2635,True
+379,8,fixed,What should the robot do if a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,11.9412,5.4467,18.47,2,0,0,2637,True
+380,8,fixed,Explain the role of a servomotor.,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,17.1645,13.3314,31.7058,3,1,0,2640,True
+381,8,fixed,Do you remember a motor experience?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,16.2826,0.2246,17.6125,3,0,1,2643,True
+382,8,fixed,How do robots use a LiDAR sensor?,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,16.2232,13.2996,30.6268,3,1,0,2646,True
+383,8,fixed,Explain SLAM.,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,17.0559,13.0996,31.39,3,1,0,2649,True
+384,8,fixed,What happened during navigation before?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,16.5109,0.2004,17.9083,3,0,1,2652,True
+385,9,fixed,What is the purpose of ROS 2?,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,18.4619,13.5726,33.2684,3,1,0,2655,True
+386,9,fixed,Describe the NAO humanoid.,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,16.921,13.2852,31.3721,3,1,0,2658,True
+387,9,fixed,What does SMem store?,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,16.3941,13.161,30.7125,3,1,0,2661,True
+388,9,fixed,Describe proportional integral derivative terms.,semantic,pid-controller,found,semantic,pid-controller,controlled-paraphrase,0.96,found,1,16.0828,13.3834,30.6094,3,1,0,2664,True
+389,9,fixed,Tell me about the laser scanner.,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,16.5685,13.2295,31.0341,3,1,0,2667,True
+390,9,fixed,Explain rotary encoders.,semantic,encoder,found,semantic,encoder,fuzzy,0.85,found,1,17.1193,34.8702,53.1771,3,1,0,2670,True
+391,9,fixed,Explain grid map.,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,16.8843,13.1501,31.1909,3,1,0,2673,True
+392,9,fixed,How should the robot react when a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,10.506,5.5146,17.1994,2,0,0,2675,True
+393,9,fixed,What should the robot do if the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,10.5323,5.4771,17.1481,2,0,0,2677,True
+394,9,fixed,What happened during navigation before?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,16.2443,0.1956,17.5174,3,0,1,2680,True
+395,9,fixed,What should the robot do if an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,10.645,5.4494,17.1749,2,0,0,2682,True
+396,9,fixed,What happened to the camera earlier?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,16.1972,0.1849,17.4859,3,0,1,2685,True
+397,9,fixed,Do you remember a low battery episode?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,15.9348,0.0797,17.1121,3,0,1,2688,True
+398,9,fixed,How do robots use a LiDAR sensor?,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,16.6802,13.37,31.2542,3,1,0,2691,True
+399,9,fixed,Do you remember an obstacle?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,16.4884,0.0642,17.6724,3,0,1,2694,True
+400,9,fixed,What happened to the motor before?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,16.2096,0.2635,17.5592,3,0,1,2697,True
+401,9,fixed,How should the robot react when the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,11.0647,5.5386,17.8673,2,0,0,2699,True
+402,9,fixed,What is simultaneous localization and mapping?,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,16.5309,13.4441,31.0808,3,1,0,2702,True
+403,9,fixed,What is an occupancy grid?,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,16.5257,13.2579,30.8947,3,1,0,2705,True
+404,9,fixed,What is a depth camera?,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,16.7139,13.495,31.4228,3,1,0,2708,True
+405,9,fixed,What should the robot do if the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,10.3174,5.4889,16.9333,2,0,0,2710,True
+406,9,fixed,Explain SLAM.,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,17.1206,13.5889,31.9755,3,1,0,2713,True
+407,9,fixed,What happened with the battery earlier?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,16.5459,0.1321,17.7215,3,0,1,2716,True
+408,9,fixed,Tell me about the robotic gripper.,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,17.2827,13.3393,31.8867,3,1,0,2719,True
+409,9,fixed,What should the robot do if a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,13.0226,5.6113,19.8975,2,0,0,2721,True
+410,9,fixed,What is a robot gripper?,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,17.8548,13.2993,32.3911,3,1,0,2724,True
+411,9,fixed,What does a wheel encoder do?,semantic,encoder,found,semantic,encoder,semantic-alias,1.0,found,1,17.1589,13.2423,31.5244,3,1,0,2727,True
+412,9,fixed,Explain Soar semantic memory.,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,17.2511,13.3136,31.7732,3,1,0,2730,True
+413,9,fixed,What is an ultrasonic sensor?,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,16.7312,13.2751,31.2088,3,1,0,2733,True
+414,9,fixed,Explain the Robot Operating System 2.,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,17.0577,13.4563,31.6976,3,1,0,2736,True
+415,9,fixed,What happened with an obstacle before?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,18.9472,0.1008,20.1711,3,0,1,2739,True
+416,9,fixed,What happened to a sensor before?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,17.9101,0.1551,19.1473,3,0,1,2742,True
+417,9,fixed,What should the robot do if a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,11.2153,5.5155,17.8757,2,0,0,2744,True
+418,9,fixed,Explain the role of a servomotor.,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,26.2791,13.8087,41.3847,3,1,0,2747,True
+419,9,fixed,How should the robot react when the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,12.4995,5.5831,19.1436,2,0,0,2749,True
+420,9,fixed,Tell me about the depth sensor.,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,17.8442,13.7287,32.7784,3,1,0,2752,True
+421,9,fixed,Do you remember a sensor experience?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,17.4525,0.1611,18.7926,3,0,1,2755,True
+422,9,fixed,What is the NAO robot?,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,17.8141,13.2427,32.2127,3,1,0,2758,True
+423,9,fixed,Do you remember a camera event?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,18.2869,0.2076,19.5989,3,0,1,2761,True
+424,9,fixed,How should the robot react when a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,11.0817,5.4779,17.6641,2,0,0,2763,True
+425,9,fixed,How should the robot react when localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,10.8282,5.4227,17.3187,2,0,0,2765,True
+426,9,fixed,Do you remember a motor experience?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,16.8529,0.1764,18.1048,3,0,1,2768,True
+427,9,fixed,What is a servo motor?,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,17.0728,13.2131,31.5123,3,1,0,2771,True
+428,9,fixed,Explain the ultrasonic rangefinder.,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,17.2608,13.3865,31.855,3,1,0,2774,True
+429,9,fixed,What is a PID controller?,semantic,pid-controller,found,semantic,pid-controller,semantic-alias,1.0,found,1,17.0503,13.2868,31.5087,3,1,0,2777,True
+430,9,fixed,How should the robot react when an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,10.8075,5.4677,17.4483,2,0,0,2779,True
+431,9,fixed,Do you remember an earlier navigation episode?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,16.5807,0.1723,17.7909,3,0,1,2782,True
+432,9,fixed,What should the robot do if localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,10.9083,5.5982,17.6653,2,0,0,2784,True
+433,10,fixed,What happened to the camera earlier?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,16.5916,0.1812,17.8866,3,0,1,2787,True
+434,10,fixed,What should the robot do if a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,10.7212,5.413,17.2109,2,0,0,2789,True
+435,10,fixed,What is a robot gripper?,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,17.6195,13.2566,31.9219,3,1,0,2792,True
+436,10,fixed,Explain SLAM.,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,17.5458,13.0297,31.7951,3,1,0,2795,True
+437,10,fixed,What happened with the battery earlier?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,18.5886,0.1362,19.8158,3,0,1,2798,True
+438,10,fixed,What is the NAO robot?,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,21.7967,13.2118,36.0771,3,1,0,2801,True
+439,10,fixed,Explain the role of a servomotor.,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,27.6984,14.6608,43.9965,3,1,0,2804,True
+440,10,fixed,What is simultaneous localization and mapping?,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,19.7835,13.5278,34.3349,3,1,0,2807,True
+441,10,fixed,What happened with an obstacle before?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,24.1136,0.0989,25.2805,3,0,1,2810,True
+442,10,fixed,What is a depth camera?,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,28.059,13.749,42.8389,3,1,0,2813,True
+443,10,fixed,What happened to a sensor before?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,28.5668,0.2324,29.795,3,0,1,2816,True
+444,10,fixed,Describe proportional integral derivative terms.,semantic,pid-controller,found,semantic,pid-controller,controlled-paraphrase,0.96,found,1,18.4395,13.4358,32.7279,3,1,0,2819,True
+445,10,fixed,How should the robot react when a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,12.0786,5.4806,18.5446,2,0,0,2821,True
+446,10,fixed,Explain rotary encoders.,semantic,encoder,found,semantic,encoder,fuzzy,0.85,found,1,18.6045,35.1857,54.6803,3,1,0,2824,True
+447,10,fixed,What is a PID controller?,semantic,pid-controller,found,semantic,pid-controller,semantic-alias,1.0,found,1,18.0163,13.5486,32.4413,3,1,0,2827,True
+448,10,fixed,What happened during navigation before?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,17.5044,0.198,18.6214,3,0,1,2830,True
+449,10,fixed,What is a servo motor?,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,17.2584,13.1436,31.4734,3,1,0,2833,True
+450,10,fixed,Do you remember a camera event?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,17.0619,0.1937,18.324,3,0,1,2836,True
+451,10,fixed,What is an ultrasonic sensor?,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,24.4862,13.3304,39.1309,3,1,0,2839,True
+452,10,fixed,What should the robot do if a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,17.978,5.8108,25.206,2,0,0,2841,True
+453,10,fixed,Explain the Robot Operating System 2.,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,22.446,14.5528,38.1825,3,1,0,2844,True
+454,10,fixed,What does a wheel encoder do?,semantic,encoder,found,semantic,encoder,semantic-alias,1.0,found,1,23.6725,14.0743,39.0153,3,1,0,2847,True
+455,10,fixed,What should the robot do if localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,16.4706,6.5061,24.1602,2,0,0,2849,True
+456,10,fixed,Explain Soar semantic memory.,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,19.4914,13.5521,33.9557,3,1,0,2852,True
+457,10,fixed,What should the robot do if an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,12.2488,5.4939,18.5153,2,0,0,2854,True
+458,10,fixed,Tell me about the robotic gripper.,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,20.2414,13.3241,34.454,3,1,0,2857,True
+459,10,fixed,What should the robot do if the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,12.0137,5.666,18.5367,2,0,0,2859,True
+460,10,fixed,Do you remember an obstacle?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,18.2258,0.0494,19.1339,3,0,1,2862,True
+461,10,fixed,What is the purpose of ROS 2?,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,18.4461,13.2524,32.7389,3,1,0,2865,True
+462,10,fixed,Do you remember an earlier navigation episode?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,17.7016,0.1573,18.8551,3,0,1,2868,True
+463,10,fixed,How should the robot react when an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,11.7297,5.5317,18.5299,2,0,0,2870,True
+464,10,fixed,Do you remember a sensor experience?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,17.5928,0.098,18.7237,3,0,1,2873,True
+465,10,fixed,Tell me about the laser scanner.,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,18.4948,13.3484,32.9279,3,1,0,2876,True
+466,10,fixed,Tell me about the depth sensor.,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,17.7721,13.3636,32.2411,3,1,0,2879,True
+467,10,fixed,What does SMem store?,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,18.3368,13.1836,32.6561,3,1,0,2882,True
+468,10,fixed,Do you remember a motor experience?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,17.6944,0.2344,18.9964,3,0,1,2885,True
+469,10,fixed,How should the robot react when localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,11.4895,5.4455,18.0077,2,0,0,2887,True
+470,10,fixed,Do you remember a low battery episode?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,17.367,0.079,18.5467,3,0,1,2890,True
+471,10,fixed,Describe the NAO humanoid.,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,17.8991,13.1732,32.3657,3,1,0,2893,True
+472,10,fixed,How do robots use a LiDAR sensor?,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,18.1391,13.3644,32.7334,3,1,0,2896,True
+473,10,fixed,How should the robot react when a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,11.5636,5.4662,18.1499,2,0,0,2898,True
+474,10,fixed,Explain the ultrasonic rangefinder.,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,19.2902,13.4116,33.8866,3,1,0,2901,True
+475,10,fixed,Explain grid map.,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,18.0826,13.031,32.2063,3,1,0,2904,True
+476,10,fixed,What is an occupancy grid?,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,19.5167,13.2691,33.9511,3,1,0,2907,True
+477,10,fixed,What happened to the motor before?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,17.7874,0.2575,19.1078,3,0,1,2910,True
+478,10,fixed,How should the robot react when the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,11.6034,5.506,18.2966,2,0,0,2912,True
+479,10,fixed,How should the robot react when the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,11.5116,5.413,18.0728,2,0,0,2914,True
+480,10,fixed,What should the robot do if the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,11.2593,5.3755,17.7152,2,0,0,2916,True
+481,11,fixed,Tell me about the laser scanner.,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,18.4381,13.3069,33.1412,3,1,0,2919,True
+482,11,fixed,Do you remember an earlier navigation episode?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,19.1852,0.2262,20.4947,3,0,1,2922,True
+483,11,fixed,What happened during navigation before?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,19.0482,0.1649,20.4007,3,0,1,2925,True
+484,11,fixed,What is a PID controller?,semantic,pid-controller,found,semantic,pid-controller,semantic-alias,1.0,found,1,28.3443,13.9675,43.2064,3,1,0,2928,True
+485,11,fixed,What happened to the motor before?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,22.1197,0.2713,23.3072,3,0,1,2931,True
+486,11,fixed,Do you remember an obstacle?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,27.8366,0.0608,28.8475,3,0,1,2934,True
+487,11,fixed,What should the robot do if the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,15.8434,5.5416,22.6706,2,0,0,2936,True
+488,11,fixed,What is a servo motor?,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,24.6462,13.5943,39.5101,3,1,0,2939,True
+489,11,fixed,What happened with the battery earlier?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,24.1136,0.1404,25.4238,3,0,1,2942,True
+490,11,fixed,What is a robot gripper?,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,22.5978,13.8772,37.638,3,1,0,2945,True
+491,11,fixed,Explain rotary encoders.,semantic,encoder,found,semantic,encoder,fuzzy,0.85,found,1,21.3254,35.3183,57.9587,3,1,0,2948,True
+492,11,fixed,How should the robot react when the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,13.1088,5.5232,19.6063,2,0,0,2950,True
+493,11,fixed,What is the NAO robot?,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,18.9252,13.1286,33.2406,3,1,0,2953,True
+494,11,fixed,Explain the role of a servomotor.,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,20.8118,13.5684,35.5992,3,1,0,2956,True
+495,11,fixed,What is an ultrasonic sensor?,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,22.9133,13.4696,37.7106,3,1,0,2959,True
+496,11,fixed,How should the robot react when a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,13.1533,5.593,19.8868,2,0,0,2961,True
+497,11,fixed,What happened with an obstacle before?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,18.9837,0.082,20.1418,3,0,1,2964,True
+498,11,fixed,Do you remember a sensor experience?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,18.3427,0.1573,19.5957,3,0,1,2967,True
+499,11,fixed,What should the robot do if the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,25.7121,5.4689,32.2839,2,0,0,2969,True
+500,11,fixed,Do you remember a motor experience?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,35.8966,0.2378,37.2938,3,0,1,2972,True
+501,11,fixed,Do you remember a camera event?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,28.5173,0.1468,29.5512,3,0,1,2975,True
+502,11,fixed,What should the robot do if localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,15.5399,5.637,22.1145,2,0,0,2977,True
+503,11,fixed,What should the robot do if an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,15.4522,5.6107,22.006,2,0,0,2979,True
+504,11,fixed,Explain grid map.,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,23.5575,13.8573,38.3975,3,1,0,2982,True
+505,11,fixed,Explain SLAM.,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,24.2275,13.3777,38.609,3,1,0,2985,True
+506,11,fixed,Explain the Robot Operating System 2.,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,22.0748,14.204,37.2023,3,1,0,2988,True
+507,11,fixed,What does SMem store?,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,22.8159,13.801,37.5166,3,1,0,2991,True
+508,11,fixed,Do you remember a low battery episode?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,23.368,0.0969,24.2427,3,0,1,2994,True
+509,11,fixed,Describe the NAO humanoid.,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,20.8034,13.534,35.2194,3,1,0,2997,True
+510,11,fixed,Describe proportional integral derivative terms.,semantic,pid-controller,found,semantic,pid-controller,controlled-paraphrase,0.96,found,1,22.4543,14.1049,37.4629,3,1,0,3000,True
+511,11,fixed,What does a wheel encoder do?,semantic,encoder,found,semantic,encoder,semantic-alias,1.0,found,1,20.7536,13.6709,35.2889,3,1,0,3003,True
+512,11,fixed,What should the robot do if a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,14.8542,6.1402,22.0365,2,0,0,3005,True
+513,11,fixed,How should the robot react when localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,14.2039,5.521,20.7204,2,0,0,3007,True
+514,11,fixed,What happened to a sensor before?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,20.2113,0.1469,21.2345,3,0,1,3010,True
+515,11,fixed,How should the robot react when the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,13.6666,5.7021,20.665,2,0,0,3012,True
+516,11,fixed,How should the robot react when an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,14.5362,5.9595,21.587,2,0,0,3014,True
+517,11,fixed,Explain the ultrasonic rangefinder.,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,46.2108,14.0581,61.8731,3,1,0,3017,True
+518,11,fixed,What happened to the camera earlier?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,45.0144,0.3103,46.5722,3,0,1,3020,True
+519,11,fixed,What is an occupancy grid?,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,29.9072,15.0402,46.1393,3,1,0,3023,True
+520,11,fixed,How do robots use a LiDAR sensor?,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,95.3519,19.5645,116.9816,3,1,0,3026,True
+521,11,fixed,Explain Soar semantic memory.,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,46.2719,14.7844,62.5651,3,1,0,3029,True
+522,11,fixed,Tell me about the robotic gripper.,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,25.0022,18.4429,44.4031,3,1,0,3032,True
+523,11,fixed,What is a depth camera?,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,21.9341,14.3025,37.1828,3,1,0,3035,True
+524,11,fixed,What is simultaneous localization and mapping?,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,26.2316,14.0999,41.4051,3,1,0,3038,True
+525,11,fixed,How should the robot react when a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,13.5214,5.6581,20.0266,2,0,0,3040,True
+526,11,fixed,What is the purpose of ROS 2?,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,35.0301,14.6108,51.6133,3,1,0,3043,True
+527,11,fixed,What should the robot do if a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,22.4306,6.9685,30.58,2,0,0,3045,True
+528,11,fixed,Tell me about the depth sensor.,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,39.6741,25.3089,66.2266,3,1,0,3048,True
+529,12,fixed,What should the robot do if a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,20.3834,6.447,27.8071,2,0,0,3050,True
+530,12,fixed,What is a depth camera?,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,32.4343,33.9772,67.524,3,1,0,3053,True
+531,12,fixed,What is the purpose of ROS 2?,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,23.7478,13.8757,38.5441,3,1,0,3056,True
+532,12,fixed,What should the robot do if the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,25.3286,6.1536,32.9858,2,0,0,3058,True
+533,12,fixed,What should the robot do if a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,21.6809,7.4132,30.1503,2,0,0,3060,True
+534,12,fixed,What happened to the motor before?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,34.1566,0.259,35.41,3,0,1,3063,True
+535,12,fixed,What happened to a sensor before?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,104.3775,0.1348,108.143,3,0,1,3066,True
+536,12,fixed,Tell me about the laser scanner.,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,37.0942,21.2049,59.2655,3,1,0,3069,True
+537,12,fixed,Explain grid map.,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,29.8002,14.0165,44.7467,3,1,0,3072,True
+538,12,fixed,What is an occupancy grid?,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,32.7844,14.4063,48.1494,3,1,0,3075,True
+539,12,fixed,Explain SLAM.,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,29.6266,15.7464,46.4657,3,1,0,3078,True
+540,12,fixed,How should the robot react when the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,16.0438,5.6463,22.5242,2,0,0,3080,True
+541,12,fixed,How should the robot react when the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,13.8536,5.6029,20.3289,2,0,0,3082,True
+542,12,fixed,What happened during navigation before?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,24.6555,0.1807,25.8525,3,0,1,3085,True
+543,12,fixed,Do you remember a sensor experience?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,22.7764,0.0996,23.9369,3,0,1,3088,True
+544,12,fixed,How should the robot react when a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,16.2614,6.005,23.5515,2,0,0,3090,True
+545,12,fixed,What is the NAO robot?,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,22.0169,13.8512,37.1454,3,1,0,3093,True
+546,12,fixed,How should the robot react when an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,15.39,5.5994,22.1518,2,0,0,3095,True
+547,12,fixed,What does a wheel encoder do?,semantic,encoder,found,semantic,encoder,semantic-alias,1.0,found,1,22.7424,13.9833,37.9185,3,1,0,3098,True
+548,12,fixed,Describe the NAO humanoid.,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,25.5644,13.7744,40.6556,3,1,0,3101,True
+549,12,fixed,How should the robot react when localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,15.3658,5.5327,21.9811,2,0,0,3103,True
+550,12,fixed,Do you remember an obstacle?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,22.88,0.0602,24.061,3,0,1,3106,True
+551,12,fixed,Explain Soar semantic memory.,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,22.6301,13.8267,37.6744,3,1,0,3109,True
+552,12,fixed,What happened with the battery earlier?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,21.3633,0.1395,22.4716,3,0,1,3112,True
+553,12,fixed,What should the robot do if the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,16.1786,6.55,23.9605,2,0,0,3114,True
+554,12,fixed,What is simultaneous localization and mapping?,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,22.0859,13.679,36.8476,3,1,0,3117,True
+555,12,fixed,Explain rotary encoders.,semantic,encoder,found,semantic,encoder,fuzzy,0.85,found,1,23.1693,36.2693,60.7154,3,1,0,3120,True
+556,12,fixed,What should the robot do if an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,16.1751,5.5193,22.6772,2,0,0,3122,True
+557,12,fixed,What happened to the camera earlier?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,24.2256,0.2242,25.4191,3,0,1,3125,True
+558,12,fixed,Explain the ultrasonic rangefinder.,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,23.6601,13.3794,38.0251,3,1,0,3128,True
+559,12,fixed,What should the robot do if localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,16.0116,5.4706,22.5863,2,0,0,3130,True
+560,12,fixed,How should the robot react when a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,14.1289,5.7655,21.352,2,0,0,3132,True
+561,12,fixed,Do you remember a motor experience?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,24.2764,0.2332,25.6732,3,0,1,3135,True
+562,12,fixed,Explain the role of a servomotor.,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,25.744,14.0385,40.9793,3,1,0,3138,True
+563,12,fixed,Tell me about the robotic gripper.,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,26.3278,13.6668,41.144,3,1,0,3141,True
+564,12,fixed,Do you remember a camera event?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,22.6737,0.1911,23.9025,3,0,1,3144,True
+565,12,fixed,Describe proportional integral derivative terms.,semantic,pid-controller,found,semantic,pid-controller,controlled-paraphrase,0.96,found,1,26.0448,13.5417,40.9508,3,1,0,3147,True
+566,12,fixed,How do robots use a LiDAR sensor?,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,22.5697,13.9285,37.8538,3,1,0,3150,True
+567,12,fixed,What is a servo motor?,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,26.2672,14.2098,41.7592,3,1,0,3153,True
+568,12,fixed,What does SMem store?,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,26.8483,13.7817,41.8982,3,1,0,3156,True
+569,12,fixed,Do you remember a low battery episode?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,29.6401,0.1051,30.7168,3,0,1,3159,True
+570,12,fixed,Explain the Robot Operating System 2.,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,26.4284,15.2675,42.9542,3,1,0,3162,True
+571,12,fixed,What is an ultrasonic sensor?,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,27.4624,14.24,43.171,3,1,0,3165,True
+572,12,fixed,Do you remember an earlier navigation episode?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,25.6869,0.1841,26.8919,3,0,1,3168,True
+573,12,fixed,Tell me about the depth sensor.,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,25.8717,14.2851,41.4079,3,1,0,3171,True
+574,12,fixed,What is a robot gripper?,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,28.8894,14.2928,44.4735,3,1,0,3174,True
+575,12,fixed,What happened with an obstacle before?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,26.8031,0.1076,27.9306,3,0,1,3177,True
+576,12,fixed,What is a PID controller?,semantic,pid-controller,found,semantic,pid-controller,semantic-alias,1.0,found,1,25.6076,13.8204,40.5929,3,1,0,3180,True
+577,13,fixed,Tell me about the laser scanner.,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,24.1552,15.3096,40.7323,3,1,0,3183,True
+578,13,fixed,Describe proportional integral derivative terms.,semantic,pid-controller,found,semantic,pid-controller,controlled-paraphrase,0.96,found,1,27.1076,13.7298,42.1431,3,1,0,3186,True
+579,13,fixed,Explain the role of a servomotor.,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,42.7671,14.375,62.4229,3,1,0,3189,True
+580,13,fixed,How should the robot react when an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,20.274,5.7969,27.0248,2,0,0,3191,True
+581,13,fixed,What happened with an obstacle before?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,68.5519,0.0862,77.5895,3,0,1,3194,True
+582,13,fixed,Tell me about the robotic gripper.,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,43.3907,35.8627,80.5184,3,1,0,3197,True
+583,13,fixed,How should the robot react when localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,22.5714,5.7467,29.3374,2,0,0,3199,True
+584,13,fixed,Explain Soar semantic memory.,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,46.0692,14.1383,61.1501,3,1,0,3202,True
+585,13,fixed,Do you remember a sensor experience?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,37.3775,0.1375,38.3551,3,0,1,3205,True
+586,13,fixed,Explain rotary encoders.,semantic,encoder,found,semantic,encoder,fuzzy,0.85,found,1,42.7238,39.28,82.9472,3,1,0,3208,True
+587,13,fixed,Tell me about the depth sensor.,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,40.0696,14.3538,55.5187,3,1,0,3211,True
+588,13,fixed,Explain the Robot Operating System 2.,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,41.3047,18.2586,60.7022,3,1,0,3214,True
+589,13,fixed,What should the robot do if a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,23.3889,5.8612,32.0497,2,0,0,3216,True
+590,13,fixed,What is a PID controller?,semantic,pid-controller,found,semantic,pid-controller,semantic-alias,1.0,found,1,70.3207,16.4693,88.1622,3,1,0,3219,True
+591,13,fixed,What is a robot gripper?,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,37.6692,18.5436,59.9164,3,1,0,3222,True
+592,13,fixed,Explain the ultrasonic rangefinder.,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,47.5364,14.9997,63.578,3,1,0,3225,True
+593,13,fixed,What should the robot do if the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,23.8107,6.4647,32.1836,2,0,0,3227,True
+594,13,fixed,What does a wheel encoder do?,semantic,encoder,found,semantic,encoder,semantic-alias,1.0,found,1,25.1546,14.7709,40.9135,3,1,0,3230,True
+595,13,fixed,What should the robot do if the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,17.7667,5.7234,24.347,2,0,0,3232,True
+596,13,fixed,What is the purpose of ROS 2?,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,30.1361,15.5874,46.7839,3,1,0,3235,True
+597,13,fixed,What does SMem store?,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,33.2589,16.1732,50.4738,3,1,0,3238,True
+598,13,fixed,Explain SLAM.,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,34.2755,14.9987,50.2162,3,1,0,3241,True
+599,13,fixed,What happened during navigation before?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,35.4985,0.21,36.6934,3,0,1,3244,True
+600,13,fixed,What happened to a sensor before?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,90.5288,0.1281,91.467,3,0,1,3247,True
+601,13,fixed,What should the robot do if a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,17.6012,6.7713,25.3179,2,0,0,3249,True
+602,13,fixed,What happened to the camera earlier?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,28.5664,0.1947,29.598,3,0,1,3252,True
+603,13,fixed,How do robots use a LiDAR sensor?,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,31.9424,15.1863,48.4547,3,1,0,3255,True
+604,13,fixed,How should the robot react when a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,18.1279,6.1813,25.7571,2,0,0,3257,True
+605,13,fixed,Do you remember a camera event?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,26.0667,0.2549,27.3479,3,0,1,3260,True
+606,13,fixed,What is an ultrasonic sensor?,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,28.1881,14.2688,43.6995,3,1,0,3263,True
+607,13,fixed,Explain grid map.,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,26.2742,13.9247,41.3575,3,1,0,3266,True
+608,13,fixed,What is a depth camera?,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,29.4234,16.1014,47.0504,3,1,0,3269,True
+609,13,fixed,Do you remember a low battery episode?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,32.9368,0.1274,34.3074,3,0,1,3272,True
+610,13,fixed,How should the robot react when the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,18.4245,6.825,26.4257,2,0,0,3274,True
+611,13,fixed,What should the robot do if localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,19.9409,5.8004,26.6205,2,0,0,3276,True
+612,13,fixed,What is the NAO robot?,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,38.9342,15.5219,55.6168,3,1,0,3279,True
+613,13,fixed,What should the robot do if an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,18.5777,5.6,25.0185,2,0,0,3281,True
+614,13,fixed,What is simultaneous localization and mapping?,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,31.4508,16.1971,50.331,3,1,0,3284,True
+615,13,fixed,Do you remember an earlier navigation episode?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,28.6943,0.1923,29.7166,3,0,1,3287,True
+616,13,fixed,How should the robot react when a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,18.441,5.7069,25.2606,2,0,0,3289,True
+617,13,fixed,What happened with the battery earlier?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,26.5378,0.1115,27.6443,3,0,1,3292,True
+618,13,fixed,What is an occupancy grid?,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,33.4019,14.8765,49.2818,3,1,0,3295,True
+619,13,fixed,Do you remember a motor experience?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,33.6155,0.2513,34.8132,3,0,1,3298,True
+620,13,fixed,What is a servo motor?,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,27.0171,14.1808,42.4549,3,1,0,3301,True
+621,13,fixed,Describe the NAO humanoid.,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,35.257,14.1344,50.4689,3,1,0,3304,True
+622,13,fixed,What happened to the motor before?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,36.9931,0.2965,38.3837,3,0,1,3307,True
+623,13,fixed,How should the robot react when the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,21.7607,5.7228,28.9781,2,0,0,3309,True
+624,13,fixed,Do you remember an obstacle?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,30.3596,0.0651,31.2928,3,0,1,3312,True
+625,14,fixed,Do you remember an obstacle?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,27.7542,0.0569,28.6959,3,0,1,3315,True
+626,14,fixed,How should the robot react when localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,20.231,6.0422,27.4799,2,0,0,3317,True
+627,14,fixed,What is a PID controller?,semantic,pid-controller,found,semantic,pid-controller,semantic-alias,1.0,found,1,28.6378,14.3276,44.1465,3,1,0,3320,True
+628,14,fixed,What should the robot do if the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,18.5072,5.6764,25.3792,2,0,0,3322,True
+629,14,fixed,How should the robot react when an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,20.478,5.8419,27.4559,2,0,0,3324,True
+630,14,fixed,What is an ultrasonic sensor?,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,31.1262,14.0968,46.486,3,1,0,3327,True
+631,14,fixed,What does SMem store?,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,26.7511,15.1113,42.9548,3,1,0,3330,True
+632,14,fixed,What should the robot do if a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,20.0402,6.1896,27.4542,2,0,0,3332,True
+633,14,fixed,What happened to a sensor before?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,30.5014,0.1538,31.5182,3,0,1,3335,True
+634,14,fixed,What happened to the motor before?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,31.7243,0.2593,32.8582,3,0,1,3338,True
+635,14,fixed,How do robots use a LiDAR sensor?,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,33.0318,14.6006,48.6043,3,1,0,3341,True
+636,14,fixed,How should the robot react when the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,19.6616,5.669,26.4343,2,0,0,3343,True
+637,14,fixed,How should the robot react when a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,19.4238,7.1525,28.0058,2,0,0,3345,True
+638,14,fixed,What happened during navigation before?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,30.6559,0.2932,32.3427,3,0,1,3348,True
+639,14,fixed,What is the NAO robot?,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,29.1178,16.0747,46.3657,3,1,0,3351,True
+640,14,fixed,What should the robot do if the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,18.731,5.6641,25.4488,2,0,0,3353,True
+641,14,fixed,What happened with an obstacle before?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,30.5011,0.0854,31.6336,3,0,1,3356,True
+642,14,fixed,What should the robot do if localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,20.4459,6.0672,27.6565,2,0,0,3358,True
+643,14,fixed,What is a servo motor?,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,29.8817,15.9316,47.0344,3,1,0,3361,True
+644,14,fixed,Describe proportional integral derivative terms.,semantic,pid-controller,found,semantic,pid-controller,controlled-paraphrase,0.96,found,1,32.0853,13.8896,47.2442,3,1,0,3364,True
+645,14,fixed,Explain SLAM.,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,30.1038,13.9223,45.0172,3,1,0,3367,True
+646,14,fixed,What is simultaneous localization and mapping?,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,31.0691,15.9642,48.1907,3,1,0,3370,True
+647,14,fixed,How should the robot react when a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,20.6012,5.6395,27.3767,2,0,0,3372,True
+648,14,fixed,Explain grid map.,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,25.5741,14.3131,40.9146,3,1,0,3375,True
+649,14,fixed,Do you remember a camera event?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,30.4669,0.2,31.8304,3,0,1,3378,True
+650,14,fixed,What happened with the battery earlier?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,28.9246,0.1356,30.0181,3,0,1,3381,True
+651,14,fixed,Explain the role of a servomotor.,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,28.0229,14.9703,44.5756,3,1,0,3384,True
+652,14,fixed,Tell me about the robotic gripper.,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,28.5571,13.6499,43.2143,3,1,0,3387,True
+653,14,fixed,Describe the NAO humanoid.,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,29.8362,13.83,44.8554,3,1,0,3390,True
+654,14,fixed,Do you remember a sensor experience?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,29.8797,0.1328,31.1013,3,0,1,3393,True
+655,14,fixed,What is the purpose of ROS 2?,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,26.0786,13.9045,41.1673,3,1,0,3396,True
+656,14,fixed,Do you remember a low battery episode?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,29.4937,0.1108,30.8271,3,0,1,3399,True
+657,14,fixed,What is a depth camera?,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,29.4703,13.9452,44.7557,3,1,0,3402,True
+658,14,fixed,What happened to the camera earlier?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,29.3993,0.2453,30.7871,3,0,1,3405,True
+659,14,fixed,Tell me about the laser scanner.,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,29.8431,14.6115,46.3077,3,1,0,3408,True
+660,14,fixed,Explain Soar semantic memory.,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,38.9714,14.4195,54.5725,3,1,0,3411,True
+661,14,fixed,Explain the Robot Operating System 2.,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,32.1494,14.4619,48.0897,3,1,0,3414,True
+662,14,fixed,Explain the ultrasonic rangefinder.,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,42.9878,14.3576,58.6602,3,1,0,3417,True
+663,14,fixed,What should the robot do if an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,19.2806,5.8942,26.3879,2,0,0,3419,True
+664,14,fixed,What does a wheel encoder do?,semantic,encoder,found,semantic,encoder,semantic-alias,1.0,found,1,34.1542,17.0854,52.4564,3,1,0,3422,True
+665,14,fixed,What should the robot do if a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,23.7721,6.1331,30.9201,2,0,0,3424,True
+666,14,fixed,Do you remember a motor experience?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,32.0254,0.2385,33.1103,3,0,1,3427,True
+667,14,fixed,Explain rotary encoders.,semantic,encoder,found,semantic,encoder,fuzzy,0.85,found,1,29.2174,39.9367,70.5312,3,1,0,3430,True
+668,14,fixed,Do you remember an earlier navigation episode?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,32.8523,0.1801,33.9447,3,0,1,3433,True
+669,14,fixed,What is a robot gripper?,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,180.4113,14.3084,195.6108,3,1,0,3436,True
+670,14,fixed,Tell me about the depth sensor.,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,27.4687,14.3849,42.7947,3,1,0,3439,True
+671,14,fixed,What is an occupancy grid?,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,30.0458,14.3777,45.3576,3,1,0,3442,True
+672,14,fixed,How should the robot react when the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,19.7893,5.6225,26.3643,2,0,0,3444,True
+673,15,fixed,What is a robot gripper?,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,30.6542,13.2516,44.8808,3,1,0,3447,True
+674,15,fixed,Describe the NAO humanoid.,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,30.728,14.0314,45.9227,3,1,0,3450,True
+675,15,fixed,What is a depth camera?,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,30.1416,14.3283,45.624,3,1,0,3453,True
+676,15,fixed,What is the purpose of ROS 2?,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,32.7353,14.7371,48.6769,3,1,0,3456,True
+677,15,fixed,What happened to the camera earlier?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,27.9058,0.2403,29.2993,3,0,1,3459,True
+678,15,fixed,What should the robot do if a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,19.0966,6.2631,26.6265,2,0,0,3461,True
+679,15,fixed,Explain the role of a servomotor.,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,31.3918,14.0272,46.7617,3,1,0,3464,True
+680,15,fixed,What does SMem store?,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,29.1722,14.1296,44.4752,3,1,0,3467,True
+681,15,fixed,How should the robot react when an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,24.6336,5.9389,32.349,2,0,0,3469,True
+682,15,fixed,Tell me about the robotic gripper.,semantic,gripper,found,semantic,gripper,semantic-alias,1.0,found,1,30.9386,14.2847,46.62,3,1,0,3472,True
+683,15,fixed,What is a servo motor?,semantic,servomotor,found,semantic,servomotor,semantic-alias,1.0,found,1,28.76,14.5646,44.8113,3,1,0,3475,True
+684,15,fixed,Describe proportional integral derivative terms.,semantic,pid-controller,found,semantic,pid-controller,controlled-paraphrase,0.96,found,1,32.3502,15.1988,48.7995,3,1,0,3478,True
+685,15,fixed,How should the robot react when the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,18.621,5.5861,25.22,2,0,0,3480,True
+686,15,fixed,Do you remember an obstacle?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,32.1054,0.0812,33.2286,3,0,1,3483,True
+687,15,fixed,What is the NAO robot?,semantic,nao-robot,found,semantic,nao-robot,semantic-alias,1.0,found,1,36.6285,15.3284,53.3562,3,1,0,3486,True
+688,15,fixed,Explain Soar semantic memory.,semantic,semantic-memory,found,semantic,semantic-memory,semantic-alias,1.0,found,1,30.4275,14.078,45.8258,3,1,0,3489,True
+689,15,fixed,Explain SLAM.,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,29.3078,14.1171,44.4161,3,1,0,3492,True
+690,15,fixed,What should the robot do if localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,19.3332,5.8254,26.3474,2,0,0,3494,True
+691,15,fixed,What happened with an obstacle before?,episodic,obstacle,found,episodic,obstacle,episodic-cue,1.0,found,1,33.0506,0.0844,34.1783,3,0,1,3497,True
+692,15,fixed,What is simultaneous localization and mapping?,semantic,slam,found,semantic,slam,semantic-alias,1.0,found,1,36.4911,14.9714,52.6674,3,1,0,3500,True
+693,15,fixed,What is an ultrasonic sensor?,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,34.6547,14.3968,50.0488,3,1,0,3503,True
+694,15,fixed,How do robots use a LiDAR sensor?,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,32.8921,15.6961,49.7048,3,1,0,3506,True
+695,15,fixed,Explain grid map.,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,35.4674,14.4334,50.8536,3,1,0,3509,True
+696,15,fixed,Do you remember an earlier navigation episode?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,34.8339,0.1794,36.1682,3,0,1,3512,True
+697,15,fixed,What happened during navigation before?,episodic,navigation,found,episodic,navigation,episodic-cue,1.0,found,1,42.4204,0.1801,43.8263,3,0,1,3515,True
+698,15,fixed,How should the robot react when a sensor fails in a classroom demonstration?,procedural,sensor-failure,found,procedural,sensor-failure,procedure-exact,1.0,found,1,25.2591,6.0485,32.6199,2,0,0,3517,True
+699,15,fixed,Do you remember a low battery episode?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,35.354,0.0868,36.6561,3,0,1,3520,True
+700,15,fixed,Tell me about the laser scanner.,semantic,lidar-sensor,found,semantic,lidar-sensor,semantic-alias,1.0,found,1,34.8653,15.994,52.0865,3,1,0,3523,True
+701,15,fixed,Do you remember a camera event?,episodic,vision,found,episodic,vision,episodic-cue,1.0,found,1,38.3652,0.2014,39.3813,3,0,1,3526,True
+702,15,fixed,What does a wheel encoder do?,semantic,encoder,found,semantic,encoder,semantic-alias,1.0,found,1,34.098,14.6165,49.832,3,1,0,3529,True
+703,15,fixed,What is a PID controller?,semantic,pid-controller,found,semantic,pid-controller,semantic-alias,1.0,found,1,33.9933,16.1627,51.1391,3,1,0,3532,True
+704,15,fixed,Tell me about the depth sensor.,semantic,depth-camera,found,semantic,depth-camera,semantic-alias,1.0,found,1,37.0525,14.5182,52.5833,3,1,0,3535,True
+705,15,fixed,What happened to a sensor before?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,35.3875,0.1681,36.4335,3,0,1,3538,True
+706,15,fixed,How should the robot react when the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,28.3972,5.6696,35.0103,2,0,0,3540,True
+707,15,fixed,Explain the ultrasonic rangefinder.,semantic,ultrasonic-sensor,found,semantic,ultrasonic-sensor,semantic-alias,1.0,found,1,38.1929,14.7676,54.0088,3,1,0,3543,True
+708,15,fixed,How should the robot react when localization is lost in a classroom demonstration?,procedural,lost-localization,found,procedural,lost-localization,procedure-exact,1.0,found,1,29.0003,8.2044,38.3415,2,0,0,3545,True
+709,15,fixed,Do you remember a sensor experience?,episodic,sensor,found,episodic,sensor,episodic-cue,1.0,found,1,43.2708,1.2617,46.9105,3,0,1,3548,True
+710,15,fixed,What should the robot do if an obstacle is close in a classroom demonstration?,procedural,obstacle-close,found,procedural,obstacle-close,procedure-exact,1.0,found,1,25.1396,6.0066,32.0929,2,0,0,3550,True
+711,15,fixed,Explain rotary encoders.,semantic,encoder,found,semantic,encoder,fuzzy,0.85,found,1,33.183,39.9483,74.0775,3,1,0,3553,True
+712,15,fixed,Do you remember a motor experience?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,34.9051,0.2329,36.0422,3,0,1,3556,True
+713,15,fixed,How should the robot react when a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,24.4298,6.0579,31.483,2,0,0,3558,True
+714,15,fixed,What should the robot do if the emergency stop is triggered in a classroom demonstration?,procedural,emergency-stop,found,procedural,emergency-stop,procedure-exact,1.0,found,1,25.5189,5.6454,32.1523,2,0,0,3560,True
+715,15,fixed,What happened to the motor before?,episodic,actuator,found,episodic,actuator,episodic-cue,1.0,found,1,34.3326,0.1922,35.4035,3,0,1,3563,True
+716,15,fixed,What is an occupancy grid?,semantic,occupancy-grid,found,semantic,occupancy-grid,semantic-alias,1.0,found,1,34.8738,16.4442,52.4206,3,1,0,3566,True
+717,15,fixed,What happened with the battery earlier?,episodic,battery,found,episodic,battery,episodic-cue,1.0,found,1,37.9418,0.1813,39.2195,3,0,1,3569,True
+718,15,fixed,Explain the Robot Operating System 2.,semantic,ros-2,found,semantic,ros-2,semantic-alias,1.0,found,1,34.8649,14.6178,50.4168,3,1,0,3572,True
+719,15,fixed,What should the robot do if a motor overheats in a classroom demonstration?,procedural,overheating,found,procedural,overheating,procedure-exact,1.0,found,1,23.8857,7.0003,31.835,2,0,0,3574,True
+720,15,fixed,What should the robot do if the battery is low in a classroom demonstration?,procedural,low-battery,found,procedural,low-battery,procedure-exact,1.0,found,1,27.7766,7.0736,35.7988,2,0,0,3576,True

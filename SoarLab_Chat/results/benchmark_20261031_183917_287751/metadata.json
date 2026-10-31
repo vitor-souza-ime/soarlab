@@ -1,0 +1,62 @@
+{
+  "run_id": "benchmark_20261031_183917_287751",
+  "status": "completed",
+  "mode": "fixed",
+  "repetitions": 15,
+  "random_seed": 2028,
+  "timestamp_utc": "2026-10-31T21:39:17.288752+00:00",
+  "platform": "Native Soar 9.6.5 SML; Python intent/slot parser",
+  "corpus": {
+    "procedural_productions": 108,
+    "semantic_verified": 124,
+    "episodic_verified": 120
+  },
+  "reference_source": "predefined human-authored intent/topic labels",
+  "warnings": [
+    "Episodic seed events are synthetic pedagogical records, not field observations.",
+    "Paraphrase classification is performed in Python, not Soar.",
+    "SML wrapper and telemetry are included in measured Soar response time.",
+    "Within-process measurements may exhibit activation and caching effects.",
+    "No claim about human learning is supported by this benchmark."
+  ],
+  "native_soar": true,
+  "questions_per_repetition": 48,
+  "planned_rows": 720,
+  "rows": 720,
+  "correct": 720,
+  "accuracy": 1.0,
+  "score_name": "fixed-set accuracy",
+  "summary": {
+    "semantic": {
+      "n": 360,
+      "mean_ms": 24.08269,
+      "median_ms": 23.92165,
+      "p95_ms": 31.38509,
+      "score": 1.0
+    },
+    "procedural": {
+      "n": 180,
+      "mean_ms": 15.7179,
+      "median_ms": 15.82325,
+      "p95_ms": 21.29036,
+      "score": 1.0
+    },
+    "episodic": {
+      "n": 180,
+      "mean_ms": 24.01264,
+      "median_ms": 24.17115,
+      "p95_ms": 31.13264,
+      "score": 1.0
+    }
+  },
+  "graphics": [
+    "01_latency_distribution.png",
+    "02_median_p95.png",
+    "03_accuracy_or_agreement.png",
+    "04_latency_over_queries.png",
+    "05_native_memory_queries.png",
+    "06_paraphrase_accuracy.png",
+    "07_soar_decision_cycles.png",
+    "08_e2e_vs_soar.png"
+  ]
+}

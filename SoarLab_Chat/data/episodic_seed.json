@@ -1,0 +1,722 @@
+[
+  {
+    "topic": "obstacle",
+    "description": "The front rangefinder detected a box and the robot stopped during a classroom demonstration (teaching episode 01, topic obstacle).",
+    "source": "synthetic-pedagogical",
+    "event_id": "obstacle-01"
+  },
+  {
+    "topic": "obstacle",
+    "description": "A wall blocked the route and the controller chose a safe turn while exploring a simulated corridor (teaching episode 02, topic obstacle).",
+    "source": "synthetic-pedagogical",
+    "event_id": "obstacle-02"
+  },
+  {
+    "topic": "obstacle",
+    "description": "A chair entered the route and the robot paused in a mapping exercise (teaching episode 03, topic obstacle).",
+    "source": "synthetic-pedagogical",
+    "event_id": "obstacle-03"
+  },
+  {
+    "topic": "obstacle",
+    "description": "The bumper registered contact and the robot backed away while testing the robot indoors (teaching episode 04, topic obstacle).",
+    "source": "synthetic-pedagogical",
+    "event_id": "obstacle-04"
+  },
+  {
+    "topic": "obstacle",
+    "description": "An unexpected barrier appeared and the system reduced speed during a sensor calibration activity (teaching episode 05, topic obstacle).",
+    "source": "synthetic-pedagogical",
+    "event_id": "obstacle-05"
+  },
+  {
+    "topic": "obstacle",
+    "description": "The front rangefinder detected a box and the robot stopped at the beginning of a lab session (teaching episode 06, topic obstacle).",
+    "source": "synthetic-pedagogical",
+    "event_id": "obstacle-06"
+  },
+  {
+    "topic": "obstacle",
+    "description": "A wall blocked the route and the controller chose a safe turn during an obstacle-avoidance exercise (teaching episode 07, topic obstacle).",
+    "source": "synthetic-pedagogical",
+    "event_id": "obstacle-07"
+  },
+  {
+    "topic": "obstacle",
+    "description": "A chair entered the route and the robot paused while comparing control settings (teaching episode 08, topic obstacle).",
+    "source": "synthetic-pedagogical",
+    "event_id": "obstacle-08"
+  },
+  {
+    "topic": "obstacle",
+    "description": "The bumper registered contact and the robot backed away during a navigation benchmark (teaching episode 09, topic obstacle).",
+    "source": "synthetic-pedagogical",
+    "event_id": "obstacle-09"
+  },
+  {
+    "topic": "obstacle",
+    "description": "An unexpected barrier appeared and the system reduced speed during a repeated trial (teaching episode 10, topic obstacle).",
+    "source": "synthetic-pedagogical",
+    "event_id": "obstacle-10"
+  },
+  {
+    "topic": "obstacle",
+    "description": "The front rangefinder detected a box and the robot stopped while the instructor observed (teaching episode 11, topic obstacle).",
+    "source": "synthetic-pedagogical",
+    "event_id": "obstacle-11"
+  },
+  {
+    "topic": "obstacle",
+    "description": "A wall blocked the route and the controller chose a safe turn near the docking station (teaching episode 12, topic obstacle).",
+    "source": "synthetic-pedagogical",
+    "event_id": "obstacle-12"
+  },
+  {
+    "topic": "obstacle",
+    "description": "A chair entered the route and the robot paused while a student monitored telemetry (teaching episode 13, topic obstacle).",
+    "source": "synthetic-pedagogical",
+    "event_id": "obstacle-13"
+  },
+  {
+    "topic": "obstacle",
+    "description": "The bumper registered contact and the robot backed away at a marked waypoint (teaching episode 14, topic obstacle).",
+    "source": "synthetic-pedagogical",
+    "event_id": "obstacle-14"
+  },
+  {
+    "topic": "obstacle",
+    "description": "An unexpected barrier appeared and the system reduced speed under low-light conditions (teaching episode 15, topic obstacle).",
+    "source": "synthetic-pedagogical",
+    "event_id": "obstacle-15"
+  },
+  {
+    "topic": "obstacle",
+    "description": "The front rangefinder detected a box and the robot stopped during a timed mission (teaching episode 16, topic obstacle).",
+    "source": "synthetic-pedagogical",
+    "event_id": "obstacle-16"
+  },
+  {
+    "topic": "obstacle",
+    "description": "A wall blocked the route and the controller chose a safe turn after restarting the controller (teaching episode 17, topic obstacle).",
+    "source": "synthetic-pedagogical",
+    "event_id": "obstacle-17"
+  },
+  {
+    "topic": "obstacle",
+    "description": "A chair entered the route and the robot paused during a collaborative robotics demonstration (teaching episode 18, topic obstacle).",
+    "source": "synthetic-pedagogical",
+    "event_id": "obstacle-18"
+  },
+  {
+    "topic": "obstacle",
+    "description": "The bumper registered contact and the robot backed away while logging trial results (teaching episode 19, topic obstacle).",
+    "source": "synthetic-pedagogical",
+    "event_id": "obstacle-19"
+  },
+  {
+    "topic": "obstacle",
+    "description": "An unexpected barrier appeared and the system reduced speed during the final verification run (teaching episode 20, topic obstacle).",
+    "source": "synthetic-pedagogical",
+    "event_id": "obstacle-20"
+  },
+  {
+    "topic": "battery",
+    "description": "The voltage monitor detected a low-charge condition and requested docking during a classroom demonstration (teaching episode 01, topic battery).",
+    "source": "synthetic-pedagogical",
+    "event_id": "battery-01"
+  },
+  {
+    "topic": "battery",
+    "description": "The battery warning caused the robot to stop its task while exploring a simulated corridor (teaching episode 02, topic battery).",
+    "source": "synthetic-pedagogical",
+    "event_id": "battery-02"
+  },
+  {
+    "topic": "battery",
+    "description": "The controller disabled a nonessential actuator to save energy in a mapping exercise (teaching episode 03, topic battery).",
+    "source": "synthetic-pedagogical",
+    "event_id": "battery-03"
+  },
+  {
+    "topic": "battery",
+    "description": "The robot logged a voltage drop and switched to safe mode while testing the robot indoors (teaching episode 04, topic battery).",
+    "source": "synthetic-pedagogical",
+    "event_id": "battery-04"
+  },
+  {
+    "topic": "battery",
+    "description": "The robot reached its charging station after a low-battery alert during a sensor calibration activity (teaching episode 05, topic battery).",
+    "source": "synthetic-pedagogical",
+    "event_id": "battery-05"
+  },
+  {
+    "topic": "battery",
+    "description": "The voltage monitor detected a low-charge condition and requested docking at the beginning of a lab session (teaching episode 06, topic battery).",
+    "source": "synthetic-pedagogical",
+    "event_id": "battery-06"
+  },
+  {
+    "topic": "battery",
+    "description": "The battery warning caused the robot to stop its task during an obstacle-avoidance exercise (teaching episode 07, topic battery).",
+    "source": "synthetic-pedagogical",
+    "event_id": "battery-07"
+  },
+  {
+    "topic": "battery",
+    "description": "The controller disabled a nonessential actuator to save energy while comparing control settings (teaching episode 08, topic battery).",
+    "source": "synthetic-pedagogical",
+    "event_id": "battery-08"
+  },
+  {
+    "topic": "battery",
+    "description": "The robot logged a voltage drop and switched to safe mode during a navigation benchmark (teaching episode 09, topic battery).",
+    "source": "synthetic-pedagogical",
+    "event_id": "battery-09"
+  },
+  {
+    "topic": "battery",
+    "description": "The robot reached its charging station after a low-battery alert during a repeated trial (teaching episode 10, topic battery).",
+    "source": "synthetic-pedagogical",
+    "event_id": "battery-10"
+  },
+  {
+    "topic": "battery",
+    "description": "The voltage monitor detected a low-charge condition and requested docking while the instructor observed (teaching episode 11, topic battery).",
+    "source": "synthetic-pedagogical",
+    "event_id": "battery-11"
+  },
+  {
+    "topic": "battery",
+    "description": "The battery warning caused the robot to stop its task near the docking station (teaching episode 12, topic battery).",
+    "source": "synthetic-pedagogical",
+    "event_id": "battery-12"
+  },
+  {
+    "topic": "battery",
+    "description": "The controller disabled a nonessential actuator to save energy while a student monitored telemetry (teaching episode 13, topic battery).",
+    "source": "synthetic-pedagogical",
+    "event_id": "battery-13"
+  },
+  {
+    "topic": "battery",
+    "description": "The robot logged a voltage drop and switched to safe mode at a marked waypoint (teaching episode 14, topic battery).",
+    "source": "synthetic-pedagogical",
+    "event_id": "battery-14"
+  },
+  {
+    "topic": "battery",
+    "description": "The robot reached its charging station after a low-battery alert under low-light conditions (teaching episode 15, topic battery).",
+    "source": "synthetic-pedagogical",
+    "event_id": "battery-15"
+  },
+  {
+    "topic": "battery",
+    "description": "The voltage monitor detected a low-charge condition and requested docking during a timed mission (teaching episode 16, topic battery).",
+    "source": "synthetic-pedagogical",
+    "event_id": "battery-16"
+  },
+  {
+    "topic": "battery",
+    "description": "The battery warning caused the robot to stop its task after restarting the controller (teaching episode 17, topic battery).",
+    "source": "synthetic-pedagogical",
+    "event_id": "battery-17"
+  },
+  {
+    "topic": "battery",
+    "description": "The controller disabled a nonessential actuator to save energy during a collaborative robotics demonstration (teaching episode 18, topic battery).",
+    "source": "synthetic-pedagogical",
+    "event_id": "battery-18"
+  },
+  {
+    "topic": "battery",
+    "description": "The robot logged a voltage drop and switched to safe mode while logging trial results (teaching episode 19, topic battery).",
+    "source": "synthetic-pedagogical",
+    "event_id": "battery-19"
+  },
+  {
+    "topic": "battery",
+    "description": "The robot reached its charging station after a low-battery alert during the final verification run (teaching episode 20, topic battery).",
+    "source": "synthetic-pedagogical",
+    "event_id": "battery-20"
+  },
+  {
+    "topic": "sensor",
+    "description": "An ultrasonic reading was noisy and the system requested a new sample during a classroom demonstration (teaching episode 01, topic sensor).",
+    "source": "synthetic-pedagogical",
+    "event_id": "sensor-01"
+  },
+  {
+    "topic": "sensor",
+    "description": "The imu drift was observed during orientation estimation while exploring a simulated corridor (teaching episode 02, topic sensor).",
+    "source": "synthetic-pedagogical",
+    "event_id": "sensor-02"
+  },
+  {
+    "topic": "sensor",
+    "description": "A wheel encoder missed pulses and odometry became less reliable in a mapping exercise (teaching episode 03, topic sensor).",
+    "source": "synthetic-pedagogical",
+    "event_id": "sensor-03"
+  },
+  {
+    "topic": "sensor",
+    "description": "The camera frame arrived late and the agent waited for a fresh observation while testing the robot indoors (teaching episode 04, topic sensor).",
+    "source": "synthetic-pedagogical",
+    "event_id": "sensor-04"
+  },
+  {
+    "topic": "sensor",
+    "description": "A distance sensor stopped responding and the system raised a diagnostic warning during a sensor calibration activity (teaching episode 05, topic sensor).",
+    "source": "synthetic-pedagogical",
+    "event_id": "sensor-05"
+  },
+  {
+    "topic": "sensor",
+    "description": "An ultrasonic reading was noisy and the system requested a new sample at the beginning of a lab session (teaching episode 06, topic sensor).",
+    "source": "synthetic-pedagogical",
+    "event_id": "sensor-06"
+  },
+  {
+    "topic": "sensor",
+    "description": "The imu drift was observed during orientation estimation during an obstacle-avoidance exercise (teaching episode 07, topic sensor).",
+    "source": "synthetic-pedagogical",
+    "event_id": "sensor-07"
+  },
+  {
+    "topic": "sensor",
+    "description": "A wheel encoder missed pulses and odometry became less reliable while comparing control settings (teaching episode 08, topic sensor).",
+    "source": "synthetic-pedagogical",
+    "event_id": "sensor-08"
+  },
+  {
+    "topic": "sensor",
+    "description": "The camera frame arrived late and the agent waited for a fresh observation during a navigation benchmark (teaching episode 09, topic sensor).",
+    "source": "synthetic-pedagogical",
+    "event_id": "sensor-09"
+  },
+  {
+    "topic": "sensor",
+    "description": "A distance sensor stopped responding and the system raised a diagnostic warning during a repeated trial (teaching episode 10, topic sensor).",
+    "source": "synthetic-pedagogical",
+    "event_id": "sensor-10"
+  },
+  {
+    "topic": "sensor",
+    "description": "An ultrasonic reading was noisy and the system requested a new sample while the instructor observed (teaching episode 11, topic sensor).",
+    "source": "synthetic-pedagogical",
+    "event_id": "sensor-11"
+  },
+  {
+    "topic": "sensor",
+    "description": "The imu drift was observed during orientation estimation near the docking station (teaching episode 12, topic sensor).",
+    "source": "synthetic-pedagogical",
+    "event_id": "sensor-12"
+  },
+  {
+    "topic": "sensor",
+    "description": "A wheel encoder missed pulses and odometry became less reliable while a student monitored telemetry (teaching episode 13, topic sensor).",
+    "source": "synthetic-pedagogical",
+    "event_id": "sensor-13"
+  },
+  {
+    "topic": "sensor",
+    "description": "The camera frame arrived late and the agent waited for a fresh observation at a marked waypoint (teaching episode 14, topic sensor).",
+    "source": "synthetic-pedagogical",
+    "event_id": "sensor-14"
+  },
+  {
+    "topic": "sensor",
+    "description": "A distance sensor stopped responding and the system raised a diagnostic warning under low-light conditions (teaching episode 15, topic sensor).",
+    "source": "synthetic-pedagogical",
+    "event_id": "sensor-15"
+  },
+  {
+    "topic": "sensor",
+    "description": "An ultrasonic reading was noisy and the system requested a new sample during a timed mission (teaching episode 16, topic sensor).",
+    "source": "synthetic-pedagogical",
+    "event_id": "sensor-16"
+  },
+  {
+    "topic": "sensor",
+    "description": "The imu drift was observed during orientation estimation after restarting the controller (teaching episode 17, topic sensor).",
+    "source": "synthetic-pedagogical",
+    "event_id": "sensor-17"
+  },
+  {
+    "topic": "sensor",
+    "description": "A wheel encoder missed pulses and odometry became less reliable during a collaborative robotics demonstration (teaching episode 18, topic sensor).",
+    "source": "synthetic-pedagogical",
+    "event_id": "sensor-18"
+  },
+  {
+    "topic": "sensor",
+    "description": "The camera frame arrived late and the agent waited for a fresh observation while logging trial results (teaching episode 19, topic sensor).",
+    "source": "synthetic-pedagogical",
+    "event_id": "sensor-19"
+  },
+  {
+    "topic": "sensor",
+    "description": "A distance sensor stopped responding and the system raised a diagnostic warning during the final verification run (teaching episode 20, topic sensor).",
+    "source": "synthetic-pedagogical",
+    "event_id": "sensor-20"
+  },
+  {
+    "topic": "navigation",
+    "description": "The planned path was replanned around a blocked region during a classroom demonstration (teaching episode 01, topic navigation).",
+    "source": "synthetic-pedagogical",
+    "event_id": "navigation-01"
+  },
+  {
+    "topic": "navigation",
+    "description": "The robot reached a waypoint while avoiding a narrow passage while exploring a simulated corridor (teaching episode 02, topic navigation).",
+    "source": "synthetic-pedagogical",
+    "event_id": "navigation-02"
+  },
+  {
+    "topic": "navigation",
+    "description": "The estimated pose drifted and the system started relocalization in a mapping exercise (teaching episode 03, topic navigation).",
+    "source": "synthetic-pedagogical",
+    "event_id": "navigation-03"
+  },
+  {
+    "topic": "navigation",
+    "description": "The local planner rejected a collision-prone move while testing the robot indoors (teaching episode 04, topic navigation).",
+    "source": "synthetic-pedagogical",
+    "event_id": "navigation-04"
+  },
+  {
+    "topic": "navigation",
+    "description": "The robot selected a shorter safe route through the mapped area during a sensor calibration activity (teaching episode 05, topic navigation).",
+    "source": "synthetic-pedagogical",
+    "event_id": "navigation-05"
+  },
+  {
+    "topic": "navigation",
+    "description": "The planned path was replanned around a blocked region at the beginning of a lab session (teaching episode 06, topic navigation).",
+    "source": "synthetic-pedagogical",
+    "event_id": "navigation-06"
+  },
+  {
+    "topic": "navigation",
+    "description": "The robot reached a waypoint while avoiding a narrow passage during an obstacle-avoidance exercise (teaching episode 07, topic navigation).",
+    "source": "synthetic-pedagogical",
+    "event_id": "navigation-07"
+  },
+  {
+    "topic": "navigation",
+    "description": "The estimated pose drifted and the system started relocalization while comparing control settings (teaching episode 08, topic navigation).",
+    "source": "synthetic-pedagogical",
+    "event_id": "navigation-08"
+  },
+  {
+    "topic": "navigation",
+    "description": "The local planner rejected a collision-prone move during a navigation benchmark (teaching episode 09, topic navigation).",
+    "source": "synthetic-pedagogical",
+    "event_id": "navigation-09"
+  },
+  {
+    "topic": "navigation",
+    "description": "The robot selected a shorter safe route through the mapped area during a repeated trial (teaching episode 10, topic navigation).",
+    "source": "synthetic-pedagogical",
+    "event_id": "navigation-10"
+  },
+  {
+    "topic": "navigation",
+    "description": "The planned path was replanned around a blocked region while the instructor observed (teaching episode 11, topic navigation).",
+    "source": "synthetic-pedagogical",
+    "event_id": "navigation-11"
+  },
+  {
+    "topic": "navigation",
+    "description": "The robot reached a waypoint while avoiding a narrow passage near the docking station (teaching episode 12, topic navigation).",
+    "source": "synthetic-pedagogical",
+    "event_id": "navigation-12"
+  },
+  {
+    "topic": "navigation",
+    "description": "The estimated pose drifted and the system started relocalization while a student monitored telemetry (teaching episode 13, topic navigation).",
+    "source": "synthetic-pedagogical",
+    "event_id": "navigation-13"
+  },
+  {
+    "topic": "navigation",
+    "description": "The local planner rejected a collision-prone move at a marked waypoint (teaching episode 14, topic navigation).",
+    "source": "synthetic-pedagogical",
+    "event_id": "navigation-14"
+  },
+  {
+    "topic": "navigation",
+    "description": "The robot selected a shorter safe route through the mapped area under low-light conditions (teaching episode 15, topic navigation).",
+    "source": "synthetic-pedagogical",
+    "event_id": "navigation-15"
+  },
+  {
+    "topic": "navigation",
+    "description": "The planned path was replanned around a blocked region during a timed mission (teaching episode 16, topic navigation).",
+    "source": "synthetic-pedagogical",
+    "event_id": "navigation-16"
+  },
+  {
+    "topic": "navigation",
+    "description": "The robot reached a waypoint while avoiding a narrow passage after restarting the controller (teaching episode 17, topic navigation).",
+    "source": "synthetic-pedagogical",
+    "event_id": "navigation-17"
+  },
+  {
+    "topic": "navigation",
+    "description": "The estimated pose drifted and the system started relocalization during a collaborative robotics demonstration (teaching episode 18, topic navigation).",
+    "source": "synthetic-pedagogical",
+    "event_id": "navigation-18"
+  },
+  {
+    "topic": "navigation",
+    "description": "The local planner rejected a collision-prone move while logging trial results (teaching episode 19, topic navigation).",
+    "source": "synthetic-pedagogical",
+    "event_id": "navigation-19"
+  },
+  {
+    "topic": "navigation",
+    "description": "The robot selected a shorter safe route through the mapped area during the final verification run (teaching episode 20, topic navigation).",
+    "source": "synthetic-pedagogical",
+    "event_id": "navigation-20"
+  },
+  {
+    "topic": "vision",
+    "description": "The camera detected a colored marker and recorded its image position during a classroom demonstration (teaching episode 01, topic vision).",
+    "source": "synthetic-pedagogical",
+    "event_id": "vision-01"
+  },
+  {
+    "topic": "vision",
+    "description": "An aruco tag was found and its pose was estimated while exploring a simulated corridor (teaching episode 02, topic vision).",
+    "source": "synthetic-pedagogical",
+    "event_id": "vision-02"
+  },
+  {
+    "topic": "vision",
+    "description": "The object detector located a bottle in the image in a mapping exercise (teaching episode 03, topic vision).",
+    "source": "synthetic-pedagogical",
+    "event_id": "vision-03"
+  },
+  {
+    "topic": "vision",
+    "description": "Motion blur reduced feature matches and a fresh frame was requested while testing the robot indoors (teaching episode 04, topic vision).",
+    "source": "synthetic-pedagogical",
+    "event_id": "vision-04"
+  },
+  {
+    "topic": "vision",
+    "description": "The robot tracked a moving object across consecutive frames during a sensor calibration activity (teaching episode 05, topic vision).",
+    "source": "synthetic-pedagogical",
+    "event_id": "vision-05"
+  },
+  {
+    "topic": "vision",
+    "description": "The camera detected a colored marker and recorded its image position at the beginning of a lab session (teaching episode 06, topic vision).",
+    "source": "synthetic-pedagogical",
+    "event_id": "vision-06"
+  },
+  {
+    "topic": "vision",
+    "description": "An aruco tag was found and its pose was estimated during an obstacle-avoidance exercise (teaching episode 07, topic vision).",
+    "source": "synthetic-pedagogical",
+    "event_id": "vision-07"
+  },
+  {
+    "topic": "vision",
+    "description": "The object detector located a bottle in the image while comparing control settings (teaching episode 08, topic vision).",
+    "source": "synthetic-pedagogical",
+    "event_id": "vision-08"
+  },
+  {
+    "topic": "vision",
+    "description": "Motion blur reduced feature matches and a fresh frame was requested during a navigation benchmark (teaching episode 09, topic vision).",
+    "source": "synthetic-pedagogical",
+    "event_id": "vision-09"
+  },
+  {
+    "topic": "vision",
+    "description": "The robot tracked a moving object across consecutive frames during a repeated trial (teaching episode 10, topic vision).",
+    "source": "synthetic-pedagogical",
+    "event_id": "vision-10"
+  },
+  {
+    "topic": "vision",
+    "description": "The camera detected a colored marker and recorded its image position while the instructor observed (teaching episode 11, topic vision).",
+    "source": "synthetic-pedagogical",
+    "event_id": "vision-11"
+  },
+  {
+    "topic": "vision",
+    "description": "An aruco tag was found and its pose was estimated near the docking station (teaching episode 12, topic vision).",
+    "source": "synthetic-pedagogical",
+    "event_id": "vision-12"
+  },
+  {
+    "topic": "vision",
+    "description": "The object detector located a bottle in the image while a student monitored telemetry (teaching episode 13, topic vision).",
+    "source": "synthetic-pedagogical",
+    "event_id": "vision-13"
+  },
+  {
+    "topic": "vision",
+    "description": "Motion blur reduced feature matches and a fresh frame was requested at a marked waypoint (teaching episode 14, topic vision).",
+    "source": "synthetic-pedagogical",
+    "event_id": "vision-14"
+  },
+  {
+    "topic": "vision",
+    "description": "The robot tracked a moving object across consecutive frames under low-light conditions (teaching episode 15, topic vision).",
+    "source": "synthetic-pedagogical",
+    "event_id": "vision-15"
+  },
+  {
+    "topic": "vision",
+    "description": "The camera detected a colored marker and recorded its image position during a timed mission (teaching episode 16, topic vision).",
+    "source": "synthetic-pedagogical",
+    "event_id": "vision-16"
+  },
+  {
+    "topic": "vision",
+    "description": "An aruco tag was found and its pose was estimated after restarting the controller (teaching episode 17, topic vision).",
+    "source": "synthetic-pedagogical",
+    "event_id": "vision-17"
+  },
+  {
+    "topic": "vision",
+    "description": "The object detector located a bottle in the image during a collaborative robotics demonstration (teaching episode 18, topic vision).",
+    "source": "synthetic-pedagogical",
+    "event_id": "vision-18"
+  },
+  {
+    "topic": "vision",
+    "description": "Motion blur reduced feature matches and a fresh frame was requested while logging trial results (teaching episode 19, topic vision).",
+    "source": "synthetic-pedagogical",
+    "event_id": "vision-19"
+  },
+  {
+    "topic": "vision",
+    "description": "The robot tracked a moving object across consecutive frames during the final verification run (teaching episode 20, topic vision).",
+    "source": "synthetic-pedagogical",
+    "event_id": "vision-20"
+  },
+  {
+    "topic": "actuator",
+    "description": "A servo reached its target angle and reported completion during a classroom demonstration (teaching episode 01, topic actuator).",
+    "source": "synthetic-pedagogical",
+    "event_id": "actuator-01"
+  },
+  {
+    "topic": "actuator",
+    "description": "The wheel motor overheated and its command was reduced while exploring a simulated corridor (teaching episode 02, topic actuator).",
+    "source": "synthetic-pedagogical",
+    "event_id": "actuator-02"
+  },
+  {
+    "topic": "actuator",
+    "description": "The robotic gripper closed around an object successfully in a mapping exercise (teaching episode 03, topic actuator).",
+    "source": "synthetic-pedagogical",
+    "event_id": "actuator-03"
+  },
+  {
+    "topic": "actuator",
+    "description": "A motor driver reported excessive current and the robot halted while testing the robot indoors (teaching episode 04, topic actuator).",
+    "source": "synthetic-pedagogical",
+    "event_id": "actuator-04"
+  },
+  {
+    "topic": "actuator",
+    "description": "The joint controller reduced overshoot after a gain adjustment during a sensor calibration activity (teaching episode 05, topic actuator).",
+    "source": "synthetic-pedagogical",
+    "event_id": "actuator-05"
+  },
+  {
+    "topic": "actuator",
+    "description": "A servo reached its target angle and reported completion at the beginning of a lab session (teaching episode 06, topic actuator).",
+    "source": "synthetic-pedagogical",
+    "event_id": "actuator-06"
+  },
+  {
+    "topic": "actuator",
+    "description": "The wheel motor overheated and its command was reduced during an obstacle-avoidance exercise (teaching episode 07, topic actuator).",
+    "source": "synthetic-pedagogical",
+    "event_id": "actuator-07"
+  },
+  {
+    "topic": "actuator",
+    "description": "The robotic gripper closed around an object successfully while comparing control settings (teaching episode 08, topic actuator).",
+    "source": "synthetic-pedagogical",
+    "event_id": "actuator-08"
+  },
+  {
+    "topic": "actuator",
+    "description": "A motor driver reported excessive current and the robot halted during a navigation benchmark (teaching episode 09, topic actuator).",
+    "source": "synthetic-pedagogical",
+    "event_id": "actuator-09"
+  },
+  {
+    "topic": "actuator",
+    "description": "The joint controller reduced overshoot after a gain adjustment during a repeated trial (teaching episode 10, topic actuator).",
+    "source": "synthetic-pedagogical",
+    "event_id": "actuator-10"
+  },
+  {
+    "topic": "actuator",
+    "description": "A servo reached its target angle and reported completion while the instructor observed (teaching episode 11, topic actuator).",
+    "source": "synthetic-pedagogical",
+    "event_id": "actuator-11"
+  },
+  {
+    "topic": "actuator",
+    "description": "The wheel motor overheated and its command was reduced near the docking station (teaching episode 12, topic actuator).",
+    "source": "synthetic-pedagogical",
+    "event_id": "actuator-12"
+  },
+  {
+    "topic": "actuator",
+    "description": "The robotic gripper closed around an object successfully while a student monitored telemetry (teaching episode 13, topic actuator).",
+    "source": "synthetic-pedagogical",
+    "event_id": "actuator-13"
+  },
+  {
+    "topic": "actuator",
+    "description": "A motor driver reported excessive current and the robot halted at a marked waypoint (teaching episode 14, topic actuator).",
+    "source": "synthetic-pedagogical",
+    "event_id": "actuator-14"
+  },
+  {
+    "topic": "actuator",
+    "description": "The joint controller reduced overshoot after a gain adjustment under low-light conditions (teaching episode 15, topic actuator).",
+    "source": "synthetic-pedagogical",
+    "event_id": "actuator-15"
+  },
+  {
+    "topic": "actuator",
+    "description": "A servo reached its target angle and reported completion during a timed mission (teaching episode 16, topic actuator).",
+    "source": "synthetic-pedagogical",
+    "event_id": "actuator-16"
+  },
+  {
+    "topic": "actuator",
+    "description": "The wheel motor overheated and its command was reduced after restarting the controller (teaching episode 17, topic actuator).",
+    "source": "synthetic-pedagogical",
+    "event_id": "actuator-17"
+  },
+  {
+    "topic": "actuator",
+    "description": "The robotic gripper closed around an object successfully during a collaborative robotics demonstration (teaching episode 18, topic actuator).",
+    "source": "synthetic-pedagogical",
+    "event_id": "actuator-18"
+  },
+  {
+    "topic": "actuator",
+    "description": "A motor driver reported excessive current and the robot halted while logging trial results (teaching episode 19, topic actuator).",
+    "source": "synthetic-pedagogical",
+    "event_id": "actuator-19"
+  },
+  {
+    "topic": "actuator",
+    "description": "The joint controller reduced overshoot after a gain adjustment during the final verification run (teaching episode 20, topic actuator).",
+    "source": "synthetic-pedagogical",
+    "event_id": "actuator-20"
+  }
+]

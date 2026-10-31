@@ -1,0 +1,4 @@
+﻿memory,n,correct,accuracy,median_ms,p95_ms,mean_ms,mean_cycles
+procedural,900,900,1.0,14.0629,22.42851,14.52704,2.0
+semantic,1800,1800,1.0,21.58745,34.2205,22.63313,3.0
+episodic,900,900,1.0,21.86455,34.34097,22.55188,3.0

@@ -1,0 +1,137 @@
+{
+  "status": "completed",
+  "time_utc": "2026-10-31T21:38:07.871527+00:00",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "python": "3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)]",
+  "soar_sml_distribution": "9.6.5",
+  "mode": "fixed",
+  "seeds": [
+    2026,
+    2027,
+    2028,
+    2029,
+    2030
+  ],
+  "repetitions": 15,
+  "target_benchmark_observations": 3600,
+  "native_only": true,
+  "startup_corpus_validation": {
+    "semantic": 124,
+    "episodic": 120,
+    "procedural_productions": 108
+  },
+  "audit": {
+    "procedural": {
+      "planned": 108,
+      "passed": 108,
+      "failed": 0,
+      "pass_rate": 1.0
+    },
+    "semantic": {
+      "planned": 124,
+      "passed": 124,
+      "failed": 0,
+      "pass_rate": 1.0
+    },
+    "episodic": {
+      "planned": 120,
+      "passed": 120,
+      "failed": 0,
+      "pass_rate": 1.0
+    }
+  },
+  "runs": [
+    {
+      "seed": 2026,
+      "status": "completed",
+      "run_id": "benchmark_20261031_183821_592618",
+      "partial_dir": "",
+      "observations": 720,
+      "score": 1.0,
+      "warmup_queries": 48,
+      "error": ""
+    },
+    {
+      "seed": 2027,
+      "status": "completed",
+      "run_id": "benchmark_20261031_183848_561914",
+      "partial_dir": "",
+      "observations": 720,
+      "score": 1.0,
+      "warmup_queries": 48,
+      "error": ""
+    },
+    {
+      "seed": 2028,
+      "status": "completed",
+      "run_id": "benchmark_20261031_183917_287751",
+      "partial_dir": "",
+      "observations": 720,
+      "score": 1.0,
+      "warmup_queries": 48,
+      "error": ""
+    },
+    {
+      "seed": 2029,
+      "status": "completed",
+      "run_id": "benchmark_20261031_183947_822616",
+      "partial_dir": "",
+      "observations": 720,
+      "score": 1.0,
+      "warmup_queries": 48,
+      "error": ""
+    },
+    {
+      "seed": 2030,
+      "status": "completed",
+      "run_id": "benchmark_20261031_184018_570154",
+      "partial_dir": "",
+      "observations": 720,
+      "score": 1.0,
+      "warmup_queries": 48,
+      "error": ""
+    }
+  ],
+  "notes": [
+    "Every seed is measured in a new SoarChat/native kernel instance.",
+    "Each seed uses the same current JSON seed corpus and learned journals.",
+    "One 48-query warm-up block is excluded from measured rows for each seed.",
+    "Paraphrase interpretation is Python-based; cognitive replies come from native Soar.",
+    "Native episodic audit is exact-cue verification, not 120 natural language queries.",
+    "No human learning outcomes are measured."
+  ],
+  "completed_runs": 5,
+  "total_observations": 3600,
+  "summary_by_memory": [
+    {
+      "memory": "procedural",
+      "n": 900,
+      "correct": 900,
+      "accuracy": 1.0,
+      "median_ms": 14.0629,
+      "p95_ms": 22.42851,
+      "mean_ms": 14.52704,
+      "mean_cycles": 2.0
+    },
+    {
+      "memory": "semantic",
+      "n": 1800,
+      "correct": 1800,
+      "accuracy": 1.0,
+      "median_ms": 21.58745,
+      "p95_ms": 34.2205,
+      "mean_ms": 22.63313,
+      "mean_cycles": 3.0
+    },
+    {
+      "memory": "episodic",
+      "n": 900,
+      "correct": 900,
+      "accuracy": 1.0,
+      "median_ms": 21.86455,
+      "p95_ms": 34.34097,
+      "mean_ms": 22.55188,
+      "mean_cycles": 3.0
+    }
+  ]
+}

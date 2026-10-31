@@ -1,0 +1,1090 @@
+[
+  {
+    "topic": "ultrasonic-sensor",
+    "label": "Ultrasonic sensor",
+    "description": "Measures distance using the travel time of high-frequency reflected sound waves.",
+    "aliases": [
+      "ultrasonic rangefinder",
+      "ultrasound sensor",
+      "sonar sensor"
+    ]
+  },
+  {
+    "topic": "infrared-sensor",
+    "label": "Infrared sensor",
+    "description": "Senses infrared radiation; depending on the device, it measures reflectance or detects nearby objects.",
+    "aliases": [
+      "IR sensor",
+      "infrared detector"
+    ]
+  },
+  {
+    "topic": "lidar-sensor",
+    "label": "LiDAR sensor",
+    "description": "Uses laser light to estimate distances and create spatial scans of the environment.",
+    "aliases": [
+      "lidar",
+      "laser scanner",
+      "laser rangefinder"
+    ]
+  },
+  {
+    "topic": "rgb-camera",
+    "label": "RGB camera",
+    "description": "Captures color images using red, green, and blue channels.",
+    "aliases": [
+      "color camera",
+      "colour camera"
+    ]
+  },
+  {
+    "topic": "depth-camera",
+    "label": "Depth camera",
+    "description": "Estimates the distance to surfaces in a scene to support three-dimensional perception.",
+    "aliases": [
+      "depth sensor",
+      "RGB-D camera"
+    ]
+  },
+  {
+    "topic": "inertial-measurement-unit",
+    "label": "Inertial measurement unit",
+    "description": "Combines accelerometers and gyroscopes to estimate motion and orientation.",
+    "aliases": [
+      "IMU",
+      "inertial sensor"
+    ]
+  },
+  {
+    "topic": "accelerometer",
+    "label": "Accelerometer",
+    "description": "Measures specific acceleration along one or several axes.",
+    "aliases": [
+      "acceleration sensor"
+    ]
+  },
+  {
+    "topic": "gyroscope",
+    "label": "Gyroscope",
+    "description": "Measures angular velocity and supports orientation estimation and stabilization.",
+    "aliases": [
+      "gyro",
+      "angular rate sensor"
+    ]
+  },
+  {
+    "topic": "encoder",
+    "label": "Encoder",
+    "description": "Measures shaft rotation or displacement for odometry and velocity feedback.",
+    "aliases": [
+      "wheel encoder",
+      "rotary encoder",
+      "incremental encoder"
+    ]
+  },
+  {
+    "topic": "touch-sensor",
+    "label": "Touch sensor",
+    "description": "Detects physical contact, often in bumpers, switches, and collision systems.",
+    "aliases": [
+      "bumper switch",
+      "contact sensor"
+    ]
+  },
+  {
+    "topic": "light-sensor",
+    "label": "Light sensor",
+    "description": "Measures incoming light intensity to detect illumination changes.",
+    "aliases": [
+      "photocell",
+      "ambient light sensor"
+    ]
+  },
+  {
+    "topic": "sonar",
+    "label": "Sonar",
+    "description": "Detects objects or measures range using reflected acoustic waves.",
+    "aliases": [
+      "acoustic ranging",
+      "sonar system"
+    ]
+  },
+  {
+    "topic": "actuator",
+    "label": "Actuator",
+    "description": "Converts a control command into physical force or motion.",
+    "aliases": [
+      "robot actuator"
+    ]
+  },
+  {
+    "topic": "servomotor",
+    "label": "Servomotor",
+    "description": "A feedback-controlled actuator used to regulate position or rotational speed.",
+    "aliases": [
+      "servo",
+      "servo motor",
+      "servo actuator"
+    ]
+  },
+  {
+    "topic": "dc-motor",
+    "label": "DC motor",
+    "description": "An electric motor powered by direct current that converts electrical energy into rotation.",
+    "aliases": [
+      "direct current motor",
+      "brushed DC motor"
+    ]
+  },
+  {
+    "topic": "stepper-motor",
+    "label": "Stepper motor",
+    "description": "Rotates in discrete angular steps in response to command pulses.",
+    "aliases": [
+      "step motor",
+      "stepping motor"
+    ]
+  },
+  {
+    "topic": "h-bridge",
+    "label": "H-bridge",
+    "description": "A power circuit that reverses current direction through a DC motor.",
+    "aliases": [
+      "motor H bridge",
+      "motor driver bridge"
+    ]
+  },
+  {
+    "topic": "pulse-width-modulation",
+    "label": "Pulse-width modulation",
+    "description": "Controls average delivered power by varying the duty cycle of a switched signal.",
+    "aliases": [
+      "PWM",
+      "duty cycle control"
+    ]
+  },
+  {
+    "topic": "battery",
+    "label": "Battery",
+    "description": "Stores electrochemical energy and supplies voltage and current to the robot.",
+    "aliases": [
+      "robot battery",
+      "power pack"
+    ]
+  },
+  {
+    "topic": "mobile-robot",
+    "label": "Mobile robot",
+    "description": "Moves through its environment using wheels, tracks, legs, or other locomotion mechanisms.",
+    "aliases": [
+      "mobile robotics",
+      "ground robot"
+    ]
+  },
+  {
+    "topic": "nao-robot",
+    "label": "NAO robot",
+    "description": "A compact humanoid robot used in education, human-robot interaction, and robotics research.",
+    "aliases": [
+      "NAO",
+      "NAO humanoid",
+      "humanoid NAO"
+    ]
+  },
+  {
+    "topic": "pioneer-3-at",
+    "label": "Pioneer 3-AT",
+    "description": "A four-wheel mobile robot platform for teaching and researching navigation and control.",
+    "aliases": [
+      "Pioneer robot",
+      "Pioneer 3 AT"
+    ]
+  },
+  {
+    "topic": "turtlebot",
+    "label": "TurtleBot",
+    "description": "A family of educational and research mobile robots commonly integrated with ROS.",
+    "aliases": [
+      "TurtleBot robot"
+    ]
+  },
+  {
+    "topic": "humanoid-robot",
+    "label": "Humanoid robot",
+    "description": "Has a body layout or motion capabilities resembling aspects of human anatomy.",
+    "aliases": [
+      "humanoid"
+    ]
+  },
+  {
+    "topic": "collaborative-robot",
+    "label": "Collaborative robot",
+    "description": "An industrial robot intended for human-robot collaboration with appropriate safeguards.",
+    "aliases": [
+      "cobot",
+      "collaborative manipulator"
+    ]
+  },
+  {
+    "topic": "robotic-manipulator",
+    "label": "Robotic manipulator",
+    "description": "An articulated mechanism that positions and orients an end effector to perform tasks.",
+    "aliases": [
+      "robot arm",
+      "manipulator arm"
+    ]
+  },
+  {
+    "topic": "forward-kinematics",
+    "label": "Forward kinematics",
+    "description": "Computes end-effector pose from joint coordinates and robot geometry.",
+    "aliases": [
+      "direct kinematics",
+      "forward robot kinematics"
+    ]
+  },
+  {
+    "topic": "inverse-kinematics",
+    "label": "Inverse kinematics",
+    "description": "Finds joint configurations that achieve a desired end-effector pose.",
+    "aliases": [
+      "IK",
+      "inverse robot kinematics"
+    ]
+  },
+  {
+    "topic": "odometry",
+    "label": "Odometry",
+    "description": "Estimates robot displacement from measured motion, with errors that may accumulate over time.",
+    "aliases": [
+      "wheel odometry",
+      "dead reckoning"
+    ]
+  },
+  {
+    "topic": "slam",
+    "label": "SLAM",
+    "description": "Simultaneous localization and mapping estimates robot pose while constructing or updating a map.",
+    "aliases": [
+      "simultaneous localization and mapping",
+      "mapping and localization"
+    ]
+  },
+  {
+    "topic": "robot-localization",
+    "label": "Robot localization",
+    "description": "Estimates a robot position and orientation in a chosen reference frame.",
+    "aliases": [
+      "localization",
+      "pose estimation"
+    ]
+  },
+  {
+    "topic": "robot-mapping",
+    "label": "Robot mapping",
+    "description": "Constructs or updates a representation of the environment from sensor observations.",
+    "aliases": [
+      "mapping",
+      "environment mapping"
+    ]
+  },
+  {
+    "topic": "path-planning",
+    "label": "Path planning",
+    "description": "Searches for a sequence of positions connecting start and goal while respecting constraints.",
+    "aliases": [
+      "route planning",
+      "motion planning"
+    ]
+  },
+  {
+    "topic": "a-star-algorithm",
+    "label": "A-star algorithm",
+    "description": "A heuristic graph search that combines accumulated path cost with estimated remaining cost.",
+    "aliases": [
+      "A*",
+      "A star search"
+    ]
+  },
+  {
+    "topic": "dijkstra-algorithm",
+    "label": "Dijkstra algorithm",
+    "description": "Computes shortest paths in a graph with nonnegative edge weights.",
+    "aliases": [
+      "Dijkstra shortest path"
+    ]
+  },
+  {
+    "topic": "pid-controller",
+    "label": "PID controller",
+    "description": "Combines proportional, integral, and derivative terms to regulate a controlled variable.",
+    "aliases": [
+      "PID",
+      "proportional integral derivative controller"
+    ]
+  },
+  {
+    "topic": "proportional-control",
+    "label": "Proportional control",
+    "description": "Produces a control command proportional to the current reference error.",
+    "aliases": [
+      "P controller"
+    ]
+  },
+  {
+    "topic": "feedback-control",
+    "label": "Feedback control",
+    "description": "Uses measurements of system output to adjust subsequent control actions.",
+    "aliases": [
+      "closed-loop control",
+      "feedback loop"
+    ]
+  },
+  {
+    "topic": "reactive-navigation",
+    "label": "Reactive navigation",
+    "description": "Selects actions from current observations without requiring a complete global plan.",
+    "aliases": [
+      "reactive obstacle avoidance"
+    ]
+  },
+  {
+    "topic": "computer-vision",
+    "label": "Computer vision",
+    "description": "Converts images and video into useful representations for perception and decision making.",
+    "aliases": [
+      "machine vision",
+      "visual perception"
+    ]
+  },
+  {
+    "topic": "opencv",
+    "label": "OpenCV",
+    "description": "An open-source library for computer vision and image processing.",
+    "aliases": [
+      "open source computer vision library"
+    ]
+  },
+  {
+    "topic": "image-segmentation",
+    "label": "Image segmentation",
+    "description": "Partitions an image into meaningful regions or pixel classes.",
+    "aliases": [
+      "segmentation",
+      "pixel segmentation"
+    ]
+  },
+  {
+    "topic": "object-detection",
+    "label": "Object detection",
+    "description": "Identifies object categories and their locations in images.",
+    "aliases": [
+      "visual object detection"
+    ]
+  },
+  {
+    "topic": "yolo",
+    "label": "YOLO",
+    "description": "A family of object detectors that predicts object classes and bounding boxes from images.",
+    "aliases": [
+      "you only look once",
+      "YOLO detector"
+    ]
+  },
+  {
+    "topic": "machine-learning",
+    "label": "Machine learning",
+    "description": "Builds models that discover patterns from data rather than relying only on explicit rules.",
+    "aliases": [
+      "ML",
+      "statistical learning"
+    ]
+  },
+  {
+    "topic": "artificial-neural-network",
+    "label": "Artificial neural network",
+    "description": "A layered computational model with adjustable connection parameters learned from data.",
+    "aliases": [
+      "ANN",
+      "neural network"
+    ]
+  },
+  {
+    "topic": "cognitive-agent",
+    "label": "Cognitive agent",
+    "description": "Perceives input, maintains internal state, and chooses actions based on knowledge and goals.",
+    "aliases": [
+      "intelligent cognitive agent"
+    ]
+  },
+  {
+    "topic": "soar",
+    "label": "Soar cognitive architecture",
+    "description": "An architecture combining production rules, working memory, and long-term memory systems.",
+    "aliases": [
+      "Soar",
+      "Soar architecture"
+    ]
+  },
+  {
+    "topic": "procedural-memory",
+    "label": "Procedural memory",
+    "description": "In Soar, consists of productions mapping working-memory conditions to actions or preferences.",
+    "aliases": [
+      "procedural knowledge",
+      "production memory"
+    ]
+  },
+  {
+    "topic": "semantic-memory",
+    "label": "Semantic memory",
+    "description": "In Soar, stores declarative knowledge independent of particular experiences and retrieves it by cues.",
+    "aliases": [
+      "SMem",
+      "semantic knowledge"
+    ]
+  },
+  {
+    "topic": "episodic-memory",
+    "label": "Episodic memory",
+    "description": "In Soar, records past working-memory states and retrieves experience-related information by cues.",
+    "aliases": [
+      "EpMem",
+      "autobiographical memory"
+    ]
+  },
+  {
+    "topic": "working-memory",
+    "label": "Working memory",
+    "description": "Represents the current state, observations, and goals of the cognitive agent.",
+    "aliases": [
+      "WM",
+      "working memory elements"
+    ]
+  },
+  {
+    "topic": "soar-production",
+    "label": "Soar production",
+    "description": "A condition-action rule that matches working-memory patterns and proposes preferences or changes.",
+    "aliases": [
+      "production rule",
+      "Soar rule"
+    ]
+  },
+  {
+    "topic": "decision-cycle",
+    "label": "Decision cycle",
+    "description": "A recurring sequence of elaboration, operator selection, and state update in the Soar architecture.",
+    "aliases": [
+      "Soar decision cycle"
+    ]
+  },
+  {
+    "topic": "flask",
+    "label": "Flask",
+    "description": "A lightweight Python framework for building web services and applications.",
+    "aliases": [
+      "Flask web framework"
+    ]
+  },
+  {
+    "topic": "python",
+    "label": "Python",
+    "description": "A high-level programming language often used for robotics, automation, and education.",
+    "aliases": [
+      "Python programming language"
+    ]
+  },
+  {
+    "topic": "webots",
+    "label": "Webots",
+    "description": "A robotics simulator with physics, sensors, actuators, and programmable controllers.",
+    "aliases": [
+      "Webots simulator"
+    ]
+  },
+  {
+    "topic": "ros-2",
+    "label": "ROS 2",
+    "description": "A set of libraries and tools for distributed robot systems using nodes, topics, and services.",
+    "aliases": [
+      "Robot Operating System 2",
+      "ROS2"
+    ]
+  },
+  {
+    "topic": "ros-2-node",
+    "label": "ROS 2 node",
+    "description": "A computational participant that publishes, subscribes, or provides communication services.",
+    "aliases": [
+      "ROS node",
+      "node ROS2"
+    ]
+  },
+  {
+    "topic": "ros-2-topic",
+    "label": "ROS 2 topic",
+    "description": "A named publish-subscribe channel that carries messages among ROS 2 nodes.",
+    "aliases": [
+      "ROS topic",
+      "publish subscribe topic"
+    ]
+  },
+  {
+    "topic": "robot-simulation",
+    "label": "Robot simulation",
+    "description": "Uses a computational model of a robot and environment to test behaviors before physical deployment.",
+    "aliases": [
+      "robotic simulation",
+      "simulated robot"
+    ]
+  },
+  {
+    "topic": "calibration",
+    "label": "Calibration",
+    "description": "Estimates or adjusts device parameters to better match reference measurements.",
+    "aliases": [
+      "sensor calibration",
+      "robot calibration"
+    ]
+  },
+  {
+    "topic": "kalman-filter",
+    "label": "Kalman filter",
+    "description": "Recursively estimates a system state under uncertainty using a model and measurements.",
+    "aliases": [
+      "Kalman estimator"
+    ]
+  },
+  {
+    "topic": "sensor-fusion",
+    "label": "Sensor fusion",
+    "description": "Combines measurements from multiple sensors to improve robustness of state estimation.",
+    "aliases": [
+      "multisensor fusion"
+    ]
+  },
+  {
+    "topic": "obstacle",
+    "label": "Obstacle",
+    "description": "An object or region that restricts safe robot movement.",
+    "aliases": [
+      "collision obstacle",
+      "blocked path"
+    ]
+  },
+  {
+    "topic": "robot-safety",
+    "label": "Robot safety",
+    "description": "Practices that reduce risks to people, equipment, and the environment during robot operation.",
+    "aliases": [
+      "robotics safety",
+      "safe robotics"
+    ]
+  },
+  {
+    "topic": "robot-energy-consumption",
+    "label": "Robot energy consumption",
+    "description": "Energy used during locomotion, processing, sensing, and communication.",
+    "aliases": [
+      "power consumption",
+      "robot energy use"
+    ]
+  },
+  {
+    "topic": "internet-of-things",
+    "label": "Internet of Things",
+    "description": "Connected devices that exchange data for remote sensing, monitoring, and control.",
+    "aliases": [
+      "IoT",
+      "connected devices"
+    ]
+  },
+  {
+    "topic": "global-positioning-system",
+    "label": "Global Positioning System",
+    "description": "A satellite-navigation system for estimating position when adequate signals are available.",
+    "aliases": [
+      "GPS",
+      "satellite positioning"
+    ]
+  },
+  {
+    "topic": "reinforcement-learning",
+    "label": "Reinforcement learning",
+    "description": "Learns a behavior policy using rewards observed through interaction with an environment.",
+    "aliases": [
+      "RL",
+      "reward learning"
+    ]
+  },
+  {
+    "topic": "robot-pepper",
+    "label": "Pepper robot",
+    "description": "A humanoid social robot designed for interaction with people.",
+    "aliases": [
+      "Pepper",
+      "Pepper humanoid"
+    ]
+  },
+  {
+    "topic": "robot-differential-drive",
+    "label": "Differential-drive robot",
+    "description": "A robot steered by independently controlling the speeds of its left and right wheels.",
+    "aliases": [
+      "differential drive",
+      "two wheel robot"
+    ]
+  },
+  {
+    "topic": "robot-omnidirectional",
+    "label": "Omnidirectional robot",
+    "description": "A mobile robot able to translate in multiple directions without first rotating its body.",
+    "aliases": [
+      "omni robot",
+      "holonomic platform"
+    ]
+  },
+  {
+    "topic": "robot-drone",
+    "label": "Quadrotor drone",
+    "description": "An aerial robot controlled by varying the thrust of four rotors.",
+    "aliases": [
+      "quadcopter",
+      "quadrotor",
+      "UAV"
+    ]
+  },
+  {
+    "topic": "robot-legged",
+    "label": "Legged robot",
+    "description": "A robot that locomotes using articulated limbs rather than continuous wheels or tracks.",
+    "aliases": [
+      "walking robot",
+      "legged locomotion"
+    ]
+  },
+  {
+    "topic": "line-following",
+    "label": "Line following",
+    "description": "A feedback task in which a robot tracks a floor marking using reflected-light sensors.",
+    "aliases": [
+      "line follower",
+      "follow a line"
+    ]
+  },
+  {
+    "topic": "wall-following",
+    "label": "Wall following",
+    "description": "A navigation method that maintains a target distance from a nearby wall.",
+    "aliases": [
+      "wall follower",
+      "follow the wall"
+    ]
+  },
+  {
+    "topic": "occupancy-grid",
+    "label": "Occupancy grid",
+    "description": "A map divided into cells storing the estimated probability of being occupied.",
+    "aliases": [
+      "grid map",
+      "occupancy mapping"
+    ]
+  },
+  {
+    "topic": "costmap",
+    "label": "Navigation costmap",
+    "description": "A grid assigning traversal costs to cells to guide collision-aware planning.",
+    "aliases": [
+      "cost map",
+      "navigation grid cost"
+    ]
+  },
+  {
+    "topic": "potential-fields",
+    "label": "Artificial potential fields",
+    "description": "A reactive navigation method combining attraction to goals and repulsion from obstacles.",
+    "aliases": [
+      "potential field navigation",
+      "attractive repulsive forces"
+    ]
+  },
+  {
+    "topic": "rrt",
+    "label": "Rapidly-exploring random tree",
+    "description": "A sampling-based motion-planning method that incrementally explores configuration space.",
+    "aliases": [
+      "RRT",
+      "rapid exploring random tree"
+    ]
+  },
+  {
+    "topic": "astar-heuristic",
+    "label": "Admissible heuristic",
+    "description": "A search heuristic that never overestimates the true remaining cost.",
+    "aliases": [
+      "A-star heuristic",
+      "heuristic estimate"
+    ]
+  },
+  {
+    "topic": "local-planner",
+    "label": "Local planner",
+    "description": "A planner choosing short-horizon feasible motion commands using nearby obstacles and dynamics.",
+    "aliases": [
+      "local path planner"
+    ]
+  },
+  {
+    "topic": "global-planner",
+    "label": "Global planner",
+    "description": "A planner computing an overall route through a mapped environment.",
+    "aliases": [
+      "global path planner"
+    ]
+  },
+  {
+    "topic": "robot-pose",
+    "label": "Robot pose",
+    "description": "A robots position and orientation relative to a reference frame.",
+    "aliases": [
+      "pose",
+      "robot position and orientation"
+    ]
+  },
+  {
+    "topic": "coordinate-frame",
+    "label": "Coordinate frame",
+    "description": "A reference origin and axis convention used to express spatial quantities.",
+    "aliases": [
+      "reference frame",
+      "frame of reference"
+    ]
+  },
+  {
+    "topic": "homogeneous-transform",
+    "label": "Homogeneous transformation",
+    "description": "A matrix representation combining rigid-body rotation and translation.",
+    "aliases": [
+      "4x4 transform",
+      "homogeneous matrix"
+    ]
+  },
+  {
+    "topic": "rotation-matrix",
+    "label": "Rotation matrix",
+    "description": "An orthogonal matrix with unit determinant representing a three-dimensional rotation.",
+    "aliases": [
+      "3D rotation matrix"
+    ]
+  },
+  {
+    "topic": "quaternion",
+    "label": "Quaternion",
+    "description": "A four-component representation of three-dimensional orientation used to avoid some Euler-angle singularities.",
+    "aliases": [
+      "orientation quaternion"
+    ]
+  },
+  {
+    "topic": "denavit-hartenberg",
+    "label": "Denavit-Hartenberg convention",
+    "description": "A parameterization of adjacent robot-link transformations using four geometric parameters.",
+    "aliases": [
+      "DH parameters",
+      "DH convention"
+    ]
+  },
+  {
+    "topic": "joint-revolute",
+    "label": "Revolute joint",
+    "description": "A robotic joint producing relative rotation about one axis.",
+    "aliases": [
+      "rotational joint",
+      "hinge joint"
+    ]
+  },
+  {
+    "topic": "joint-prismatic",
+    "label": "Prismatic joint",
+    "description": "A robotic joint producing translation along one axis.",
+    "aliases": [
+      "linear joint",
+      "sliding joint"
+    ]
+  },
+  {
+    "topic": "end-effector",
+    "label": "End effector",
+    "description": "A tool attached to a robotic manipulator that interacts with objects or the environment.",
+    "aliases": [
+      "gripper tool",
+      "robot end effector"
+    ]
+  },
+  {
+    "topic": "gripper",
+    "label": "Robot gripper",
+    "description": "An end effector designed to grasp and release objects.",
+    "aliases": [
+      "robotic gripper",
+      "robot claw"
+    ]
+  },
+  {
+    "topic": "torque",
+    "label": "Torque",
+    "description": "The rotational effect of force about an axis, measured in newton-meters.",
+    "aliases": [
+      "motor torque"
+    ]
+  },
+  {
+    "topic": "velocity-control",
+    "label": "Velocity control",
+    "description": "A feedback scheme that drives measured speed toward a desired speed.",
+    "aliases": [
+      "speed control"
+    ]
+  },
+  {
+    "topic": "position-control",
+    "label": "Position control",
+    "description": "A feedback scheme that drives measured position toward a desired position.",
+    "aliases": [
+      "joint position control"
+    ]
+  },
+  {
+    "topic": "feedforward-control",
+    "label": "Feedforward control",
+    "description": "An anticipatory control action based on a reference or disturbance model.",
+    "aliases": [
+      "feed forward control"
+    ]
+  },
+  {
+    "topic": "integral-windup",
+    "label": "Integral windup",
+    "description": "An accumulation of integral-controller error that may cause overshoot under actuator saturation.",
+    "aliases": [
+      "PID windup",
+      "anti windup"
+    ]
+  },
+  {
+    "topic": "deadband",
+    "label": "Deadband",
+    "description": "An interval of input or error values that produces no control response.",
+    "aliases": [
+      "control dead zone"
+    ]
+  },
+  {
+    "topic": "sampling-rate",
+    "label": "Sampling rate",
+    "description": "The number of measurements or control updates performed each second.",
+    "aliases": [
+      "sampling frequency",
+      "update frequency"
+    ]
+  },
+  {
+    "topic": "nyquist-rate",
+    "label": "Nyquist sampling criterion",
+    "description": "A band-limited signal must be sampled above twice its maximum frequency for ideal reconstruction.",
+    "aliases": [
+      "Nyquist criterion"
+    ]
+  },
+  {
+    "topic": "analog-to-digital",
+    "label": "Analog-to-digital converter",
+    "description": "An electronic circuit converting an analog signal into a digital representation.",
+    "aliases": [
+      "ADC",
+      "analog digital conversion"
+    ]
+  },
+  {
+    "topic": "i2c",
+    "label": "I2C bus",
+    "description": "A synchronous serial communication bus often used for onboard sensors.",
+    "aliases": [
+      "I squared C",
+      "I2C protocol"
+    ]
+  },
+  {
+    "topic": "spi",
+    "label": "SPI bus",
+    "description": "A synchronous serial bus for high-speed communication between microcontrollers and peripherals.",
+    "aliases": [
+      "serial peripheral interface"
+    ]
+  },
+  {
+    "topic": "uart",
+    "label": "UART",
+    "description": "An asynchronous serial interface that transfers data as timed bits without a shared clock.",
+    "aliases": [
+      "universal asynchronous receiver transmitter"
+    ]
+  },
+  {
+    "topic": "mqtt",
+    "label": "MQTT",
+    "description": "A lightweight publish-subscribe messaging protocol widely used in IoT systems.",
+    "aliases": [
+      "MQTT protocol"
+    ]
+  },
+  {
+    "topic": "robot-telemetry",
+    "label": "Robot telemetry",
+    "description": "Measurements and status data transmitted from a robot for observation and analysis.",
+    "aliases": [
+      "telemetry",
+      "robot diagnostics"
+    ]
+  },
+  {
+    "topic": "edge-computing",
+    "label": "Edge computing",
+    "description": "Processing data near a robot or sensor rather than relying entirely on remote servers.",
+    "aliases": [
+      "edge AI",
+      "on-device computing"
+    ]
+  },
+  {
+    "topic": "cloud-robotics",
+    "label": "Cloud robotics",
+    "description": "An approach using remote computing or shared services to extend robot capabilities.",
+    "aliases": [
+      "robot cloud computing"
+    ]
+  },
+  {
+    "topic": "image-classification",
+    "label": "Image classification",
+    "description": "Assigning one or more class labels to an image.",
+    "aliases": [
+      "classify image"
+    ]
+  },
+  {
+    "topic": "optical-flow",
+    "label": "Optical flow",
+    "description": "Estimated apparent motion of image features between successive frames.",
+    "aliases": [
+      "motion flow",
+      "Lucas Kanade flow"
+    ]
+  },
+  {
+    "topic": "canny-edge",
+    "label": "Canny edge detector",
+    "description": "An image edge detector using smoothing, gradient analysis, and hysteresis thresholding.",
+    "aliases": [
+      "Canny edges"
+    ]
+  },
+  {
+    "topic": "hough-transform",
+    "label": "Hough transform",
+    "description": "A voting technique for detecting parameterized geometric structures such as lines and circles.",
+    "aliases": [
+      "Hough lines",
+      "Hough circles"
+    ]
+  },
+  {
+    "topic": "feature-keypoint",
+    "label": "Image keypoint",
+    "description": "A distinctive image location useful for matching and tracking.",
+    "aliases": [
+      "keypoint",
+      "feature point"
+    ]
+  },
+  {
+    "topic": "aruco-marker",
+    "label": "ArUco marker",
+    "description": "A square fiducial marker whose coded pattern supports detection and pose estimation.",
+    "aliases": [
+      "ArUco",
+      "fiducial marker"
+    ]
+  },
+  {
+    "topic": "apriltag",
+    "label": "AprilTag",
+    "description": "A visual fiducial marker system supporting robust identification and pose estimation.",
+    "aliases": [
+      "AprilTags",
+      "tag tracking"
+    ]
+  },
+  {
+    "topic": "point-cloud",
+    "label": "Point cloud",
+    "description": "A set of three-dimensional points representing measured surfaces and geometry.",
+    "aliases": [
+      "3D point cloud"
+    ]
+  },
+  {
+    "topic": "ros-service",
+    "label": "ROS 2 service",
+    "description": "A request-response communication mechanism between ROS 2 nodes.",
+    "aliases": [
+      "ROS service",
+      "service call"
+    ]
+  },
+  {
+    "topic": "ros-action",
+    "label": "ROS 2 action",
+    "description": "A ROS 2 communication pattern for long-running goals with feedback and cancellation.",
+    "aliases": [
+      "ROS action",
+      "action server"
+    ]
+  },
+  {
+    "topic": "simulation-reproducibility",
+    "label": "Experimental reproducibility",
+    "description": "The ability to repeat an experiment under documented conditions and obtain comparable observations.",
+    "aliases": [
+      "reproducibility",
+      "repeatable experiment"
+    ]
+  },
+  {
+    "topic": "random-seed",
+    "label": "Random seed",
+    "description": "A value used to initialize a pseudo-random generator to reproduce the same sequence.",
+    "aliases": [
+      "seed",
+      "reproducible randomness"
+    ]
+  },
+  {
+    "topic": "latency-p95",
+    "label": "95th-percentile latency",
+    "description": "A response-time threshold at or below which 95 percent of observations fall.",
+    "aliases": [
+      "P95 latency",
+      "p95 response time"
+    ]
+  },
+  {
+    "topic": "response-accuracy",
+    "label": "Response accuracy",
+    "description": "The proportion of evaluated responses matching a prespecified, independently checked reference.",
+    "aliases": [
+      "accuracy metric"
+    ]
+  }
+]

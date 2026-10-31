@@ -1,0 +1,1244 @@
+# SoarLab Chat 3.0 — Soar 9.6.5 native rules
+# All factual output comes from Soar productions and native memory retrieval.
+# Procedural scenario-response rules are individually compiled productions.
+
+# SoarLab Chat 2.0 / Soar 9.6.5
+
+sp {chat*semantic*query
+  (state <s> ^io.input-link <in> ^smem.command <cmd>)
+  (<in> ^request <req>)
+  (<req> ^intent semantic ^topic <topic> ^seq <seq>)
+-->
+  (<cmd> ^query <cue>)
+  (<cue> ^topic <topic>)
+}
+
+sp {chat*semantic*found
+  (state <s> ^io.input-link <in> ^io.output-link <out>
+             ^smem.command <cmd> ^smem.result <result>)
+  (<in> ^request <req>)
+  (<req> ^intent semantic ^topic <topic> ^seq <seq>)
+  (<cmd> ^query <cue>)
+  (<result> ^success <cue> ^retrieved <memory>)
+  (<memory> ^topic <topic> ^description <description>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind semantic ^status found
+           ^topic <topic> ^text <description>
+           ^rule chat*semantic*found)
+}
+
+sp {chat*semantic*unknown
+  (state <s> ^io.input-link <in> ^io.output-link <out>
+             ^smem.command <cmd> ^smem.result <result>)
+  (<in> ^request <req>)
+  (<req> ^intent semantic ^topic <topic> ^seq <seq>)
+  (<cmd> ^query <cue>)
+  (<result> ^failure <cue>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind semantic ^status unknown
+           ^topic <topic> ^text |I do not know that concept yet. You can teach it to me.|
+           ^rule chat*semantic*unknown)
+}
+
+sp {chat*teach*store
+  (state <s> ^io.input-link <in> ^smem.command <cmd>)
+  (<in> ^request <req>)
+  (<req> ^intent teach ^seq <seq> ^topic <topic> ^content <content>)
+-->
+  (<s> ^learning-record <fact>)
+  (<fact> ^topic <topic> ^description <content> ^category robotics)
+  (<cmd> ^store-new <fact>)
+}
+
+sp {chat*teach*confirmation
+  (state <s> ^io.input-link <in> ^io.output-link <out>
+             ^smem.result <result> ^learning-record <fact>)
+  (<in> ^request <req>)
+  (<req> ^intent teach ^seq <seq> ^topic <topic>)
+  (<fact> ^topic <topic>)
+  (<result> ^success <fact>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind semantic ^status stored ^topic <topic>
+           ^text |Storage requested from native SMem; verifying retrieval...|
+           ^rule chat*teach*confirmation)
+}
+
+sp {chat*experience*registered
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent experience ^seq <seq> ^topic <topic> ^content <content>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind episodic ^status presented ^topic <topic>
+           ^text |Event presented to Soar working memory.|
+           ^rule chat*experience*registered)
+}
+
+sp {chat*episodic*query
+  (state <s> ^io.input-link <in> ^epmem.command <cmd>)
+  (<in> ^request <req>)
+  (<req> ^intent episodic ^topic <topic> ^seq <seq>)
+-->
+  (<cmd> ^query <cue>)
+  (<cue> ^io <io>)
+  (<io> ^input-link <past-in>)
+  (<past-in> ^request <past>)
+  (<past> ^intent experience ^topic <topic>)
+}
+
+sp {chat*episodic*found
+  (state <s> ^io.input-link <in> ^io.output-link <out>
+             ^epmem.command <cmd> ^epmem.result <result>)
+  (<in> ^request <req>)
+  (<req> ^intent episodic ^topic <topic> ^seq <seq>)
+  (<cmd> ^query <cue>)
+  (<result> ^success <cue> ^retrieved <episode>)
+  (<episode> ^io <io>)
+  (<io> ^input-link <past-in>)
+  (<past-in> ^request <past>)
+  (<past> ^intent experience ^topic <topic> ^content <text>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind episodic ^status found ^topic <topic>
+           ^text <text> ^rule chat*episodic*found)
+}
+
+sp {chat*episodic*unknown
+  (state <s> ^io.input-link <in> ^io.output-link <out>
+             ^epmem.command <cmd> ^epmem.result <result>)
+  (<in> ^request <req>)
+  (<req> ^intent episodic ^topic <topic> ^seq <seq>)
+  (<cmd> ^query <cue>)
+  (<result> ^failure <cue>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind episodic ^status unknown ^topic <topic>
+           ^text |No episode can be retrieved for this cue yet.|
+           ^rule chat*episodic*unknown)
+}
+
+sp {chat*procedural*low-battery
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic low-battery ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic low-battery
+           ^text |If the battery is low in a classroom demonstration, stop the current task and start a safe return to the charger.| ^rule chat*procedural*low-battery)
+}
+
+sp {chat*procedural*low-battery-corridor
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic low-battery-corridor ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic low-battery-corridor
+           ^text |If the battery is low during corridor navigation, stop the current task and start a safe return to the charger.| ^rule chat*procedural*low-battery-corridor)
+}
+
+sp {chat*procedural*low-battery-mapping
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic low-battery-mapping ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic low-battery-mapping
+           ^text |If the battery is low during a mapping mission, stop the current task and start a safe return to the charger.| ^rule chat*procedural*low-battery-mapping)
+}
+
+sp {chat*procedural*low-battery-docking
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic low-battery-docking ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic low-battery-docking
+           ^text |If the battery is low while docking, stop the current task and start a safe return to the charger.| ^rule chat*procedural*low-battery-docking)
+}
+
+sp {chat*procedural*low-battery-remote-control
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic low-battery-remote-control ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic low-battery-remote-control
+           ^text |If the battery is low during teleoperation, stop the current task and start a safe return to the charger.| ^rule chat*procedural*low-battery-remote-control)
+}
+
+sp {chat*procedural*low-battery-test-bench
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic low-battery-test-bench ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic low-battery-test-bench
+           ^text |If the battery is low during a laboratory bench test, stop the current task and start a safe return to the charger.| ^rule chat*procedural*low-battery-test-bench)
+}
+
+sp {chat*procedural*obstacle-close
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic obstacle-close ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic obstacle-close
+           ^text |If an obstacle is close in a classroom demonstration, brake and evaluate a collision-free alternative before moving.| ^rule chat*procedural*obstacle-close)
+}
+
+sp {chat*procedural*obstacle-close-corridor
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic obstacle-close-corridor ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic obstacle-close-corridor
+           ^text |If an obstacle is close during corridor navigation, brake and evaluate a collision-free alternative before moving.| ^rule chat*procedural*obstacle-close-corridor)
+}
+
+sp {chat*procedural*obstacle-close-mapping
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic obstacle-close-mapping ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic obstacle-close-mapping
+           ^text |If an obstacle is close during a mapping mission, brake and evaluate a collision-free alternative before moving.| ^rule chat*procedural*obstacle-close-mapping)
+}
+
+sp {chat*procedural*obstacle-close-docking
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic obstacle-close-docking ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic obstacle-close-docking
+           ^text |If an obstacle is close while docking, brake and evaluate a collision-free alternative before moving.| ^rule chat*procedural*obstacle-close-docking)
+}
+
+sp {chat*procedural*obstacle-close-remote-control
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic obstacle-close-remote-control ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic obstacle-close-remote-control
+           ^text |If an obstacle is close during teleoperation, brake and evaluate a collision-free alternative before moving.| ^rule chat*procedural*obstacle-close-remote-control)
+}
+
+sp {chat*procedural*obstacle-close-test-bench
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic obstacle-close-test-bench ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic obstacle-close-test-bench
+           ^text |If an obstacle is close during a laboratory bench test, brake and evaluate a collision-free alternative before moving.| ^rule chat*procedural*obstacle-close-test-bench)
+}
+
+sp {chat*procedural*obstacle-clear
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic obstacle-clear ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic obstacle-clear
+           ^text |If the path is clear in a classroom demonstration, proceed at a safe speed while continuing sensor checks.| ^rule chat*procedural*obstacle-clear)
+}
+
+sp {chat*procedural*obstacle-clear-corridor
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic obstacle-clear-corridor ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic obstacle-clear-corridor
+           ^text |If the path is clear during corridor navigation, proceed at a safe speed while continuing sensor checks.| ^rule chat*procedural*obstacle-clear-corridor)
+}
+
+sp {chat*procedural*obstacle-clear-mapping
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic obstacle-clear-mapping ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic obstacle-clear-mapping
+           ^text |If the path is clear during a mapping mission, proceed at a safe speed while continuing sensor checks.| ^rule chat*procedural*obstacle-clear-mapping)
+}
+
+sp {chat*procedural*obstacle-clear-docking
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic obstacle-clear-docking ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic obstacle-clear-docking
+           ^text |If the path is clear while docking, proceed at a safe speed while continuing sensor checks.| ^rule chat*procedural*obstacle-clear-docking)
+}
+
+sp {chat*procedural*obstacle-clear-remote-control
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic obstacle-clear-remote-control ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic obstacle-clear-remote-control
+           ^text |If the path is clear during teleoperation, proceed at a safe speed while continuing sensor checks.| ^rule chat*procedural*obstacle-clear-remote-control)
+}
+
+sp {chat*procedural*obstacle-clear-test-bench
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic obstacle-clear-test-bench ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic obstacle-clear-test-bench
+           ^text |If the path is clear during a laboratory bench test, proceed at a safe speed while continuing sensor checks.| ^rule chat*procedural*obstacle-clear-test-bench)
+}
+
+sp {chat*procedural*lost-localization
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic lost-localization ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic lost-localization
+           ^text |If localization is lost in a classroom demonstration, slow down and run a relocalization procedure.| ^rule chat*procedural*lost-localization)
+}
+
+sp {chat*procedural*lost-localization-corridor
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic lost-localization-corridor ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic lost-localization-corridor
+           ^text |If localization is lost during corridor navigation, slow down and run a relocalization procedure.| ^rule chat*procedural*lost-localization-corridor)
+}
+
+sp {chat*procedural*lost-localization-mapping
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic lost-localization-mapping ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic lost-localization-mapping
+           ^text |If localization is lost during a mapping mission, slow down and run a relocalization procedure.| ^rule chat*procedural*lost-localization-mapping)
+}
+
+sp {chat*procedural*lost-localization-docking
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic lost-localization-docking ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic lost-localization-docking
+           ^text |If localization is lost while docking, slow down and run a relocalization procedure.| ^rule chat*procedural*lost-localization-docking)
+}
+
+sp {chat*procedural*lost-localization-remote-control
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic lost-localization-remote-control ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic lost-localization-remote-control
+           ^text |If localization is lost during teleoperation, slow down and run a relocalization procedure.| ^rule chat*procedural*lost-localization-remote-control)
+}
+
+sp {chat*procedural*lost-localization-test-bench
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic lost-localization-test-bench ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic lost-localization-test-bench
+           ^text |If localization is lost during a laboratory bench test, slow down and run a relocalization procedure.| ^rule chat*procedural*lost-localization-test-bench)
+}
+
+sp {chat*procedural*sensor-failure
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic sensor-failure ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic sensor-failure
+           ^text |If a sensor fails in a classroom demonstration, avoid decisions relying on the failed sensor and raise a diagnostic alert.| ^rule chat*procedural*sensor-failure)
+}
+
+sp {chat*procedural*sensor-failure-corridor
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic sensor-failure-corridor ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic sensor-failure-corridor
+           ^text |If a sensor fails during corridor navigation, avoid decisions relying on the failed sensor and raise a diagnostic alert.| ^rule chat*procedural*sensor-failure-corridor)
+}
+
+sp {chat*procedural*sensor-failure-mapping
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic sensor-failure-mapping ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic sensor-failure-mapping
+           ^text |If a sensor fails during a mapping mission, avoid decisions relying on the failed sensor and raise a diagnostic alert.| ^rule chat*procedural*sensor-failure-mapping)
+}
+
+sp {chat*procedural*sensor-failure-docking
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic sensor-failure-docking ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic sensor-failure-docking
+           ^text |If a sensor fails while docking, avoid decisions relying on the failed sensor and raise a diagnostic alert.| ^rule chat*procedural*sensor-failure-docking)
+}
+
+sp {chat*procedural*sensor-failure-remote-control
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic sensor-failure-remote-control ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic sensor-failure-remote-control
+           ^text |If a sensor fails during teleoperation, avoid decisions relying on the failed sensor and raise a diagnostic alert.| ^rule chat*procedural*sensor-failure-remote-control)
+}
+
+sp {chat*procedural*sensor-failure-test-bench
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic sensor-failure-test-bench ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic sensor-failure-test-bench
+           ^text |If a sensor fails during a laboratory bench test, avoid decisions relying on the failed sensor and raise a diagnostic alert.| ^rule chat*procedural*sensor-failure-test-bench)
+}
+
+sp {chat*procedural*overheating
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic overheating ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic overheating
+           ^text |If a motor overheats in a classroom demonstration, reduce actuator demand and suspend operation if temperatures remain unsafe.| ^rule chat*procedural*overheating)
+}
+
+sp {chat*procedural*overheating-corridor
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic overheating-corridor ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic overheating-corridor
+           ^text |If a motor overheats during corridor navigation, reduce actuator demand and suspend operation if temperatures remain unsafe.| ^rule chat*procedural*overheating-corridor)
+}
+
+sp {chat*procedural*overheating-mapping
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic overheating-mapping ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic overheating-mapping
+           ^text |If a motor overheats during a mapping mission, reduce actuator demand and suspend operation if temperatures remain unsafe.| ^rule chat*procedural*overheating-mapping)
+}
+
+sp {chat*procedural*overheating-docking
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic overheating-docking ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic overheating-docking
+           ^text |If a motor overheats while docking, reduce actuator demand and suspend operation if temperatures remain unsafe.| ^rule chat*procedural*overheating-docking)
+}
+
+sp {chat*procedural*overheating-remote-control
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic overheating-remote-control ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic overheating-remote-control
+           ^text |If a motor overheats during teleoperation, reduce actuator demand and suspend operation if temperatures remain unsafe.| ^rule chat*procedural*overheating-remote-control)
+}
+
+sp {chat*procedural*overheating-test-bench
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic overheating-test-bench ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic overheating-test-bench
+           ^text |If a motor overheats during a laboratory bench test, reduce actuator demand and suspend operation if temperatures remain unsafe.| ^rule chat*procedural*overheating-test-bench)
+}
+
+sp {chat*procedural*emergency-stop
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic emergency-stop ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic emergency-stop
+           ^text |If the emergency stop is triggered in a classroom demonstration, cut motion commands and keep the robot stopped until reset.| ^rule chat*procedural*emergency-stop)
+}
+
+sp {chat*procedural*emergency-stop-corridor
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic emergency-stop-corridor ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic emergency-stop-corridor
+           ^text |If the emergency stop is triggered during corridor navigation, cut motion commands and keep the robot stopped until reset.| ^rule chat*procedural*emergency-stop-corridor)
+}
+
+sp {chat*procedural*emergency-stop-mapping
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic emergency-stop-mapping ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic emergency-stop-mapping
+           ^text |If the emergency stop is triggered during a mapping mission, cut motion commands and keep the robot stopped until reset.| ^rule chat*procedural*emergency-stop-mapping)
+}
+
+sp {chat*procedural*emergency-stop-docking
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic emergency-stop-docking ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic emergency-stop-docking
+           ^text |If the emergency stop is triggered while docking, cut motion commands and keep the robot stopped until reset.| ^rule chat*procedural*emergency-stop-docking)
+}
+
+sp {chat*procedural*emergency-stop-remote-control
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic emergency-stop-remote-control ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic emergency-stop-remote-control
+           ^text |If the emergency stop is triggered during teleoperation, cut motion commands and keep the robot stopped until reset.| ^rule chat*procedural*emergency-stop-remote-control)
+}
+
+sp {chat*procedural*emergency-stop-test-bench
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic emergency-stop-test-bench ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic emergency-stop-test-bench
+           ^text |If the emergency stop is triggered during a laboratory bench test, cut motion commands and keep the robot stopped until reset.| ^rule chat*procedural*emergency-stop-test-bench)
+}
+
+sp {chat*procedural*bumper-triggered
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic bumper-triggered ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic bumper-triggered
+           ^text |If the bumper is pressed in a classroom demonstration, stop immediately and inspect the nearby collision region.| ^rule chat*procedural*bumper-triggered)
+}
+
+sp {chat*procedural*bumper-triggered-corridor
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic bumper-triggered-corridor ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic bumper-triggered-corridor
+           ^text |If the bumper is pressed during corridor navigation, stop immediately and inspect the nearby collision region.| ^rule chat*procedural*bumper-triggered-corridor)
+}
+
+sp {chat*procedural*bumper-triggered-mapping
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic bumper-triggered-mapping ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic bumper-triggered-mapping
+           ^text |If the bumper is pressed during a mapping mission, stop immediately and inspect the nearby collision region.| ^rule chat*procedural*bumper-triggered-mapping)
+}
+
+sp {chat*procedural*bumper-triggered-docking
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic bumper-triggered-docking ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic bumper-triggered-docking
+           ^text |If the bumper is pressed while docking, stop immediately and inspect the nearby collision region.| ^rule chat*procedural*bumper-triggered-docking)
+}
+
+sp {chat*procedural*bumper-triggered-remote-control
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic bumper-triggered-remote-control ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic bumper-triggered-remote-control
+           ^text |If the bumper is pressed during teleoperation, stop immediately and inspect the nearby collision region.| ^rule chat*procedural*bumper-triggered-remote-control)
+}
+
+sp {chat*procedural*bumper-triggered-test-bench
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic bumper-triggered-test-bench ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic bumper-triggered-test-bench
+           ^text |If the bumper is pressed during a laboratory bench test, stop immediately and inspect the nearby collision region.| ^rule chat*procedural*bumper-triggered-test-bench)
+}
+
+sp {chat*procedural*motor-stall
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic motor-stall ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic motor-stall
+           ^text |If a motor stalls in a classroom demonstration, stop the motor and inspect mechanical load or obstruction.| ^rule chat*procedural*motor-stall)
+}
+
+sp {chat*procedural*motor-stall-corridor
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic motor-stall-corridor ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic motor-stall-corridor
+           ^text |If a motor stalls during corridor navigation, stop the motor and inspect mechanical load or obstruction.| ^rule chat*procedural*motor-stall-corridor)
+}
+
+sp {chat*procedural*motor-stall-mapping
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic motor-stall-mapping ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic motor-stall-mapping
+           ^text |If a motor stalls during a mapping mission, stop the motor and inspect mechanical load or obstruction.| ^rule chat*procedural*motor-stall-mapping)
+}
+
+sp {chat*procedural*motor-stall-docking
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic motor-stall-docking ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic motor-stall-docking
+           ^text |If a motor stalls while docking, stop the motor and inspect mechanical load or obstruction.| ^rule chat*procedural*motor-stall-docking)
+}
+
+sp {chat*procedural*motor-stall-remote-control
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic motor-stall-remote-control ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic motor-stall-remote-control
+           ^text |If a motor stalls during teleoperation, stop the motor and inspect mechanical load or obstruction.| ^rule chat*procedural*motor-stall-remote-control)
+}
+
+sp {chat*procedural*motor-stall-test-bench
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic motor-stall-test-bench ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic motor-stall-test-bench
+           ^text |If a motor stalls during a laboratory bench test, stop the motor and inspect mechanical load or obstruction.| ^rule chat*procedural*motor-stall-test-bench)
+}
+
+sp {chat*procedural*wheel-slip
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic wheel-slip ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic wheel-slip
+           ^text |If the wheels slip in a classroom demonstration, reduce acceleration and reassess odometry confidence.| ^rule chat*procedural*wheel-slip)
+}
+
+sp {chat*procedural*wheel-slip-corridor
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic wheel-slip-corridor ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic wheel-slip-corridor
+           ^text |If the wheels slip during corridor navigation, reduce acceleration and reassess odometry confidence.| ^rule chat*procedural*wheel-slip-corridor)
+}
+
+sp {chat*procedural*wheel-slip-mapping
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic wheel-slip-mapping ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic wheel-slip-mapping
+           ^text |If the wheels slip during a mapping mission, reduce acceleration and reassess odometry confidence.| ^rule chat*procedural*wheel-slip-mapping)
+}
+
+sp {chat*procedural*wheel-slip-docking
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic wheel-slip-docking ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic wheel-slip-docking
+           ^text |If the wheels slip while docking, reduce acceleration and reassess odometry confidence.| ^rule chat*procedural*wheel-slip-docking)
+}
+
+sp {chat*procedural*wheel-slip-remote-control
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic wheel-slip-remote-control ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic wheel-slip-remote-control
+           ^text |If the wheels slip during teleoperation, reduce acceleration and reassess odometry confidence.| ^rule chat*procedural*wheel-slip-remote-control)
+}
+
+sp {chat*procedural*wheel-slip-test-bench
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic wheel-slip-test-bench ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic wheel-slip-test-bench
+           ^text |If the wheels slip during a laboratory bench test, reduce acceleration and reassess odometry confidence.| ^rule chat*procedural*wheel-slip-test-bench)
+}
+
+sp {chat*procedural*mapping-drift
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic mapping-drift ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic mapping-drift
+           ^text |If the map alignment drifts in a classroom demonstration, pause mapping and revisit stable landmarks for correction.| ^rule chat*procedural*mapping-drift)
+}
+
+sp {chat*procedural*mapping-drift-corridor
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic mapping-drift-corridor ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic mapping-drift-corridor
+           ^text |If the map alignment drifts during corridor navigation, pause mapping and revisit stable landmarks for correction.| ^rule chat*procedural*mapping-drift-corridor)
+}
+
+sp {chat*procedural*mapping-drift-mapping
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic mapping-drift-mapping ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic mapping-drift-mapping
+           ^text |If the map alignment drifts during a mapping mission, pause mapping and revisit stable landmarks for correction.| ^rule chat*procedural*mapping-drift-mapping)
+}
+
+sp {chat*procedural*mapping-drift-docking
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic mapping-drift-docking ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic mapping-drift-docking
+           ^text |If the map alignment drifts while docking, pause mapping and revisit stable landmarks for correction.| ^rule chat*procedural*mapping-drift-docking)
+}
+
+sp {chat*procedural*mapping-drift-remote-control
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic mapping-drift-remote-control ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic mapping-drift-remote-control
+           ^text |If the map alignment drifts during teleoperation, pause mapping and revisit stable landmarks for correction.| ^rule chat*procedural*mapping-drift-remote-control)
+}
+
+sp {chat*procedural*mapping-drift-test-bench
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic mapping-drift-test-bench ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic mapping-drift-test-bench
+           ^text |If the map alignment drifts during a laboratory bench test, pause mapping and revisit stable landmarks for correction.| ^rule chat*procedural*mapping-drift-test-bench)
+}
+
+sp {chat*procedural*camera-loss
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic camera-loss ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic camera-loss
+           ^text |If the camera feed is lost in a classroom demonstration, stop image-dependent actions and retry the camera safely.| ^rule chat*procedural*camera-loss)
+}
+
+sp {chat*procedural*camera-loss-corridor
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic camera-loss-corridor ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic camera-loss-corridor
+           ^text |If the camera feed is lost during corridor navigation, stop image-dependent actions and retry the camera safely.| ^rule chat*procedural*camera-loss-corridor)
+}
+
+sp {chat*procedural*camera-loss-mapping
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic camera-loss-mapping ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic camera-loss-mapping
+           ^text |If the camera feed is lost during a mapping mission, stop image-dependent actions and retry the camera safely.| ^rule chat*procedural*camera-loss-mapping)
+}
+
+sp {chat*procedural*camera-loss-docking
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic camera-loss-docking ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic camera-loss-docking
+           ^text |If the camera feed is lost while docking, stop image-dependent actions and retry the camera safely.| ^rule chat*procedural*camera-loss-docking)
+}
+
+sp {chat*procedural*camera-loss-remote-control
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic camera-loss-remote-control ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic camera-loss-remote-control
+           ^text |If the camera feed is lost during teleoperation, stop image-dependent actions and retry the camera safely.| ^rule chat*procedural*camera-loss-remote-control)
+}
+
+sp {chat*procedural*camera-loss-test-bench
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic camera-loss-test-bench ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic camera-loss-test-bench
+           ^text |If the camera feed is lost during a laboratory bench test, stop image-dependent actions and retry the camera safely.| ^rule chat*procedural*camera-loss-test-bench)
+}
+
+sp {chat*procedural*network-drop
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic network-drop ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic network-drop
+           ^text |If the network connection drops in a classroom demonstration, switch to a safe local control strategy and log the interruption.| ^rule chat*procedural*network-drop)
+}
+
+sp {chat*procedural*network-drop-corridor
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic network-drop-corridor ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic network-drop-corridor
+           ^text |If the network connection drops during corridor navigation, switch to a safe local control strategy and log the interruption.| ^rule chat*procedural*network-drop-corridor)
+}
+
+sp {chat*procedural*network-drop-mapping
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic network-drop-mapping ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic network-drop-mapping
+           ^text |If the network connection drops during a mapping mission, switch to a safe local control strategy and log the interruption.| ^rule chat*procedural*network-drop-mapping)
+}
+
+sp {chat*procedural*network-drop-docking
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic network-drop-docking ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic network-drop-docking
+           ^text |If the network connection drops while docking, switch to a safe local control strategy and log the interruption.| ^rule chat*procedural*network-drop-docking)
+}
+
+sp {chat*procedural*network-drop-remote-control
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic network-drop-remote-control ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic network-drop-remote-control
+           ^text |If the network connection drops during teleoperation, switch to a safe local control strategy and log the interruption.| ^rule chat*procedural*network-drop-remote-control)
+}
+
+sp {chat*procedural*network-drop-test-bench
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic network-drop-test-bench ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic network-drop-test-bench
+           ^text |If the network connection drops during a laboratory bench test, switch to a safe local control strategy and log the interruption.| ^rule chat*procedural*network-drop-test-bench)
+}
+
+sp {chat*procedural*charging-required
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic charging-required ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic charging-required
+           ^text |If the charger is required in a classroom demonstration, prioritize a safe docking maneuver over the current mission.| ^rule chat*procedural*charging-required)
+}
+
+sp {chat*procedural*charging-required-corridor
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic charging-required-corridor ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic charging-required-corridor
+           ^text |If the charger is required during corridor navigation, prioritize a safe docking maneuver over the current mission.| ^rule chat*procedural*charging-required-corridor)
+}
+
+sp {chat*procedural*charging-required-mapping
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic charging-required-mapping ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic charging-required-mapping
+           ^text |If the charger is required during a mapping mission, prioritize a safe docking maneuver over the current mission.| ^rule chat*procedural*charging-required-mapping)
+}
+
+sp {chat*procedural*charging-required-docking
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic charging-required-docking ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic charging-required-docking
+           ^text |If the charger is required while docking, prioritize a safe docking maneuver over the current mission.| ^rule chat*procedural*charging-required-docking)
+}
+
+sp {chat*procedural*charging-required-remote-control
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic charging-required-remote-control ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic charging-required-remote-control
+           ^text |If the charger is required during teleoperation, prioritize a safe docking maneuver over the current mission.| ^rule chat*procedural*charging-required-remote-control)
+}
+
+sp {chat*procedural*charging-required-test-bench
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic charging-required-test-bench ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic charging-required-test-bench
+           ^text |If the charger is required during a laboratory bench test, prioritize a safe docking maneuver over the current mission.| ^rule chat*procedural*charging-required-test-bench)
+}
+
+sp {chat*procedural*gripper-jam
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic gripper-jam ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic gripper-jam
+           ^text |If the gripper jams in a classroom demonstration, release force if safe, stop manipulation, and inspect the object.| ^rule chat*procedural*gripper-jam)
+}
+
+sp {chat*procedural*gripper-jam-corridor
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic gripper-jam-corridor ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic gripper-jam-corridor
+           ^text |If the gripper jams during corridor navigation, release force if safe, stop manipulation, and inspect the object.| ^rule chat*procedural*gripper-jam-corridor)
+}
+
+sp {chat*procedural*gripper-jam-mapping
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic gripper-jam-mapping ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic gripper-jam-mapping
+           ^text |If the gripper jams during a mapping mission, release force if safe, stop manipulation, and inspect the object.| ^rule chat*procedural*gripper-jam-mapping)
+}
+
+sp {chat*procedural*gripper-jam-docking
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic gripper-jam-docking ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic gripper-jam-docking
+           ^text |If the gripper jams while docking, release force if safe, stop manipulation, and inspect the object.| ^rule chat*procedural*gripper-jam-docking)
+}
+
+sp {chat*procedural*gripper-jam-remote-control
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic gripper-jam-remote-control ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic gripper-jam-remote-control
+           ^text |If the gripper jams during teleoperation, release force if safe, stop manipulation, and inspect the object.| ^rule chat*procedural*gripper-jam-remote-control)
+}
+
+sp {chat*procedural*gripper-jam-test-bench
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic gripper-jam-test-bench ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic gripper-jam-test-bench
+           ^text |If the gripper jams during a laboratory bench test, release force if safe, stop manipulation, and inspect the object.| ^rule chat*procedural*gripper-jam-test-bench)
+}
+
+sp {chat*procedural*joint-limit
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic joint-limit ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic joint-limit
+           ^text |If a joint limit is reached in a classroom demonstration, block further motion toward the joint limit and report the condition.| ^rule chat*procedural*joint-limit)
+}
+
+sp {chat*procedural*joint-limit-corridor
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic joint-limit-corridor ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic joint-limit-corridor
+           ^text |If a joint limit is reached during corridor navigation, block further motion toward the joint limit and report the condition.| ^rule chat*procedural*joint-limit-corridor)
+}
+
+sp {chat*procedural*joint-limit-mapping
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic joint-limit-mapping ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic joint-limit-mapping
+           ^text |If a joint limit is reached during a mapping mission, block further motion toward the joint limit and report the condition.| ^rule chat*procedural*joint-limit-mapping)
+}
+
+sp {chat*procedural*joint-limit-docking
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic joint-limit-docking ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic joint-limit-docking
+           ^text |If a joint limit is reached while docking, block further motion toward the joint limit and report the condition.| ^rule chat*procedural*joint-limit-docking)
+}
+
+sp {chat*procedural*joint-limit-remote-control
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic joint-limit-remote-control ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic joint-limit-remote-control
+           ^text |If a joint limit is reached during teleoperation, block further motion toward the joint limit and report the condition.| ^rule chat*procedural*joint-limit-remote-control)
+}
+
+sp {chat*procedural*joint-limit-test-bench
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic joint-limit-test-bench ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic joint-limit-test-bench
+           ^text |If a joint limit is reached during a laboratory bench test, block further motion toward the joint limit and report the condition.| ^rule chat*procedural*joint-limit-test-bench)
+}
+
+sp {chat*procedural*unexpected-person
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic unexpected-person ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic unexpected-person
+           ^text |If a person approaches the robot in a classroom demonstration, reduce speed or stop while maintaining a safe distance.| ^rule chat*procedural*unexpected-person)
+}
+
+sp {chat*procedural*unexpected-person-corridor
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic unexpected-person-corridor ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic unexpected-person-corridor
+           ^text |If a person approaches the robot during corridor navigation, reduce speed or stop while maintaining a safe distance.| ^rule chat*procedural*unexpected-person-corridor)
+}
+
+sp {chat*procedural*unexpected-person-mapping
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic unexpected-person-mapping ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic unexpected-person-mapping
+           ^text |If a person approaches the robot during a mapping mission, reduce speed or stop while maintaining a safe distance.| ^rule chat*procedural*unexpected-person-mapping)
+}
+
+sp {chat*procedural*unexpected-person-docking
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic unexpected-person-docking ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic unexpected-person-docking
+           ^text |If a person approaches the robot while docking, reduce speed or stop while maintaining a safe distance.| ^rule chat*procedural*unexpected-person-docking)
+}
+
+sp {chat*procedural*unexpected-person-remote-control
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic unexpected-person-remote-control ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic unexpected-person-remote-control
+           ^text |If a person approaches the robot during teleoperation, reduce speed or stop while maintaining a safe distance.| ^rule chat*procedural*unexpected-person-remote-control)
+}
+
+sp {chat*procedural*unexpected-person-test-bench
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic unexpected-person-test-bench ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic unexpected-person-test-bench
+           ^text |If a person approaches the robot during a laboratory bench test, reduce speed or stop while maintaining a safe distance.| ^rule chat*procedural*unexpected-person-test-bench)
+}
+
+sp {chat*procedural*navigation-deadend
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic navigation-deadend ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic navigation-deadend
+           ^text |If a corridor has no exit in a classroom demonstration, stop, rotate safely, and replan away from the dead end.| ^rule chat*procedural*navigation-deadend)
+}
+
+sp {chat*procedural*navigation-deadend-corridor
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic navigation-deadend-corridor ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic navigation-deadend-corridor
+           ^text |If a corridor has no exit during corridor navigation, stop, rotate safely, and replan away from the dead end.| ^rule chat*procedural*navigation-deadend-corridor)
+}
+
+sp {chat*procedural*navigation-deadend-mapping
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic navigation-deadend-mapping ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic navigation-deadend-mapping
+           ^text |If a corridor has no exit during a mapping mission, stop, rotate safely, and replan away from the dead end.| ^rule chat*procedural*navigation-deadend-mapping)
+}
+
+sp {chat*procedural*navigation-deadend-docking
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic navigation-deadend-docking ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic navigation-deadend-docking
+           ^text |If a corridor has no exit while docking, stop, rotate safely, and replan away from the dead end.| ^rule chat*procedural*navigation-deadend-docking)
+}
+
+sp {chat*procedural*navigation-deadend-remote-control
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic navigation-deadend-remote-control ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic navigation-deadend-remote-control
+           ^text |If a corridor has no exit during teleoperation, stop, rotate safely, and replan away from the dead end.| ^rule chat*procedural*navigation-deadend-remote-control)
+}
+
+sp {chat*procedural*navigation-deadend-test-bench
+  (state <s> ^io.input-link <in> ^io.output-link <out>)
+  (<in> ^request <req>)
+  (<req> ^intent procedural ^topic navigation-deadend-test-bench ^seq <seq>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind procedural ^status found ^topic navigation-deadend-test-bench
+           ^text |If a corridor has no exit during a laboratory bench test, stop, rotate safely, and replan away from the dead end.| ^rule chat*procedural*navigation-deadend-test-bench)
+}
+
+sp {chat*episodic-exact*query
+  (state <s> ^io.input-link <in> ^epmem.command <cmd>)
+  (<in> ^request <req>)
+  (<req> ^intent episodic-exact ^topic <topic> ^content <content> ^seq <seq>)
+-->
+  (<cmd> ^query <cue>)
+  (<cue> ^io <io>)
+  (<io> ^input-link <past-in>)
+  (<past-in> ^request <past>)
+  (<past> ^intent experience ^topic <topic> ^content <content>)
+}
+
+sp {chat*episodic-exact*found
+  (state <s> ^io.input-link <in> ^io.output-link <out>
+             ^epmem.command <cmd> ^epmem.result <result>)
+  (<in> ^request <req>)
+  (<req> ^intent episodic-exact ^topic <topic> ^content <content> ^seq <seq>)
+  (<cmd> ^query <cue>)
+  (<result> ^success <cue> ^retrieved <episode>)
+  (<episode> ^io <io>)
+  (<io> ^input-link <past-in>)
+  (<past-in> ^request <past>)
+  (<past> ^intent experience ^topic <topic> ^content <content>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind episodic ^status found ^topic <topic>
+           ^text <content> ^rule chat*episodic-exact*found)
+}
+
+sp {chat*episodic-exact*unknown
+  (state <s> ^io.input-link <in> ^io.output-link <out>
+             ^epmem.command <cmd> ^epmem.result <result>)
+  (<in> ^request <req>)
+  (<req> ^intent episodic-exact ^topic <topic> ^content <content> ^seq <seq>)
+  (<cmd> ^query <cue>)
+  (<result> ^failure <cue>)
+-->
+  (<out> ^reply <reply>)
+  (<reply> ^seq <seq> ^kind episodic ^status unknown ^topic <topic>
+           ^text |The requested experience was not retrieved by native EpMem.|
+           ^rule chat*episodic-exact*unknown)
+}

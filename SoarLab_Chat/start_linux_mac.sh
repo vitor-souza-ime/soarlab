@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -e
+cd "$(dirname "$0")"
+python -m pip install -r requirements.txt
+python diagnostico_soar.py
+python app.py

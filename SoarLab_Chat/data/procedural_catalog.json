@@ -1,0 +1,1082 @@
+[
+  {
+    "topic": "low-battery",
+    "label": "the battery is low in a classroom demonstration",
+    "question": "What should the robot do if the battery is low in a classroom demonstration?",
+    "response": "If the battery is low in a classroom demonstration, stop the current task and start a safe return to the charger.",
+    "aliases": [
+      "How should the robot react when the battery is low in a classroom demonstration?",
+      "Procedure when the battery is low in a classroom demonstration"
+    ]
+  },
+  {
+    "topic": "low-battery-corridor",
+    "label": "the battery is low during corridor navigation",
+    "question": "What should the robot do if the battery is low during corridor navigation?",
+    "response": "If the battery is low during corridor navigation, stop the current task and start a safe return to the charger.",
+    "aliases": [
+      "How should the robot react when the battery is low during corridor navigation?",
+      "Procedure when the battery is low during corridor navigation"
+    ]
+  },
+  {
+    "topic": "low-battery-mapping",
+    "label": "the battery is low during a mapping mission",
+    "question": "What should the robot do if the battery is low during a mapping mission?",
+    "response": "If the battery is low during a mapping mission, stop the current task and start a safe return to the charger.",
+    "aliases": [
+      "How should the robot react when the battery is low during a mapping mission?",
+      "Procedure when the battery is low during a mapping mission"
+    ]
+  },
+  {
+    "topic": "low-battery-docking",
+    "label": "the battery is low while docking",
+    "question": "What should the robot do if the battery is low while docking?",
+    "response": "If the battery is low while docking, stop the current task and start a safe return to the charger.",
+    "aliases": [
+      "How should the robot react when the battery is low while docking?",
+      "Procedure when the battery is low while docking"
+    ]
+  },
+  {
+    "topic": "low-battery-remote-control",
+    "label": "the battery is low during teleoperation",
+    "question": "What should the robot do if the battery is low during teleoperation?",
+    "response": "If the battery is low during teleoperation, stop the current task and start a safe return to the charger.",
+    "aliases": [
+      "How should the robot react when the battery is low during teleoperation?",
+      "Procedure when the battery is low during teleoperation"
+    ]
+  },
+  {
+    "topic": "low-battery-test-bench",
+    "label": "the battery is low during a laboratory bench test",
+    "question": "What should the robot do if the battery is low during a laboratory bench test?",
+    "response": "If the battery is low during a laboratory bench test, stop the current task and start a safe return to the charger.",
+    "aliases": [
+      "How should the robot react when the battery is low during a laboratory bench test?",
+      "Procedure when the battery is low during a laboratory bench test"
+    ]
+  },
+  {
+    "topic": "obstacle-close",
+    "label": "an obstacle is close in a classroom demonstration",
+    "question": "What should the robot do if an obstacle is close in a classroom demonstration?",
+    "response": "If an obstacle is close in a classroom demonstration, brake and evaluate a collision-free alternative before moving.",
+    "aliases": [
+      "How should the robot react when an obstacle is close in a classroom demonstration?",
+      "Procedure when an obstacle is close in a classroom demonstration"
+    ]
+  },
+  {
+    "topic": "obstacle-close-corridor",
+    "label": "an obstacle is close during corridor navigation",
+    "question": "What should the robot do if an obstacle is close during corridor navigation?",
+    "response": "If an obstacle is close during corridor navigation, brake and evaluate a collision-free alternative before moving.",
+    "aliases": [
+      "How should the robot react when an obstacle is close during corridor navigation?",
+      "Procedure when an obstacle is close during corridor navigation"
+    ]
+  },
+  {
+    "topic": "obstacle-close-mapping",
+    "label": "an obstacle is close during a mapping mission",
+    "question": "What should the robot do if an obstacle is close during a mapping mission?",
+    "response": "If an obstacle is close during a mapping mission, brake and evaluate a collision-free alternative before moving.",
+    "aliases": [
+      "How should the robot react when an obstacle is close during a mapping mission?",
+      "Procedure when an obstacle is close during a mapping mission"
+    ]
+  },
+  {
+    "topic": "obstacle-close-docking",
+    "label": "an obstacle is close while docking",
+    "question": "What should the robot do if an obstacle is close while docking?",
+    "response": "If an obstacle is close while docking, brake and evaluate a collision-free alternative before moving.",
+    "aliases": [
+      "How should the robot react when an obstacle is close while docking?",
+      "Procedure when an obstacle is close while docking"
+    ]
+  },
+  {
+    "topic": "obstacle-close-remote-control",
+    "label": "an obstacle is close during teleoperation",
+    "question": "What should the robot do if an obstacle is close during teleoperation?",
+    "response": "If an obstacle is close during teleoperation, brake and evaluate a collision-free alternative before moving.",
+    "aliases": [
+      "How should the robot react when an obstacle is close during teleoperation?",
+      "Procedure when an obstacle is close during teleoperation"
+    ]
+  },
+  {
+    "topic": "obstacle-close-test-bench",
+    "label": "an obstacle is close during a laboratory bench test",
+    "question": "What should the robot do if an obstacle is close during a laboratory bench test?",
+    "response": "If an obstacle is close during a laboratory bench test, brake and evaluate a collision-free alternative before moving.",
+    "aliases": [
+      "How should the robot react when an obstacle is close during a laboratory bench test?",
+      "Procedure when an obstacle is close during a laboratory bench test"
+    ]
+  },
+  {
+    "topic": "obstacle-clear",
+    "label": "the path is clear in a classroom demonstration",
+    "question": "What should the robot do if the path is clear in a classroom demonstration?",
+    "response": "If the path is clear in a classroom demonstration, proceed at a safe speed while continuing sensor checks.",
+    "aliases": [
+      "How should the robot react when the path is clear in a classroom demonstration?",
+      "Procedure when the path is clear in a classroom demonstration"
+    ]
+  },
+  {
+    "topic": "obstacle-clear-corridor",
+    "label": "the path is clear during corridor navigation",
+    "question": "What should the robot do if the path is clear during corridor navigation?",
+    "response": "If the path is clear during corridor navigation, proceed at a safe speed while continuing sensor checks.",
+    "aliases": [
+      "How should the robot react when the path is clear during corridor navigation?",
+      "Procedure when the path is clear during corridor navigation"
+    ]
+  },
+  {
+    "topic": "obstacle-clear-mapping",
+    "label": "the path is clear during a mapping mission",
+    "question": "What should the robot do if the path is clear during a mapping mission?",
+    "response": "If the path is clear during a mapping mission, proceed at a safe speed while continuing sensor checks.",
+    "aliases": [
+      "How should the robot react when the path is clear during a mapping mission?",
+      "Procedure when the path is clear during a mapping mission"
+    ]
+  },
+  {
+    "topic": "obstacle-clear-docking",
+    "label": "the path is clear while docking",
+    "question": "What should the robot do if the path is clear while docking?",
+    "response": "If the path is clear while docking, proceed at a safe speed while continuing sensor checks.",
+    "aliases": [
+      "How should the robot react when the path is clear while docking?",
+      "Procedure when the path is clear while docking"
+    ]
+  },
+  {
+    "topic": "obstacle-clear-remote-control",
+    "label": "the path is clear during teleoperation",
+    "question": "What should the robot do if the path is clear during teleoperation?",
+    "response": "If the path is clear during teleoperation, proceed at a safe speed while continuing sensor checks.",
+    "aliases": [
+      "How should the robot react when the path is clear during teleoperation?",
+      "Procedure when the path is clear during teleoperation"
+    ]
+  },
+  {
+    "topic": "obstacle-clear-test-bench",
+    "label": "the path is clear during a laboratory bench test",
+    "question": "What should the robot do if the path is clear during a laboratory bench test?",
+    "response": "If the path is clear during a laboratory bench test, proceed at a safe speed while continuing sensor checks.",
+    "aliases": [
+      "How should the robot react when the path is clear during a laboratory bench test?",
+      "Procedure when the path is clear during a laboratory bench test"
+    ]
+  },
+  {
+    "topic": "lost-localization",
+    "label": "localization is lost in a classroom demonstration",
+    "question": "What should the robot do if localization is lost in a classroom demonstration?",
+    "response": "If localization is lost in a classroom demonstration, slow down and run a relocalization procedure.",
+    "aliases": [
+      "How should the robot react when localization is lost in a classroom demonstration?",
+      "Procedure when localization is lost in a classroom demonstration"
+    ]
+  },
+  {
+    "topic": "lost-localization-corridor",
+    "label": "localization is lost during corridor navigation",
+    "question": "What should the robot do if localization is lost during corridor navigation?",
+    "response": "If localization is lost during corridor navigation, slow down and run a relocalization procedure.",
+    "aliases": [
+      "How should the robot react when localization is lost during corridor navigation?",
+      "Procedure when localization is lost during corridor navigation"
+    ]
+  },
+  {
+    "topic": "lost-localization-mapping",
+    "label": "localization is lost during a mapping mission",
+    "question": "What should the robot do if localization is lost during a mapping mission?",
+    "response": "If localization is lost during a mapping mission, slow down and run a relocalization procedure.",
+    "aliases": [
+      "How should the robot react when localization is lost during a mapping mission?",
+      "Procedure when localization is lost during a mapping mission"
+    ]
+  },
+  {
+    "topic": "lost-localization-docking",
+    "label": "localization is lost while docking",
+    "question": "What should the robot do if localization is lost while docking?",
+    "response": "If localization is lost while docking, slow down and run a relocalization procedure.",
+    "aliases": [
+      "How should the robot react when localization is lost while docking?",
+      "Procedure when localization is lost while docking"
+    ]
+  },
+  {
+    "topic": "lost-localization-remote-control",
+    "label": "localization is lost during teleoperation",
+    "question": "What should the robot do if localization is lost during teleoperation?",
+    "response": "If localization is lost during teleoperation, slow down and run a relocalization procedure.",
+    "aliases": [
+      "How should the robot react when localization is lost during teleoperation?",
+      "Procedure when localization is lost during teleoperation"
+    ]
+  },
+  {
+    "topic": "lost-localization-test-bench",
+    "label": "localization is lost during a laboratory bench test",
+    "question": "What should the robot do if localization is lost during a laboratory bench test?",
+    "response": "If localization is lost during a laboratory bench test, slow down and run a relocalization procedure.",
+    "aliases": [
+      "How should the robot react when localization is lost during a laboratory bench test?",
+      "Procedure when localization is lost during a laboratory bench test"
+    ]
+  },
+  {
+    "topic": "sensor-failure",
+    "label": "a sensor fails in a classroom demonstration",
+    "question": "What should the robot do if a sensor fails in a classroom demonstration?",
+    "response": "If a sensor fails in a classroom demonstration, avoid decisions relying on the failed sensor and raise a diagnostic alert.",
+    "aliases": [
+      "How should the robot react when a sensor fails in a classroom demonstration?",
+      "Procedure when a sensor fails in a classroom demonstration"
+    ]
+  },
+  {
+    "topic": "sensor-failure-corridor",
+    "label": "a sensor fails during corridor navigation",
+    "question": "What should the robot do if a sensor fails during corridor navigation?",
+    "response": "If a sensor fails during corridor navigation, avoid decisions relying on the failed sensor and raise a diagnostic alert.",
+    "aliases": [
+      "How should the robot react when a sensor fails during corridor navigation?",
+      "Procedure when a sensor fails during corridor navigation"
+    ]
+  },
+  {
+    "topic": "sensor-failure-mapping",
+    "label": "a sensor fails during a mapping mission",
+    "question": "What should the robot do if a sensor fails during a mapping mission?",
+    "response": "If a sensor fails during a mapping mission, avoid decisions relying on the failed sensor and raise a diagnostic alert.",
+    "aliases": [
+      "How should the robot react when a sensor fails during a mapping mission?",
+      "Procedure when a sensor fails during a mapping mission"
+    ]
+  },
+  {
+    "topic": "sensor-failure-docking",
+    "label": "a sensor fails while docking",
+    "question": "What should the robot do if a sensor fails while docking?",
+    "response": "If a sensor fails while docking, avoid decisions relying on the failed sensor and raise a diagnostic alert.",
+    "aliases": [
+      "How should the robot react when a sensor fails while docking?",
+      "Procedure when a sensor fails while docking"
+    ]
+  },
+  {
+    "topic": "sensor-failure-remote-control",
+    "label": "a sensor fails during teleoperation",
+    "question": "What should the robot do if a sensor fails during teleoperation?",
+    "response": "If a sensor fails during teleoperation, avoid decisions relying on the failed sensor and raise a diagnostic alert.",
+    "aliases": [
+      "How should the robot react when a sensor fails during teleoperation?",
+      "Procedure when a sensor fails during teleoperation"
+    ]
+  },
+  {
+    "topic": "sensor-failure-test-bench",
+    "label": "a sensor fails during a laboratory bench test",
+    "question": "What should the robot do if a sensor fails during a laboratory bench test?",
+    "response": "If a sensor fails during a laboratory bench test, avoid decisions relying on the failed sensor and raise a diagnostic alert.",
+    "aliases": [
+      "How should the robot react when a sensor fails during a laboratory bench test?",
+      "Procedure when a sensor fails during a laboratory bench test"
+    ]
+  },
+  {
+    "topic": "overheating",
+    "label": "a motor overheats in a classroom demonstration",
+    "question": "What should the robot do if a motor overheats in a classroom demonstration?",
+    "response": "If a motor overheats in a classroom demonstration, reduce actuator demand and suspend operation if temperatures remain unsafe.",
+    "aliases": [
+      "How should the robot react when a motor overheats in a classroom demonstration?",
+      "Procedure when a motor overheats in a classroom demonstration"
+    ]
+  },
+  {
+    "topic": "overheating-corridor",
+    "label": "a motor overheats during corridor navigation",
+    "question": "What should the robot do if a motor overheats during corridor navigation?",
+    "response": "If a motor overheats during corridor navigation, reduce actuator demand and suspend operation if temperatures remain unsafe.",
+    "aliases": [
+      "How should the robot react when a motor overheats during corridor navigation?",
+      "Procedure when a motor overheats during corridor navigation"
+    ]
+  },
+  {
+    "topic": "overheating-mapping",
+    "label": "a motor overheats during a mapping mission",
+    "question": "What should the robot do if a motor overheats during a mapping mission?",
+    "response": "If a motor overheats during a mapping mission, reduce actuator demand and suspend operation if temperatures remain unsafe.",
+    "aliases": [
+      "How should the robot react when a motor overheats during a mapping mission?",
+      "Procedure when a motor overheats during a mapping mission"
+    ]
+  },
+  {
+    "topic": "overheating-docking",
+    "label": "a motor overheats while docking",
+    "question": "What should the robot do if a motor overheats while docking?",
+    "response": "If a motor overheats while docking, reduce actuator demand and suspend operation if temperatures remain unsafe.",
+    "aliases": [
+      "How should the robot react when a motor overheats while docking?",
+      "Procedure when a motor overheats while docking"
+    ]
+  },
+  {
+    "topic": "overheating-remote-control",
+    "label": "a motor overheats during teleoperation",
+    "question": "What should the robot do if a motor overheats during teleoperation?",
+    "response": "If a motor overheats during teleoperation, reduce actuator demand and suspend operation if temperatures remain unsafe.",
+    "aliases": [
+      "How should the robot react when a motor overheats during teleoperation?",
+      "Procedure when a motor overheats during teleoperation"
+    ]
+  },
+  {
+    "topic": "overheating-test-bench",
+    "label": "a motor overheats during a laboratory bench test",
+    "question": "What should the robot do if a motor overheats during a laboratory bench test?",
+    "response": "If a motor overheats during a laboratory bench test, reduce actuator demand and suspend operation if temperatures remain unsafe.",
+    "aliases": [
+      "How should the robot react when a motor overheats during a laboratory bench test?",
+      "Procedure when a motor overheats during a laboratory bench test"
+    ]
+  },
+  {
+    "topic": "emergency-stop",
+    "label": "the emergency stop is triggered in a classroom demonstration",
+    "question": "What should the robot do if the emergency stop is triggered in a classroom demonstration?",
+    "response": "If the emergency stop is triggered in a classroom demonstration, cut motion commands and keep the robot stopped until reset.",
+    "aliases": [
+      "How should the robot react when the emergency stop is triggered in a classroom demonstration?",
+      "Procedure when the emergency stop is triggered in a classroom demonstration"
+    ]
+  },
+  {
+    "topic": "emergency-stop-corridor",
+    "label": "the emergency stop is triggered during corridor navigation",
+    "question": "What should the robot do if the emergency stop is triggered during corridor navigation?",
+    "response": "If the emergency stop is triggered during corridor navigation, cut motion commands and keep the robot stopped until reset.",
+    "aliases": [
+      "How should the robot react when the emergency stop is triggered during corridor navigation?",
+      "Procedure when the emergency stop is triggered during corridor navigation"
+    ]
+  },
+  {
+    "topic": "emergency-stop-mapping",
+    "label": "the emergency stop is triggered during a mapping mission",
+    "question": "What should the robot do if the emergency stop is triggered during a mapping mission?",
+    "response": "If the emergency stop is triggered during a mapping mission, cut motion commands and keep the robot stopped until reset.",
+    "aliases": [
+      "How should the robot react when the emergency stop is triggered during a mapping mission?",
+      "Procedure when the emergency stop is triggered during a mapping mission"
+    ]
+  },
+  {
+    "topic": "emergency-stop-docking",
+    "label": "the emergency stop is triggered while docking",
+    "question": "What should the robot do if the emergency stop is triggered while docking?",
+    "response": "If the emergency stop is triggered while docking, cut motion commands and keep the robot stopped until reset.",
+    "aliases": [
+      "How should the robot react when the emergency stop is triggered while docking?",
+      "Procedure when the emergency stop is triggered while docking"
+    ]
+  },
+  {
+    "topic": "emergency-stop-remote-control",
+    "label": "the emergency stop is triggered during teleoperation",
+    "question": "What should the robot do if the emergency stop is triggered during teleoperation?",
+    "response": "If the emergency stop is triggered during teleoperation, cut motion commands and keep the robot stopped until reset.",
+    "aliases": [
+      "How should the robot react when the emergency stop is triggered during teleoperation?",
+      "Procedure when the emergency stop is triggered during teleoperation"
+    ]
+  },
+  {
+    "topic": "emergency-stop-test-bench",
+    "label": "the emergency stop is triggered during a laboratory bench test",
+    "question": "What should the robot do if the emergency stop is triggered during a laboratory bench test?",
+    "response": "If the emergency stop is triggered during a laboratory bench test, cut motion commands and keep the robot stopped until reset.",
+    "aliases": [
+      "How should the robot react when the emergency stop is triggered during a laboratory bench test?",
+      "Procedure when the emergency stop is triggered during a laboratory bench test"
+    ]
+  },
+  {
+    "topic": "bumper-triggered",
+    "label": "the bumper is pressed in a classroom demonstration",
+    "question": "What should the robot do if the bumper is pressed in a classroom demonstration?",
+    "response": "If the bumper is pressed in a classroom demonstration, stop immediately and inspect the nearby collision region.",
+    "aliases": [
+      "How should the robot react when the bumper is pressed in a classroom demonstration?",
+      "Procedure when the bumper is pressed in a classroom demonstration"
+    ]
+  },
+  {
+    "topic": "bumper-triggered-corridor",
+    "label": "the bumper is pressed during corridor navigation",
+    "question": "What should the robot do if the bumper is pressed during corridor navigation?",
+    "response": "If the bumper is pressed during corridor navigation, stop immediately and inspect the nearby collision region.",
+    "aliases": [
+      "How should the robot react when the bumper is pressed during corridor navigation?",
+      "Procedure when the bumper is pressed during corridor navigation"
+    ]
+  },
+  {
+    "topic": "bumper-triggered-mapping",
+    "label": "the bumper is pressed during a mapping mission",
+    "question": "What should the robot do if the bumper is pressed during a mapping mission?",
+    "response": "If the bumper is pressed during a mapping mission, stop immediately and inspect the nearby collision region.",
+    "aliases": [
+      "How should the robot react when the bumper is pressed during a mapping mission?",
+      "Procedure when the bumper is pressed during a mapping mission"
+    ]
+  },
+  {
+    "topic": "bumper-triggered-docking",
+    "label": "the bumper is pressed while docking",
+    "question": "What should the robot do if the bumper is pressed while docking?",
+    "response": "If the bumper is pressed while docking, stop immediately and inspect the nearby collision region.",
+    "aliases": [
+      "How should the robot react when the bumper is pressed while docking?",
+      "Procedure when the bumper is pressed while docking"
+    ]
+  },
+  {
+    "topic": "bumper-triggered-remote-control",
+    "label": "the bumper is pressed during teleoperation",
+    "question": "What should the robot do if the bumper is pressed during teleoperation?",
+    "response": "If the bumper is pressed during teleoperation, stop immediately and inspect the nearby collision region.",
+    "aliases": [
+      "How should the robot react when the bumper is pressed during teleoperation?",
+      "Procedure when the bumper is pressed during teleoperation"
+    ]
+  },
+  {
+    "topic": "bumper-triggered-test-bench",
+    "label": "the bumper is pressed during a laboratory bench test",
+    "question": "What should the robot do if the bumper is pressed during a laboratory bench test?",
+    "response": "If the bumper is pressed during a laboratory bench test, stop immediately and inspect the nearby collision region.",
+    "aliases": [
+      "How should the robot react when the bumper is pressed during a laboratory bench test?",
+      "Procedure when the bumper is pressed during a laboratory bench test"
+    ]
+  },
+  {
+    "topic": "motor-stall",
+    "label": "a motor stalls in a classroom demonstration",
+    "question": "What should the robot do if a motor stalls in a classroom demonstration?",
+    "response": "If a motor stalls in a classroom demonstration, stop the motor and inspect mechanical load or obstruction.",
+    "aliases": [
+      "How should the robot react when a motor stalls in a classroom demonstration?",
+      "Procedure when a motor stalls in a classroom demonstration"
+    ]
+  },
+  {
+    "topic": "motor-stall-corridor",
+    "label": "a motor stalls during corridor navigation",
+    "question": "What should the robot do if a motor stalls during corridor navigation?",
+    "response": "If a motor stalls during corridor navigation, stop the motor and inspect mechanical load or obstruction.",
+    "aliases": [
+      "How should the robot react when a motor stalls during corridor navigation?",
+      "Procedure when a motor stalls during corridor navigation"
+    ]
+  },
+  {
+    "topic": "motor-stall-mapping",
+    "label": "a motor stalls during a mapping mission",
+    "question": "What should the robot do if a motor stalls during a mapping mission?",
+    "response": "If a motor stalls during a mapping mission, stop the motor and inspect mechanical load or obstruction.",
+    "aliases": [
+      "How should the robot react when a motor stalls during a mapping mission?",
+      "Procedure when a motor stalls during a mapping mission"
+    ]
+  },
+  {
+    "topic": "motor-stall-docking",
+    "label": "a motor stalls while docking",
+    "question": "What should the robot do if a motor stalls while docking?",
+    "response": "If a motor stalls while docking, stop the motor and inspect mechanical load or obstruction.",
+    "aliases": [
+      "How should the robot react when a motor stalls while docking?",
+      "Procedure when a motor stalls while docking"
+    ]
+  },
+  {
+    "topic": "motor-stall-remote-control",
+    "label": "a motor stalls during teleoperation",
+    "question": "What should the robot do if a motor stalls during teleoperation?",
+    "response": "If a motor stalls during teleoperation, stop the motor and inspect mechanical load or obstruction.",
+    "aliases": [
+      "How should the robot react when a motor stalls during teleoperation?",
+      "Procedure when a motor stalls during teleoperation"
+    ]
+  },
+  {
+    "topic": "motor-stall-test-bench",
+    "label": "a motor stalls during a laboratory bench test",
+    "question": "What should the robot do if a motor stalls during a laboratory bench test?",
+    "response": "If a motor stalls during a laboratory bench test, stop the motor and inspect mechanical load or obstruction.",
+    "aliases": [
+      "How should the robot react when a motor stalls during a laboratory bench test?",
+      "Procedure when a motor stalls during a laboratory bench test"
+    ]
+  },
+  {
+    "topic": "wheel-slip",
+    "label": "the wheels slip in a classroom demonstration",
+    "question": "What should the robot do if the wheels slip in a classroom demonstration?",
+    "response": "If the wheels slip in a classroom demonstration, reduce acceleration and reassess odometry confidence.",
+    "aliases": [
+      "How should the robot react when the wheels slip in a classroom demonstration?",
+      "Procedure when the wheels slip in a classroom demonstration"
+    ]
+  },
+  {
+    "topic": "wheel-slip-corridor",
+    "label": "the wheels slip during corridor navigation",
+    "question": "What should the robot do if the wheels slip during corridor navigation?",
+    "response": "If the wheels slip during corridor navigation, reduce acceleration and reassess odometry confidence.",
+    "aliases": [
+      "How should the robot react when the wheels slip during corridor navigation?",
+      "Procedure when the wheels slip during corridor navigation"
+    ]
+  },
+  {
+    "topic": "wheel-slip-mapping",
+    "label": "the wheels slip during a mapping mission",
+    "question": "What should the robot do if the wheels slip during a mapping mission?",
+    "response": "If the wheels slip during a mapping mission, reduce acceleration and reassess odometry confidence.",
+    "aliases": [
+      "How should the robot react when the wheels slip during a mapping mission?",
+      "Procedure when the wheels slip during a mapping mission"
+    ]
+  },
+  {
+    "topic": "wheel-slip-docking",
+    "label": "the wheels slip while docking",
+    "question": "What should the robot do if the wheels slip while docking?",
+    "response": "If the wheels slip while docking, reduce acceleration and reassess odometry confidence.",
+    "aliases": [
+      "How should the robot react when the wheels slip while docking?",
+      "Procedure when the wheels slip while docking"
+    ]
+  },
+  {
+    "topic": "wheel-slip-remote-control",
+    "label": "the wheels slip during teleoperation",
+    "question": "What should the robot do if the wheels slip during teleoperation?",
+    "response": "If the wheels slip during teleoperation, reduce acceleration and reassess odometry confidence.",
+    "aliases": [
+      "How should the robot react when the wheels slip during teleoperation?",
+      "Procedure when the wheels slip during teleoperation"
+    ]
+  },
+  {
+    "topic": "wheel-slip-test-bench",
+    "label": "the wheels slip during a laboratory bench test",
+    "question": "What should the robot do if the wheels slip during a laboratory bench test?",
+    "response": "If the wheels slip during a laboratory bench test, reduce acceleration and reassess odometry confidence.",
+    "aliases": [
+      "How should the robot react when the wheels slip during a laboratory bench test?",
+      "Procedure when the wheels slip during a laboratory bench test"
+    ]
+  },
+  {
+    "topic": "mapping-drift",
+    "label": "the map alignment drifts in a classroom demonstration",
+    "question": "What should the robot do if the map alignment drifts in a classroom demonstration?",
+    "response": "If the map alignment drifts in a classroom demonstration, pause mapping and revisit stable landmarks for correction.",
+    "aliases": [
+      "How should the robot react when the map alignment drifts in a classroom demonstration?",
+      "Procedure when the map alignment drifts in a classroom demonstration"
+    ]
+  },
+  {
+    "topic": "mapping-drift-corridor",
+    "label": "the map alignment drifts during corridor navigation",
+    "question": "What should the robot do if the map alignment drifts during corridor navigation?",
+    "response": "If the map alignment drifts during corridor navigation, pause mapping and revisit stable landmarks for correction.",
+    "aliases": [
+      "How should the robot react when the map alignment drifts during corridor navigation?",
+      "Procedure when the map alignment drifts during corridor navigation"
+    ]
+  },
+  {
+    "topic": "mapping-drift-mapping",
+    "label": "the map alignment drifts during a mapping mission",
+    "question": "What should the robot do if the map alignment drifts during a mapping mission?",
+    "response": "If the map alignment drifts during a mapping mission, pause mapping and revisit stable landmarks for correction.",
+    "aliases": [
+      "How should the robot react when the map alignment drifts during a mapping mission?",
+      "Procedure when the map alignment drifts during a mapping mission"
+    ]
+  },
+  {
+    "topic": "mapping-drift-docking",
+    "label": "the map alignment drifts while docking",
+    "question": "What should the robot do if the map alignment drifts while docking?",
+    "response": "If the map alignment drifts while docking, pause mapping and revisit stable landmarks for correction.",
+    "aliases": [
+      "How should the robot react when the map alignment drifts while docking?",
+      "Procedure when the map alignment drifts while docking"
+    ]
+  },
+  {
+    "topic": "mapping-drift-remote-control",
+    "label": "the map alignment drifts during teleoperation",
+    "question": "What should the robot do if the map alignment drifts during teleoperation?",
+    "response": "If the map alignment drifts during teleoperation, pause mapping and revisit stable landmarks for correction.",
+    "aliases": [
+      "How should the robot react when the map alignment drifts during teleoperation?",
+      "Procedure when the map alignment drifts during teleoperation"
+    ]
+  },
+  {
+    "topic": "mapping-drift-test-bench",
+    "label": "the map alignment drifts during a laboratory bench test",
+    "question": "What should the robot do if the map alignment drifts during a laboratory bench test?",
+    "response": "If the map alignment drifts during a laboratory bench test, pause mapping and revisit stable landmarks for correction.",
+    "aliases": [
+      "How should the robot react when the map alignment drifts during a laboratory bench test?",
+      "Procedure when the map alignment drifts during a laboratory bench test"
+    ]
+  },
+  {
+    "topic": "camera-loss",
+    "label": "the camera feed is lost in a classroom demonstration",
+    "question": "What should the robot do if the camera feed is lost in a classroom demonstration?",
+    "response": "If the camera feed is lost in a classroom demonstration, stop image-dependent actions and retry the camera safely.",
+    "aliases": [
+      "How should the robot react when the camera feed is lost in a classroom demonstration?",
+      "Procedure when the camera feed is lost in a classroom demonstration"
+    ]
+  },
+  {
+    "topic": "camera-loss-corridor",
+    "label": "the camera feed is lost during corridor navigation",
+    "question": "What should the robot do if the camera feed is lost during corridor navigation?",
+    "response": "If the camera feed is lost during corridor navigation, stop image-dependent actions and retry the camera safely.",
+    "aliases": [
+      "How should the robot react when the camera feed is lost during corridor navigation?",
+      "Procedure when the camera feed is lost during corridor navigation"
+    ]
+  },
+  {
+    "topic": "camera-loss-mapping",
+    "label": "the camera feed is lost during a mapping mission",
+    "question": "What should the robot do if the camera feed is lost during a mapping mission?",
+    "response": "If the camera feed is lost during a mapping mission, stop image-dependent actions and retry the camera safely.",
+    "aliases": [
+      "How should the robot react when the camera feed is lost during a mapping mission?",
+      "Procedure when the camera feed is lost during a mapping mission"
+    ]
+  },
+  {
+    "topic": "camera-loss-docking",
+    "label": "the camera feed is lost while docking",
+    "question": "What should the robot do if the camera feed is lost while docking?",
+    "response": "If the camera feed is lost while docking, stop image-dependent actions and retry the camera safely.",
+    "aliases": [
+      "How should the robot react when the camera feed is lost while docking?",
+      "Procedure when the camera feed is lost while docking"
+    ]
+  },
+  {
+    "topic": "camera-loss-remote-control",
+    "label": "the camera feed is lost during teleoperation",
+    "question": "What should the robot do if the camera feed is lost during teleoperation?",
+    "response": "If the camera feed is lost during teleoperation, stop image-dependent actions and retry the camera safely.",
+    "aliases": [
+      "How should the robot react when the camera feed is lost during teleoperation?",
+      "Procedure when the camera feed is lost during teleoperation"
+    ]
+  },
+  {
+    "topic": "camera-loss-test-bench",
+    "label": "the camera feed is lost during a laboratory bench test",
+    "question": "What should the robot do if the camera feed is lost during a laboratory bench test?",
+    "response": "If the camera feed is lost during a laboratory bench test, stop image-dependent actions and retry the camera safely.",
+    "aliases": [
+      "How should the robot react when the camera feed is lost during a laboratory bench test?",
+      "Procedure when the camera feed is lost during a laboratory bench test"
+    ]
+  },
+  {
+    "topic": "network-drop",
+    "label": "the network connection drops in a classroom demonstration",
+    "question": "What should the robot do if the network connection drops in a classroom demonstration?",
+    "response": "If the network connection drops in a classroom demonstration, switch to a safe local control strategy and log the interruption.",
+    "aliases": [
+      "How should the robot react when the network connection drops in a classroom demonstration?",
+      "Procedure when the network connection drops in a classroom demonstration"
+    ]
+  },
+  {
+    "topic": "network-drop-corridor",
+    "label": "the network connection drops during corridor navigation",
+    "question": "What should the robot do if the network connection drops during corridor navigation?",
+    "response": "If the network connection drops during corridor navigation, switch to a safe local control strategy and log the interruption.",
+    "aliases": [
+      "How should the robot react when the network connection drops during corridor navigation?",
+      "Procedure when the network connection drops during corridor navigation"
+    ]
+  },
+  {
+    "topic": "network-drop-mapping",
+    "label": "the network connection drops during a mapping mission",
+    "question": "What should the robot do if the network connection drops during a mapping mission?",
+    "response": "If the network connection drops during a mapping mission, switch to a safe local control strategy and log the interruption.",
+    "aliases": [
+      "How should the robot react when the network connection drops during a mapping mission?",
+      "Procedure when the network connection drops during a mapping mission"
+    ]
+  },
+  {
+    "topic": "network-drop-docking",
+    "label": "the network connection drops while docking",
+    "question": "What should the robot do if the network connection drops while docking?",
+    "response": "If the network connection drops while docking, switch to a safe local control strategy and log the interruption.",
+    "aliases": [
+      "How should the robot react when the network connection drops while docking?",
+      "Procedure when the network connection drops while docking"
+    ]
+  },
+  {
+    "topic": "network-drop-remote-control",
+    "label": "the network connection drops during teleoperation",
+    "question": "What should the robot do if the network connection drops during teleoperation?",
+    "response": "If the network connection drops during teleoperation, switch to a safe local control strategy and log the interruption.",
+    "aliases": [
+      "How should the robot react when the network connection drops during teleoperation?",
+      "Procedure when the network connection drops during teleoperation"
+    ]
+  },
+  {
+    "topic": "network-drop-test-bench",
+    "label": "the network connection drops during a laboratory bench test",
+    "question": "What should the robot do if the network connection drops during a laboratory bench test?",
+    "response": "If the network connection drops during a laboratory bench test, switch to a safe local control strategy and log the interruption.",
+    "aliases": [
+      "How should the robot react when the network connection drops during a laboratory bench test?",
+      "Procedure when the network connection drops during a laboratory bench test"
+    ]
+  },
+  {
+    "topic": "charging-required",
+    "label": "the charger is required in a classroom demonstration",
+    "question": "What should the robot do if the charger is required in a classroom demonstration?",
+    "response": "If the charger is required in a classroom demonstration, prioritize a safe docking maneuver over the current mission.",
+    "aliases": [
+      "How should the robot react when the charger is required in a classroom demonstration?",
+      "Procedure when the charger is required in a classroom demonstration"
+    ]
+  },
+  {
+    "topic": "charging-required-corridor",
+    "label": "the charger is required during corridor navigation",
+    "question": "What should the robot do if the charger is required during corridor navigation?",
+    "response": "If the charger is required during corridor navigation, prioritize a safe docking maneuver over the current mission.",
+    "aliases": [
+      "How should the robot react when the charger is required during corridor navigation?",
+      "Procedure when the charger is required during corridor navigation"
+    ]
+  },
+  {
+    "topic": "charging-required-mapping",
+    "label": "the charger is required during a mapping mission",
+    "question": "What should the robot do if the charger is required during a mapping mission?",
+    "response": "If the charger is required during a mapping mission, prioritize a safe docking maneuver over the current mission.",
+    "aliases": [
+      "How should the robot react when the charger is required during a mapping mission?",
+      "Procedure when the charger is required during a mapping mission"
+    ]
+  },
+  {
+    "topic": "charging-required-docking",
+    "label": "the charger is required while docking",
+    "question": "What should the robot do if the charger is required while docking?",
+    "response": "If the charger is required while docking, prioritize a safe docking maneuver over the current mission.",
+    "aliases": [
+      "How should the robot react when the charger is required while docking?",
+      "Procedure when the charger is required while docking"
+    ]
+  },
+  {
+    "topic": "charging-required-remote-control",
+    "label": "the charger is required during teleoperation",
+    "question": "What should the robot do if the charger is required during teleoperation?",
+    "response": "If the charger is required during teleoperation, prioritize a safe docking maneuver over the current mission.",
+    "aliases": [
+      "How should the robot react when the charger is required during teleoperation?",
+      "Procedure when the charger is required during teleoperation"
+    ]
+  },
+  {
+    "topic": "charging-required-test-bench",
+    "label": "the charger is required during a laboratory bench test",
+    "question": "What should the robot do if the charger is required during a laboratory bench test?",
+    "response": "If the charger is required during a laboratory bench test, prioritize a safe docking maneuver over the current mission.",
+    "aliases": [
+      "How should the robot react when the charger is required during a laboratory bench test?",
+      "Procedure when the charger is required during a laboratory bench test"
+    ]
+  },
+  {
+    "topic": "gripper-jam",
+    "label": "the gripper jams in a classroom demonstration",
+    "question": "What should the robot do if the gripper jams in a classroom demonstration?",
+    "response": "If the gripper jams in a classroom demonstration, release force if safe, stop manipulation, and inspect the object.",
+    "aliases": [
+      "How should the robot react when the gripper jams in a classroom demonstration?",
+      "Procedure when the gripper jams in a classroom demonstration"
+    ]
+  },
+  {
+    "topic": "gripper-jam-corridor",
+    "label": "the gripper jams during corridor navigation",
+    "question": "What should the robot do if the gripper jams during corridor navigation?",
+    "response": "If the gripper jams during corridor navigation, release force if safe, stop manipulation, and inspect the object.",
+    "aliases": [
+      "How should the robot react when the gripper jams during corridor navigation?",
+      "Procedure when the gripper jams during corridor navigation"
+    ]
+  },
+  {
+    "topic": "gripper-jam-mapping",
+    "label": "the gripper jams during a mapping mission",
+    "question": "What should the robot do if the gripper jams during a mapping mission?",
+    "response": "If the gripper jams during a mapping mission, release force if safe, stop manipulation, and inspect the object.",
+    "aliases": [
+      "How should the robot react when the gripper jams during a mapping mission?",
+      "Procedure when the gripper jams during a mapping mission"
+    ]
+  },
+  {
+    "topic": "gripper-jam-docking",
+    "label": "the gripper jams while docking",
+    "question": "What should the robot do if the gripper jams while docking?",
+    "response": "If the gripper jams while docking, release force if safe, stop manipulation, and inspect the object.",
+    "aliases": [
+      "How should the robot react when the gripper jams while docking?",
+      "Procedure when the gripper jams while docking"
+    ]
+  },
+  {
+    "topic": "gripper-jam-remote-control",
+    "label": "the gripper jams during teleoperation",
+    "question": "What should the robot do if the gripper jams during teleoperation?",
+    "response": "If the gripper jams during teleoperation, release force if safe, stop manipulation, and inspect the object.",
+    "aliases": [
+      "How should the robot react when the gripper jams during teleoperation?",
+      "Procedure when the gripper jams during teleoperation"
+    ]
+  },
+  {
+    "topic": "gripper-jam-test-bench",
+    "label": "the gripper jams during a laboratory bench test",
+    "question": "What should the robot do if the gripper jams during a laboratory bench test?",
+    "response": "If the gripper jams during a laboratory bench test, release force if safe, stop manipulation, and inspect the object.",
+    "aliases": [
+      "How should the robot react when the gripper jams during a laboratory bench test?",
+      "Procedure when the gripper jams during a laboratory bench test"
+    ]
+  },
+  {
+    "topic": "joint-limit",
+    "label": "a joint limit is reached in a classroom demonstration",
+    "question": "What should the robot do if a joint limit is reached in a classroom demonstration?",
+    "response": "If a joint limit is reached in a classroom demonstration, block further motion toward the joint limit and report the condition.",
+    "aliases": [
+      "How should the robot react when a joint limit is reached in a classroom demonstration?",
+      "Procedure when a joint limit is reached in a classroom demonstration"
+    ]
+  },
+  {
+    "topic": "joint-limit-corridor",
+    "label": "a joint limit is reached during corridor navigation",
+    "question": "What should the robot do if a joint limit is reached during corridor navigation?",
+    "response": "If a joint limit is reached during corridor navigation, block further motion toward the joint limit and report the condition.",
+    "aliases": [
+      "How should the robot react when a joint limit is reached during corridor navigation?",
+      "Procedure when a joint limit is reached during corridor navigation"
+    ]
+  },
+  {
+    "topic": "joint-limit-mapping",
+    "label": "a joint limit is reached during a mapping mission",
+    "question": "What should the robot do if a joint limit is reached during a mapping mission?",
+    "response": "If a joint limit is reached during a mapping mission, block further motion toward the joint limit and report the condition.",
+    "aliases": [
+      "How should the robot react when a joint limit is reached during a mapping mission?",
+      "Procedure when a joint limit is reached during a mapping mission"
+    ]
+  },
+  {
+    "topic": "joint-limit-docking",
+    "label": "a joint limit is reached while docking",
+    "question": "What should the robot do if a joint limit is reached while docking?",
+    "response": "If a joint limit is reached while docking, block further motion toward the joint limit and report the condition.",
+    "aliases": [
+      "How should the robot react when a joint limit is reached while docking?",
+      "Procedure when a joint limit is reached while docking"
+    ]
+  },
+  {
+    "topic": "joint-limit-remote-control",
+    "label": "a joint limit is reached during teleoperation",
+    "question": "What should the robot do if a joint limit is reached during teleoperation?",
+    "response": "If a joint limit is reached during teleoperation, block further motion toward the joint limit and report the condition.",
+    "aliases": [
+      "How should the robot react when a joint limit is reached during teleoperation?",
+      "Procedure when a joint limit is reached during teleoperation"
+    ]
+  },
+  {
+    "topic": "joint-limit-test-bench",
+    "label": "a joint limit is reached during a laboratory bench test",
+    "question": "What should the robot do if a joint limit is reached during a laboratory bench test?",
+    "response": "If a joint limit is reached during a laboratory bench test, block further motion toward the joint limit and report the condition.",
+    "aliases": [
+      "How should the robot react when a joint limit is reached during a laboratory bench test?",
+      "Procedure when a joint limit is reached during a laboratory bench test"
+    ]
+  },
+  {
+    "topic": "unexpected-person",
+    "label": "a person approaches the robot in a classroom demonstration",
+    "question": "What should the robot do if a person approaches the robot in a classroom demonstration?",
+    "response": "If a person approaches the robot in a classroom demonstration, reduce speed or stop while maintaining a safe distance.",
+    "aliases": [
+      "How should the robot react when a person approaches the robot in a classroom demonstration?",
+      "Procedure when a person approaches the robot in a classroom demonstration"
+    ]
+  },
+  {
+    "topic": "unexpected-person-corridor",
+    "label": "a person approaches the robot during corridor navigation",
+    "question": "What should the robot do if a person approaches the robot during corridor navigation?",
+    "response": "If a person approaches the robot during corridor navigation, reduce speed or stop while maintaining a safe distance.",
+    "aliases": [
+      "How should the robot react when a person approaches the robot during corridor navigation?",
+      "Procedure when a person approaches the robot during corridor navigation"
+    ]
+  },
+  {
+    "topic": "unexpected-person-mapping",
+    "label": "a person approaches the robot during a mapping mission",
+    "question": "What should the robot do if a person approaches the robot during a mapping mission?",
+    "response": "If a person approaches the robot during a mapping mission, reduce speed or stop while maintaining a safe distance.",
+    "aliases": [
+      "How should the robot react when a person approaches the robot during a mapping mission?",
+      "Procedure when a person approaches the robot during a mapping mission"
+    ]
+  },
+  {
+    "topic": "unexpected-person-docking",
+    "label": "a person approaches the robot while docking",
+    "question": "What should the robot do if a person approaches the robot while docking?",
+    "response": "If a person approaches the robot while docking, reduce speed or stop while maintaining a safe distance.",
+    "aliases": [
+      "How should the robot react when a person approaches the robot while docking?",
+      "Procedure when a person approaches the robot while docking"
+    ]
+  },
+  {
+    "topic": "unexpected-person-remote-control",
+    "label": "a person approaches the robot during teleoperation",
+    "question": "What should the robot do if a person approaches the robot during teleoperation?",
+    "response": "If a person approaches the robot during teleoperation, reduce speed or stop while maintaining a safe distance.",
+    "aliases": [
+      "How should the robot react when a person approaches the robot during teleoperation?",
+      "Procedure when a person approaches the robot during teleoperation"
+    ]
+  },
+  {
+    "topic": "unexpected-person-test-bench",
+    "label": "a person approaches the robot during a laboratory bench test",
+    "question": "What should the robot do if a person approaches the robot during a laboratory bench test?",
+    "response": "If a person approaches the robot during a laboratory bench test, reduce speed or stop while maintaining a safe distance.",
+    "aliases": [
+      "How should the robot react when a person approaches the robot during a laboratory bench test?",
+      "Procedure when a person approaches the robot during a laboratory bench test"
+    ]
+  },
+  {
+    "topic": "navigation-deadend",
+    "label": "a corridor has no exit in a classroom demonstration",
+    "question": "What should the robot do if a corridor has no exit in a classroom demonstration?",
+    "response": "If a corridor has no exit in a classroom demonstration, stop, rotate safely, and replan away from the dead end.",
+    "aliases": [
+      "How should the robot react when a corridor has no exit in a classroom demonstration?",
+      "Procedure when a corridor has no exit in a classroom demonstration"
+    ]
+  },
+  {
+    "topic": "navigation-deadend-corridor",
+    "label": "a corridor has no exit during corridor navigation",
+    "question": "What should the robot do if a corridor has no exit during corridor navigation?",
+    "response": "If a corridor has no exit during corridor navigation, stop, rotate safely, and replan away from the dead end.",
+    "aliases": [
+      "How should the robot react when a corridor has no exit during corridor navigation?",
+      "Procedure when a corridor has no exit during corridor navigation"
+    ]
+  },
+  {
+    "topic": "navigation-deadend-mapping",
+    "label": "a corridor has no exit during a mapping mission",
+    "question": "What should the robot do if a corridor has no exit during a mapping mission?",
+    "response": "If a corridor has no exit during a mapping mission, stop, rotate safely, and replan away from the dead end.",
+    "aliases": [
+      "How should the robot react when a corridor has no exit during a mapping mission?",
+      "Procedure when a corridor has no exit during a mapping mission"
+    ]
+  },
+  {
+    "topic": "navigation-deadend-docking",
+    "label": "a corridor has no exit while docking",
+    "question": "What should the robot do if a corridor has no exit while docking?",
+    "response": "If a corridor has no exit while docking, stop, rotate safely, and replan away from the dead end.",
+    "aliases": [
+      "How should the robot react when a corridor has no exit while docking?",
+      "Procedure when a corridor has no exit while docking"
+    ]
+  },
+  {
+    "topic": "navigation-deadend-remote-control",
+    "label": "a corridor has no exit during teleoperation",
+    "question": "What should the robot do if a corridor has no exit during teleoperation?",
+    "response": "If a corridor has no exit during teleoperation, stop, rotate safely, and replan away from the dead end.",
+    "aliases": [
+      "How should the robot react when a corridor has no exit during teleoperation?",
+      "Procedure when a corridor has no exit during teleoperation"
+    ]
+  },
+  {
+    "topic": "navigation-deadend-test-bench",
+    "label": "a corridor has no exit during a laboratory bench test",
+    "question": "What should the robot do if a corridor has no exit during a laboratory bench test?",
+    "response": "If a corridor has no exit during a laboratory bench test, stop, rotate safely, and replan away from the dead end.",
+    "aliases": [
+      "How should the robot react when a corridor has no exit during a laboratory bench test?",
+      "Procedure when a corridor has no exit during a laboratory bench test"
+    ]
+  }
+]

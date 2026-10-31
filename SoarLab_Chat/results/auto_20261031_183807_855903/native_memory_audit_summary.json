@@ -1,0 +1,20 @@
+{
+  "procedural": {
+    "planned": 108,
+    "passed": 108,
+    "failed": 0,
+    "pass_rate": 1.0
+  },
+  "semantic": {
+    "planned": 124,
+    "passed": 124,
+    "failed": 0,
+    "pass_rate": 1.0
+  },
+  "episodic": {
+    "planned": 120,
+    "passed": 120,
+    "failed": 0,
+    "pass_rate": 1.0
+  }
+}
